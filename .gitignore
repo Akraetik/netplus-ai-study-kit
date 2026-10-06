@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build output and caches
+.tts-cache/
+build/
+*.wav
+
+# Voice and speech-recognition models are large; download them locally (see docs/04)
+voices/
+models/
+
+# MP3s ship as GitHub Release assets, not git objects
+audio/*.mp3
+
+# Personal study data — keep your own miss log private
+my-*.csv
+private/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.ruff_cache/
