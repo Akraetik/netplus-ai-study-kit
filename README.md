@@ -9,13 +9,15 @@
 
 I built this system while preparing for Network+. I had a job, a long commute, and little desk time. So I used AI to turn the exam objectives into audio I could drill while driving and flashcards I could review in spare minutes between life. Then I fed my practice-test misses back to the AI and rebuilt the material around my weak spots.
 
-I'm publishing the finished materials and the system that made them, one piece at a time.
+I'm publishing the finished materials and the system that made them, when I have time between doing other things. The system works around your real life. A certificate is just flair to a career and learning track.
+
+I added Anthropic's Claude as a contributor. I used them to create the AI flashcards and Audio. Fair disclosure. A feature not a bug. 
 
 ## Roadmap
 
 - [x] Project scope and licenses
 - [x] The method: define the target, how learning works, study plans
-- [ ] Tracking templates: miss log, score tracker, study plan
+- [x] Tracking templates: miss log, score tracker, study plan
 - [ ] `make_deck.py` — CSV → Anki deck, with CI
 - [ ] ~2,000 Anki cards: core, rapid recall, trouble areas, quick decks
 - [ ] `make_audio.py` — local two-voice TTS for car drills

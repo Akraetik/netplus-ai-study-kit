@@ -1,0 +1,3 @@
+date,source,q_num,domain,objective,topic,my_answer,correct_answer,miss_type,why_i_missed_it,concept_in_my_words,times_missed
+2026-09-14,Practice exam 3,41,5,5.5,DHCP relay,Change the DHCP scope,Configure a DHCP relay (ip helper-address),K,Didn't know DHCP broadcasts don't cross routers,DHCP Discover is a broadcast. Routers drop broadcasts. A relay forwards it to the server as unicast.,1
+2026-09-14,Practice exam 3,57,3,3.3,RPO vs RTO,RTO,RPO,D,Mixed up the two,RPO = how much data I can lose (Point in time). RTO = how long I can be down (Time).,2

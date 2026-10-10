@@ -1,0 +1,2 @@
+date,source,overall_pct,d1_concepts,d2_implementation,d3_operations,d4_security,d5_troubleshooting,misses_K,misses_D,misses_A,misses_R,misses_P,guesses_G,notes
+2026-09-10,Baseline (cold),58,62,50,60,64,55,,,,,,,First look. Most misses were K.
