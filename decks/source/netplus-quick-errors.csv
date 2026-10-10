@@ -1,0 +1,45 @@
+deck,front,answer,note,tags
+N+ Quick · Common Errors and Fixes,Can ping an IP but not a URL.,<b>DNS</b>,"Check DNS servers, flush the cache, query a public resolver to compare.",quick_errors
+N+ Quick · Common Errors and Fixes,Host has <b>169.254.x.x</b>.,<b>DHCP failed</b> — APIPA self-assigned,"Check link, switch port VLAN, ip helper-address, scope exhaustion, DHCP service.",quick_errors
+N+ Quick · Common Errors and Fixes,Can reach the local LAN but nothing outside.,<b>Default gateway</b> or <b>subnet mask</b> wrong,Gateway wrong = nothing remote. Mask wrong = partial local failures too.,quick_errors
+N+ Quick · Common Errors and Fixes,Can reach some hosts on the local LAN but not others.,<b>Wrong subnet mask</b>,The host is misjudging which destinations are local.,quick_errors
+N+ Quick · Common Errors and Fixes,Server answers ping but the app will not connect.,<b>Layer 4 or above</b>,"Check the service is listening, then test the port, then the host firewall.",quick_errors
+N+ Quick · Common Errors and Fixes,Port test says <b>connection refused</b>.,<b>Nothing is listening</b> on that port,The network path is fine. The service is down or bound to the wrong interface.,quick_errors
+N+ Quick · Common Errors and Fixes,Port test <b>times out</b>.,A <b>firewall or ACL</b> is silently dropping it,Refused = nothing listening. Timeout = something is dropping.,quick_errors
+N+ Quick · Common Errors and Fixes,New firewall rule added but traffic is still blocked.,<b>Rule order</b>,"ACLs are top-down, first match wins. An earlier deny is catching it.",quick_errors
+N+ Quick · Common Errors and Fixes,Two devices have intermittent connectivity and sessions drop.,<b>Duplicate IP address</b>,arp -a shows a flapping binding; show mac-address-table finds the port.,quick_errors
+N+ Quick · Common Errors and Fixes,"Whole network slows, switch CPUs at 100%, all LEDs blink together.",<b>Layer 2 switching loop</b>,Break the loop physically. Prevent with BPDU Guard on access ports.,quick_errors
+N+ Quick · Common Errors and Fixes,Floor went down right after a user tidied their desk.,<b>Both ends of a patch cable in two wall jacks</b>,A loop. BPDU Guard prevents this entire class of problem.,quick_errors
+N+ Quick · Common Errors and Fixes,Workstation links at 100 Mbps on a gigabit switch.,<b>Cable fault — a bad pair</b>,Gigabit needs all four pairs; it falls back rather than failing.,quick_errors
+N+ Quick · Common Errors and Fixes,Terrible throughput with late collisions and CRC errors.,<b>Duplex mismatch</b>,"One side hardcoded, the other autonegotiating down to half.",quick_errors
+N+ Quick · Common Errors and Fixes,Interface shows rising <b>CRC errors</b>.,<b>Physical problem</b>,"Bad cable, EMI, distance, failing transceiver, or duplex mismatch.",quick_errors
+N+ Quick · Common Errors and Fixes,Interface shows rising <b>discards</b> but no errors.,"<b>Congestion</b>, not a fault",Frames were fine; the queue was full. Add capacity or apply QoS.,quick_errors
+N+ Quick · Common Errors and Fixes,Small pings work but large transfers hang.,<b>MTU mismatch</b> with ICMP blocked,"Path MTU Discovery cannot signal back, so the connection black-holes.",quick_errors
+N+ Quick · Common Errors and Fixes,New fiber link stays down at both ends.,<b>TX and RX transposed</b>,Swap one end. Then check for transceiver mismatch.,quick_errors
+N+ Quick · Common Errors and Fixes,New AP will not power on though the port has link.,<b>PoE budget exhausted</b> or wrong PoE standard,Check show power inline. Wi-Fi 6 APs usually need PoE+ or better.,quick_errors
+N+ Quick · Common Errors and Fixes,Switch port keeps going <b>err-disabled</b>.,"A <b>violation</b> — port security, BPDU Guard, or link flap",Read the log for which. Fix the cause before bouncing the port.,quick_errors
+N+ Quick · Common Errors and Fixes,Port died after a user swapped laptops.,<b>Port security</b> saw a new MAC,A sticky MAC entry recorded the old laptop as the only allowed device.,quick_errors
+N+ Quick · Common Errors and Fixes,New VLAN works on one switch but nowhere else.,<b>Not allowed on the trunk</b>,Also check the VLAN exists on both switches and has an SVI and DHCP scope.,quick_errors
+N+ Quick · Common Errors and Fixes,New subnet reaches the server; the server cannot reply.,<b>Missing return route</b>,Routing must exist in both directions.,quick_errors
+N+ Quick · Common Errors and Fixes,"Guest network: existing devices fine, new ones get nothing.",<b>DHCP scope exhaustion</b>,"Shorten the lease time first, then widen the scope.",quick_errors
+N+ Quick · Common Errors and Fixes,"Some clients get correct addressing, others get a strange range.",<b>Rogue DHCP server</b>,ipconfig /all names the issuing server. Fix with DHCP snooping.,quick_errors
+N+ Quick · Common Errors and Fixes,Addressing works but no names resolve anywhere on the subnet.,<b>Wrong DHCP option 6</b> (DNS servers),"Option 3 is gateway, 6 is DNS, 66/67 are PXE boot.",quick_errors
+N+ Quick · Common Errors and Fixes,"VoIP call connects and rings, but one side hears nothing.",<b>RTP media path blocked</b>,SIP signaling worked. The audio uses separate dynamic UDP ports.,quick_errors
+N+ Quick · Common Errors and Fixes,VoIP audio is choppy and robotic.,<b>Jitter</b>,Variation in latency. Fix with QoS and a priority queue for voice.,quick_errors
+N+ Quick · Common Errors and Fixes,Users lost the network — half the office only.,Find <b>what the failed half shares</b>,"One switch, uplink, VLAN, DHCP scope or controller. Do not start at a PC.",quick_errors
+N+ Quick · Common Errors and Fixes,Everything is slow at the same time every day.,A <b>scheduled job</b>,"Backups, imaging, replication. Find it with flow data, then reschedule or shape it.",quick_errors
+N+ Quick · Common Errors and Fixes,VPN connects but no internal resources are reachable.,"<b>Routes, split tunnel scope, or firewall rules</b>","Connection succeeded, so credentials and the tunnel are not the issue.",quick_errors
+N+ Quick · Common Errors and Fixes,Certificate warning on a site that worked yesterday.,<b>Expired certificate</b> — or a wrong clock,Everyone affected = expiry. One machine affected = its clock or trust store.,quick_errors
+N+ Quick · Common Errors and Fixes,Domain logins suddenly fail site-wide with no changes.,<b>Clock skew</b> — NTP failure,Kerberos rejects tickets outside about five minutes of skew.,quick_errors
+N+ Quick · Common Errors and Fixes,Traceroute shows the same two routers repeating.,<b>Routing loop</b>,TTL kills the packets. Check the routing table on both routers.,quick_errors
+N+ Quick · Common Errors and Fixes,Tunnel is up between two offices but no traffic passes.,<b>Overlapping IP subnets</b>,Each host thinks the remote address is local. Renumber or NAT.,quick_errors
+N+ Quick · Common Errors and Fixes,New connections fail intermittently; existing ones are fine.,<b>PAT / NAT table exhaustion</b>,Add public addresses or shorten translation timeouts.,quick_errors
+N+ Quick · Common Errors and Fixes,Wi-Fi drops while walking between areas.,<b>Coverage gap</b> or a <b>sticky client</b>,"Check RSSI at the failure point. Strong signal points at roaming, not coverage.",quick_errors
+N+ Quick · Common Errors and Fixes,Strong Wi-Fi signal but unusable when the room is full.,<b>Contention</b>,More APs with smaller cells. Raising transmit power makes it worse.,quick_errors
+N+ Quick · Common Errors and Fixes,"Printer works, then stops, then works after a reboot.",<b>DHCP address changed</b>,"Fix with a DHCP reservation, not a static address inside the scope.",quick_errors
+N+ Quick · Common Errors and Fixes,"High traffic, healthy spanning tree, lots of multicast.",<b>Multicast flooding</b>,Enable IGMP snooping. Not a loop.,quick_errors
+N+ Quick · Common Errors and Fixes,Switch floods all traffic out every port.,<b>CAM table full</b> — MAC flooding,Mitigate with port security limiting MACs per port.,quick_errors
+N+ Quick · Common Errors and Fixes,"Downloads are fast, uploads crawl on a broadband circuit.",<b>Asymmetric service</b> — usually not a fault,Cable and DSL are asymmetric by design. Check the contracted rates.,quick_errors
+N+ Quick · Common Errors and Fixes,"Fast link, high latency, no loss, but one transfer is slow.",<b>TCP window vs bandwidth-delay product</b>,Parallel transfers filling the link confirms it. Needs window scaling.,quick_errors
+N+ Quick · Common Errors and Fixes,Storage throughput collapsed after enabling jumbo frames.,<b>MTU not consistent end to end</b>,Switches still at 1500 drop the oversized frames as giants.,quick_errors
+N+ Quick · Common Errors and Fixes,One website is down for everyone; everything else works.,<b>Not your network</b> — but verify,"Test from cellular, check DNS, and check your own content filter.",quick_errors

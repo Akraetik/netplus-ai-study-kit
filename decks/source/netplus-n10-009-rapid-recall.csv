@@ -1,0 +1,953 @@
+deck,front,answer,note,tags
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DNS <b>A</b> record — what does it do?,Name to IPv4 address,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",Which DNS record does this: name to ipv4 address?,A,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DNS <b>AAAA</b> record — what does it do?,Name to IPv6 address,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",Which DNS record does this: name to ipv6 address?,AAAA,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DNS <b>CNAME</b> record — what does it do?,Alias pointing to another name,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",Which DNS record does this: alias pointing to another name?,CNAME,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DNS <b>MX</b> record — what does it do?,Mail server for the domain,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",Which DNS record does this: mail server for the domain?,MX,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DNS <b>TXT</b> record — what does it do?,"Free-form text — SPF, DKIM, DMARC, domain verification",,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time","Which DNS record does this: free-form text — spf, dkim, dmarc, domain verification?",TXT,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DNS <b>NS</b> record — what does it do?,Authoritative name servers for the zone,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",Which DNS record does this: authoritative name servers for the zone?,NS,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DNS <b>PTR</b> record — what does it do?,IP address to name (reverse lookup),,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",Which DNS record does this: ip address to name (reverse lookup)?,PTR,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DNS <b>SOA</b> record — what does it do?,Start of authority — zone authority and timers,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",Which DNS record does this: start of authority — zone authority and timers?,SOA,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DNS <b>SRV</b> record — what does it do?,Service location: host and port,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",Which DNS record does this: service location: host and port?,SRV,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DHCP <b>Option 3</b> — what does it deliver?,Default gateway,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DHCP <b>Option 6</b> — what does it deliver?,DNS servers,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DHCP <b>Option 15</b> — what does it deliver?,Domain name,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DHCP <b>Option 42</b> — what does it deliver?,NTP servers,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DHCP <b>Option 66</b> — what does it deliver?,TFTP server name (boot server),,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",DHCP <b>Option 67</b> — what does it deliver?,Boot filename,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",The four steps of DHCP?,Discover → Offer → Request → Acknowledge (DORA),,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",When does a DHCP client first try to renew?,At 50% of the lease (T1),Unicast to the issuing server.,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",When does a DHCP client start rebinding?,At 87.5% of the lease (T2),Broadcast to any DHCP server.,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",What is a DHCP <b>reservation</b>?,A specific address always given to a specific MAC,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",What is a DHCP <b>exclusion</b>?,Addresses inside the scope the server must not hand out,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",What is a DHCP <b>relay</b> / ip helper-address?,Forwards DHCP broadcasts to a server on another subnet,Routers do not forward broadcasts.,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",What does <b>DNSSEC</b> provide?,Authenticity and integrity of DNS records,Not confidentiality.,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",What do <b>DoH</b> and <b>DoT</b> provide?,Encrypted DNS queries for privacy,"DoH on 443, DoT on 853.",14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",<b>NTP stratum 0</b> — what is it?,"The reference clock itself, such as GPS or atomic",,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",<b>NTP stratum 1</b> — what is it?,A server directly attached to a reference clock,,14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",What is <b>PTP</b> used for?,Sub-microsecond time accuracy,"Finance, industrial and broadcast.",14
+"Network+ N10-009 Rapid Recall::14 DNS, DHCP & Time",What is <b>NTS</b>?,Network Time Security — authenticated NTP,,14
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,Troubleshooting <b>step 1</b>?,Identify the problem,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,'Identify the problem' — which step number?,1,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,Troubleshooting <b>step 2</b>?,Establish a theory of probable cause,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,'Establish a theory of probable cause' — which step number?,2,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,Troubleshooting <b>step 3</b>?,Test the theory to determine the cause,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,'Test the theory to determine the cause' — which step number?,3,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,Troubleshooting <b>step 4</b>?,Establish a plan of action and identify potential effects,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,'Establish a plan of action and identify potential effects' — which step number?,4,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,Troubleshooting <b>step 5</b>?,Implement the solution or escalate,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,'Implement the solution or escalate' — which step number?,5,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,Troubleshooting <b>step 6</b>?,Verify full system functionality and implement preventive measures,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,'Verify full system functionality and implement preventive measures' — which step number?,6,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,Troubleshooting <b>step 7</b>?,"Document findings, actions and outcomes",,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,"'Document findings, actions and outcomes' — which step number?",7,,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,All seven troubleshooting steps in order?,"<div class=""lst"">1. Identify the problem<br>2. Establish a theory of probable cause<br>3. Test the theory to determine the cause<br>4. Establish a plan of action and identify potential effects<br>5. Implement the solution or escalate<br>6. Verify full system functionality and implement preventive measures<br>7. Document findings, actions and outcomes</div>",Next-step questions are answered by finding where the scenario stopped and taking exactly one step.,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,Which step is always last?,"Document findings, actions and outcomes",,22
+Network+ N10-009 Rapid Recall::22 Troubleshooting Steps,At which steps is escalation legitimate?,Step 3 (cannot test the theory) and step 5 (cannot implement),,22
+Network+ N10-009 Rapid Recall::03 TCP vs UDP,Which common services run over <b>UDP</b>?,"<div class=""lst"">DHCP (67/68)<br>DNS queries (53)<br>TFTP (69)<br>NTP (123)<br>SNMP (161/162)<br>Syslog (514)<br>IKE (500)<br>RTP (VoIP media)<br>SIP (5060, may also use TCP)</div>",All favor low overhead and speed over guaranteed delivery.,03
+Network+ N10-009 Rapid Recall::03 TCP vs UDP,Which common services use <b>both TCP and UDP</b>?,"<div class=""lst"">DNS (53)<br>LDAP (389)<br>Kerberos (88)<br>SIP (5060)</div>","DNS is the one that always appears: UDP for queries, TCP for zone transfers.",03
+Network+ N10-009 Rapid Recall::03 TCP vs UDP,Name four things <b>TCP</b> provides that UDP does not.,"<div class=""lst"">Guaranteed delivery<br>Sequencing<br>Retransmission<br>Flow control (windowing)</div>",,03
+Network+ N10-009 Rapid Recall::03 TCP vs UDP,What is the <b>TCP three-way handshake</b>?,SYN → SYN/ACK → ACK,,03
+Network+ N10-009 Rapid Recall::09 PoE,<b>802.3af (PoE)</b> — power at the port?,15.4 W,,09
+Network+ N10-009 Rapid Recall::09 PoE,<b>802.3af (PoE)</b> — power at the device?,12.95 W,,09
+Network+ N10-009 Rapid Recall::09 PoE,<b>802.3at (PoE+)</b> — power at the port?,30 W,,09
+Network+ N10-009 Rapid Recall::09 PoE,<b>802.3at (PoE+)</b> — power at the device?,25.5 W,,09
+Network+ N10-009 Rapid Recall::09 PoE,<b>802.3bt Type 3 (PoE++)</b> — power at the port?,60 W,,09
+Network+ N10-009 Rapid Recall::09 PoE,<b>802.3bt Type 3 (PoE++)</b> — power at the device?,51 W,,09
+Network+ N10-009 Rapid Recall::09 PoE,<b>802.3bt Type 4 (PoE++)</b> — power at the port?,90 W,,09
+Network+ N10-009 Rapid Recall::09 PoE,<b>802.3bt Type 4 (PoE++)</b> — power at the device?,71.3 W,,09
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/8</b> — subnet mask?,255.0.0.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.0.0.0</b> — what prefix length?,/8,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/8</b> — usable hosts?,"16,777,214",,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/8</b> — block size?,1st octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/16</b> — subnet mask?,255.255.0.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.0.0</b> — what prefix length?,/16,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/16</b> — usable hosts?,"65,534",,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/16</b> — block size?,2nd octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/17</b> — subnet mask?,255.255.128.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.128.0</b> — what prefix length?,/17,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/17</b> — usable hosts?,"32,766",,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/17</b> — block size?,128 in 3rd octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/18</b> — subnet mask?,255.255.192.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.192.0</b> — what prefix length?,/18,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/18</b> — usable hosts?,"16,382",,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/18</b> — block size?,64 in 3rd octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/19</b> — subnet mask?,255.255.224.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.224.0</b> — what prefix length?,/19,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/19</b> — usable hosts?,"8,190",,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/19</b> — block size?,32 in 3rd octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/20</b> — subnet mask?,255.255.240.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.240.0</b> — what prefix length?,/20,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/20</b> — usable hosts?,"4,094",,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/20</b> — block size?,16 in 3rd octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/21</b> — subnet mask?,255.255.248.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.248.0</b> — what prefix length?,/21,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/21</b> — usable hosts?,"2,046",,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/21</b> — block size?,8 in 3rd octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/22</b> — subnet mask?,255.255.252.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.252.0</b> — what prefix length?,/22,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/22</b> — usable hosts?,"1,022",,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/22</b> — block size?,4 in 3rd octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/23</b> — subnet mask?,255.255.254.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.254.0</b> — what prefix length?,/23,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/23</b> — usable hosts?,510,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/23</b> — block size?,2 in 3rd octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/24</b> — subnet mask?,255.255.255.0,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.255.0</b> — what prefix length?,/24,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/24</b> — usable hosts?,254,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/24</b> — block size?,256 in 4th octet,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/25</b> — subnet mask?,255.255.255.128,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.255.128</b> — what prefix length?,/25,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/25</b> — usable hosts?,126,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/25</b> — block size?,128,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/26</b> — subnet mask?,255.255.255.192,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.255.192</b> — what prefix length?,/26,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/26</b> — usable hosts?,62,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/26</b> — block size?,64,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/27</b> — subnet mask?,255.255.255.224,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.255.224</b> — what prefix length?,/27,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/27</b> — usable hosts?,30,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/27</b> — block size?,32,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/28</b> — subnet mask?,255.255.255.240,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.255.240</b> — what prefix length?,/28,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/28</b> — usable hosts?,14,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/28</b> — block size?,16,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/29</b> — subnet mask?,255.255.255.248,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.255.248</b> — what prefix length?,/29,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/29</b> — usable hosts?,6,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/29</b> — block size?,8,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/30</b> — subnet mask?,255.255.255.252,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>255.255.255.252</b> — what prefix length?,/30,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/30</b> — usable hosts?,2,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/30</b> — block size?,4,,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/31</b> — usable hosts?,2 (both usable),RFC 3021. No network ID or broadcast on a point-to-point link.,05
+Network+ N10-009 Rapid Recall::05 Subnetting,<b>/32</b> — what is it?,A single host route,Used for loopbacks and host-specific routes.,05
+Network+ N10-009 Rapid Recall::05 Subnetting,Formula for <b>usable hosts</b> in a subnet?,2^h − 2,h = host bits = 32 minus the prefix length.,05
+Network+ N10-009 Rapid Recall::05 Subnetting,Formula for <b>number of subnets</b> from borrowed bits?,2^b,b = bits borrowed from the host portion.,05
+Network+ N10-009 Rapid Recall::05 Subnetting,Fast way to get <b>block size</b> from a mask octet?,256 − the mask octet,Mask 224 → 256−224 = 32. Networks start at multiples of 32.,05
+Network+ N10-009 Rapid Recall::05 Subnetting,Which mask octet values should you recognize instantly?,"<div class=""lst"">128 · 192 · 224 · 240 · 248 · 252 · 254 · 255</div>",These are /25 through /32 in the last octet.,05
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Unicast</b> — define it.,One to one,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Multicast</b> — define it.,"One to many, only to subscribed hosts",224.0.0.0/4 in IPv4.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Broadcast</b> — define it.,One to all on the local subnet,IPv4 only — IPv6 has no broadcast.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Anycast</b> — define it.,One to nearest — many hosts share an address,Used by root DNS and CDNs.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Collision domain</b> — define it.,Devices that can collide with each other,Every switch port is its own.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Broadcast domain</b> — define it.,Devices that receive each other's broadcasts,Bounded by a VLAN or a router.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>VLAN</b> — define it.,A logical broadcast domain independent of physical location,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Trunk port</b> — define it.,Carries multiple VLANs between switches using 802.1Q tags,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Access port</b> — define it.,"Carries one VLAN, untagged, to an end device",,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Native VLAN</b> — define it.,The one VLAN sent untagged on a trunk,Default is VLAN 1 — change it.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>SVI</b> — define it.,A VLAN's Layer 3 interface on a multilayer switch,Gives the VLAN a default gateway.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Subinterface</b> — define it.,"A logical division of a router interface, one per VLAN",Router-on-a-stick.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Link aggregation</b> — define it.,Bundling physical links into one logical link,Negotiated by LACP (802.3ad).,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>MTU</b> — define it.,Largest payload in one frame,Ethernet default is 1500 bytes.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Jumbo frame</b> — define it.,A frame carrying up to about 9000 bytes,Must be configured consistently end to end.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>NAT</b> — define it.,Maps private addresses to public ones,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>PAT</b> — define it.,Maps many private hosts to one public IP using source ports,What almost every office router does.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>FHRP</b> — define it.,Two routers share a virtual IP so hosts keep one gateway,"VRRP, HSRP, GLBP.",21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>VIP</b> — define it.,A virtual IP shared by redundant devices or a load balancer pool,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Route summarization</b> — define it.,Advertising several contiguous networks as one shorter prefix,Also called supernetting or aggregation.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>VLSM</b> — define it.,Using different mask lengths within the same network,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>CIDR</b> — define it.,Classless addressing — prefix length replaces fixed classes,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>SLAAC</b> — define it.,IPv6 hosts generate their own address from a router advertisement,No DHCP server needed.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>NDP</b> — define it.,IPv6 neighbor discovery — replaces ARP,Uses ICMPv6.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Dual stack</b> — define it.,Running IPv4 and IPv6 simultaneously,The preferred migration path.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>NAT64</b> — define it.,Translates between IPv6-only clients and IPv4-only servers,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>IaaS</b> — define it.,"You get VMs, storage and network; you manage the OS and up",,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>PaaS</b> — define it.,You get a platform; you manage only your app and data,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>SaaS</b> — define it.,You get finished software; you manage almost nothing,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>SDN</b> — define it.,Separates the control plane from the data plane,A central controller programs devices via APIs.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>SD-WAN</b> — define it.,Software-defined control over WAN links,Steers traffic by application policy and link quality.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>VXLAN</b> — define it.,Tunnels Layer 2 frames inside UDP across Layer 3,24-bit VNI gives about 16 million segments.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>NFV</b> — define it.,Running network functions as software instead of appliances,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>IaC</b> — define it.,Defining infrastructure in version-controlled files,"Terraform, Ansible.",21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>SASE</b> — define it.,SD-WAN plus cloud-delivered security at the edge,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Type 1 hypervisor</b> — define it.,Runs directly on hardware,"ESXi, Hyper-V, KVM.",21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Type 2 hypervisor</b> — define it.,Runs on top of a host operating system,"VirtualBox, VMware Workstation.",21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>NAS</b> — define it.,File-level storage over the existing Ethernet network,"SMB, NFS.",21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>SAN</b> — define it.,Block-level storage on a dedicated high-speed fabric,Looks like a local disk to the server.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Spine-and-leaf</b> — define it.,"Every leaf connects to every spine, leaves never to each other",Predictable hop count for east-west traffic.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Three-tier model</b> — define it.,"Core, distribution, access",,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Collapsed core</b> — define it.,Core and distribution merged into one layer,Used in smaller networks.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Forward proxy</b> — define it.,Sits in front of clients — caching and filtering,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Reverse proxy</b> — define it.,Sits in front of servers — SSL offload and load balancing,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>CDN</b> — define it.,Geographically distributed caches serving content near the user,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Load balancer</b> — define it.,Distributes requests across a pool of servers,Clients connect to the VIP.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Split tunnel</b> — define it.,Only corporate traffic goes through the VPN,"Faster, less visibility.",21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Full tunnel</b> — define it.,All traffic goes through the VPN,"More control, more load on the concentrator.",21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Latency</b> — define it.,Delay in transit,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Jitter</b> — define it.,Variation in latency,The main cause of choppy VoIP audio.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Packet loss</b> — define it.,Packets that never arrive,Collapses TCP throughput disproportionately.,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Bandwidth</b> — define it.,The link's theoretical maximum capacity,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Throughput</b> — define it.,What you actually achieve,,21
+Network+ N10-009 Rapid Recall::21 Core Concepts,<b>Goodput</b> — define it.,"Useful application data only, excluding overhead and retransmissions",,21
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 5e</b> — rated speed?,1 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 5e</b> — distance?,100 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 5e</b> — bandwidth?,100 MHz,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 6</b> — rated speed?,1 Gbps at 100 m; 10 Gbps only to 55 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 6</b> — distance?,55 m for 10G,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 6</b> — bandwidth?,250 MHz,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 6a</b> — rated speed?,10 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 6a</b> — distance?,100 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 6a</b> — bandwidth?,500 MHz,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 7</b> — rated speed?,10 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 7</b> — distance?,100 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 7</b> — bandwidth?,600 MHz,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 8</b> — rated speed?,25 or 40 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 8</b> — distance?,30 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Cat 8</b> — bandwidth?,2000 MHz,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10BASE-T</b> — speed?,10 Mbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10BASE-T</b> — media type?,Copper UTP,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10BASE-T</b> — maximum distance?,100 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>100BASE-TX</b> — speed?,100 Mbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>100BASE-TX</b> — media type?,Copper UTP,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>100BASE-TX</b> — maximum distance?,100 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>1000BASE-T</b> — speed?,1 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>1000BASE-T</b> — media type?,Copper UTP,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>1000BASE-T</b> — maximum distance?,100 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>1000BASE-SX</b> — speed?,1 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>1000BASE-SX</b> — media type?,Multimode fiber,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>1000BASE-SX</b> — maximum distance?,550 m (OM2),,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>1000BASE-LX</b> — speed?,1 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>1000BASE-LX</b> — media type?,Single-mode fiber,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>1000BASE-LX</b> — maximum distance?,5-10 km,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10GBASE-T</b> — speed?,10 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10GBASE-T</b> — media type?,Copper UTP,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10GBASE-T</b> — maximum distance?,"55 m on Cat 6, 100 m on Cat 6a",,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10GBASE-SR</b> — speed?,10 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10GBASE-SR</b> — media type?,Multimode fiber,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10GBASE-SR</b> — maximum distance?,300-400 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10GBASE-LR</b> — speed?,10 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10GBASE-LR</b> — media type?,Single-mode fiber,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>10GBASE-LR</b> — maximum distance?,10 km,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>40GBASE-SR4</b> — speed?,40 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>40GBASE-SR4</b> — media type?,Multimode fiber (MPO),,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>40GBASE-SR4</b> — maximum distance?,100-150 m,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>LC</b> connector — what media?,Fiber,"Small form factor, latched duplex — the data centre default",08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>SC</b> connector — what media?,Fiber,"Square push-pull, 'stick and click'",08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>ST</b> connector — what media?,Fiber,"Round bayonet, 'stick and twist'",08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>MPO / MTP</b> connector — what media?,Fiber,Multi-fiber ribbon for 40G and 100G,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>RJ45</b> connector — what media?,Copper,8-pin Ethernet,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>RJ11</b> connector — what media?,Copper,6-pin telephone,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>F-type</b> connector — what media?,Coax,Cable broadband,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>BNC</b> connector — what media?,Coax,"Bayonet connector, legacy coax and video",08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>SFP</b> — speed?,1 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>SFP+</b> — speed?,10 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>QSFP</b> — speed?,4 × 1 Gbps (QSFP+ = 4 × 10 = 40 Gbps),,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>QSFP28</b> — speed?,100 Gbps,,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Single-mode fiber</b> — core size and reach?,"9 micron core, kilometres","Yellow jacket, laser source.",08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,<b>Multimode fiber</b> — core size and reach?,"50 or 62.5 micron core, a few hundred metres",Aqua or orange jacket.,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,Difference between <b>T568A and T568B</b>?,The orange and green pairs are swapped,A on one end and B on the other makes a crossover.,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,What is a <b>crossover cable</b> for?,Connecting like devices — switch to switch,Auto-MDI-X makes this mostly historical.,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,What is a <b>rollover cable</b> for?,Console access to a device,All eight conductors reversed. Not Ethernet.,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,What is a <b>DAC</b> cable?,Direct attach copper with fixed transceivers,Short 1-7 m switch-to-switch links.,08
+Network+ N10-009 Rapid Recall::08 Cabling & Media,What is <b>plenum-rated</b> cable for?,Air-handling spaces above ceilings and under floors,Required by fire code.,08
+Network+ N10-009 Rapid Recall::13 Switching & STP,STP <b>Blocking</b> state — what happens?,"Receives BPDUs, forwards nothing",,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,STP <b>Listening</b> state — what happens?,"Processes BPDUs, no learning",,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,STP <b>Learning</b> state — what happens?,"Builds the MAC table, still not forwarding",,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,STP <b>Forwarding</b> state — what happens?,Normal operation,,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,STP <b>Disabled</b> state — what happens?,Administratively off,,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,STP port states in order?,Blocking → Listening → Learning → Forwarding,802.1D takes 30-50 seconds; RSTP cuts it to seconds.,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,STP <b>Root port</b> — what is it?,Best path on a non-root switch toward the root bridge,,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,STP <b>Designated port</b> — what is it?,The forwarding port for a given segment,,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,STP <b>Blocking / alternate port</b> — what is it?,Redundant path held down to prevent a loop,,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,How is the <b>root bridge</b> elected?,Lowest bridge ID (priority + MAC),Default priority is 32768.,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,What problem does <b>spanning tree</b> solve?,Layer 2 loops,"Ethernet frames have no TTL, so a looped broadcast never dies.",13
+Network+ N10-009 Rapid Recall::13 Switching & STP,What does <b>PortFast</b> do?,Moves an access port straight to forwarding,,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,What does <b>BPDU Guard</b> do?,Shuts down an access port that receives a BPDU,Stops a user plugging in their own switch.,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,What does <b>Root Guard</b> do?,Prevents a port from becoming a root port,Protects your chosen root bridge.,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,How does a switch <b>learn</b> MAC addresses?,From the source MAC of every frame it receives,,13
+Network+ N10-009 Rapid Recall::13 Switching & STP,What does a switch do with an <b>unknown unicast</b>?,Floods it out every port in the VLAN,,13
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog severity <b>0</b>?,Emergency,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog <b>Emergency</b> — what level number?,0,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog severity <b>1</b>?,Alert,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog <b>Alert</b> — what level number?,1,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog severity <b>2</b>?,Critical,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog <b>Critical</b> — what level number?,2,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog severity <b>3</b>?,Error,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog <b>Error</b> — what level number?,3,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog severity <b>4</b>?,Warning,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog <b>Warning</b> — what level number?,4,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog severity <b>5</b>?,Notice,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog <b>Notice</b> — what level number?,5,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog severity <b>6</b>?,Informational,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog <b>Informational</b> — what level number?,6,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog severity <b>7</b>?,Debug,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Syslog <b>Debug</b> — what level number?,7,,15
+Network+ N10-009 Rapid Recall::15 Syslog,Is a lower or higher syslog number more severe?,"Lower — 0 is Emergency, 7 is Debug",,15
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11a</b> — frequency band?,5 GHz,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11a</b> — maximum speed?,54 Mbps,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11b</b> — frequency band?,2.4 GHz,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11b</b> — maximum speed?,11 Mbps,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11g</b> — frequency band?,2.4 GHz,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11g</b> — maximum speed?,54 Mbps,Backward compatible with 802.11b,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11n (Wi-Fi 4)</b> — frequency band?,2.4 and 5 GHz,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11n (Wi-Fi 4)</b> — maximum speed?,600 Mbps,Introduced MIMO and channel bonding,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11ac (Wi-Fi 5)</b> — frequency band?,5 GHz only,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11ac (Wi-Fi 5)</b> — maximum speed?,~6.9 Gbps,Introduced downlink MU-MIMO and 80/160 MHz channels,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11ax (Wi-Fi 6 / 6E)</b> — frequency band?,"2.4, 5 and 6 GHz",,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>802.11ax (Wi-Fi 6 / 6E)</b> — maximum speed?,~9.6 Gbps,Introduced OFDMA and BSS coloring,10
+Network+ N10-009 Rapid Recall::10 Wireless,Non-overlapping 2.4 GHz channels?,"1, 6 and 11",Any other combination overlaps and causes interference.,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>SSID</b> — what is it?,The wireless network name,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>BSSID</b> — what is it?,The MAC address of a specific AP radio,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>ESSID</b> — what is it?,The same SSID shared across multiple APs for roaming,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>WPA2</b> encryption?,AES-CCMP,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>WPA3</b> encryption?,AES-GCMP,,10
+Network+ N10-009 Rapid Recall::10 Wireless,What replaced the PSK handshake in <b>WPA3</b>?,SAE (Simultaneous Authentication of Equals),Also called Dragonfly.,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>Omnidirectional</b> antenna — use case?,General coverage in all directions,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>Directional</b> antenna — use case?,Point-to-point links between buildings,"Yagi, parabolic, patch.",10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>Autonomous AP</b> — what is it?,A self-contained AP configured individually,,10
+Network+ N10-009 Rapid Recall::10 Wireless,<b>Lightweight AP</b> — what is it?,An AP that gets its configuration from a wireless LAN controller,,10
+Network+ N10-009 Rapid Recall::10 Wireless,What is <b>band steering</b>?,Nudging dual-band clients onto 5 or 6 GHz,,10
+Network+ N10-009 Rapid Recall::10 Wireless,What is a <b>captive portal</b>?,A page that intercepts the first request and requires login,Standard on guest networks.,10
+Network+ N10-009 Rapid Recall::20 Operations,<b>RPO</b> — define it.,How much data you can afford to lose,Drives backup frequency. Looks backward.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>RTO</b> — define it.,How long you can afford to be down,Drives recovery design. Looks forward.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>MTTR</b> — define it.,Mean time to repair a failed component,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>MTBF</b> — define it.,Mean time between failures,A reliability measure.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Cold site</b> — define it.,Space and power only,"Cheapest, days to bring up.",20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Warm site</b> — define it.,"Hardware and connectivity ready, data restored from backup",Hours.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Hot site</b> — define it.,Fully mirrored and running,"Minutes, most expensive.",20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Active-active</b> — define it.,All nodes carry traffic,"Failure reduces capacity, not availability.",20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Active-passive</b> — define it.,Standby idles until failover,"Simpler, wastes capacity, brief cutover.",20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Tabletop exercise</b> — define it.,Discussion-based walkthrough of the plan,No systems are touched.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Validation test</b> — define it.,Actually failing over and proving recovery works,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>EOL</b> — define it.,Vendor stops selling the product,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>EOS</b> — define it.,Vendor stops patching and supporting it,The security-critical date.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Full backup</b> — define it.,Everything; restore needs one set,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Incremental backup</b> — define it.,Changes since the last backup of any type,"Smallest backups, slowest restore.",20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Differential backup</b> — define it.,Changes since the last full backup,Restore needs the full plus the latest differential.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>3-2-1 rule</b> — define it.,"3 copies, 2 media types, 1 off-site",,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Baseline</b> — define it.,Recorded normal utilization and performance,Without it you cannot tell busy from abnormal.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>SNMP manager</b> — define it.,The monitoring system that polls agents,Polls on UDP 161.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>SNMP agent</b> — define it.,Software on the managed device,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>MIB</b> — define it.,The database of manageable objects on a device,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>OID</b> — define it.,The unique numeric identifier for one manageable object,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>SNMP trap</b> — define it.,Unsolicited alert pushed from agent to manager,Arrives on UDP 162.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>SNMPv3</b> — define it.,The version that adds authentication and encryption,v1 and v2c use a cleartext community string.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>NetFlow</b> — define it.,"Records flows — who talked to whom, on what port, how much",The answer for finding top bandwidth consumers.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>sFlow</b> — define it.,Samples packets rather than recording full flows,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>IPFIX</b> — define it.,The standardized version of NetFlow,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>SIEM</b> — define it.,"Aggregates and correlates logs, alerts on patterns",,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>IPAM</b> — define it.,IP address management — tracks subnet and address allocation,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>SLA</b> — define it.,Contractual commitment on uptime and response times,99.9% is about 8.8 hours of downtime a year.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>MDF</b> — define it.,Main distribution frame — primary termination point,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>IDF</b> — define it.,Intermediate distribution frame — a floor or wing wiring closet,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Jump box</b> — define it.,A hardened single entry point into a sensitive segment,,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>In-band management</b> — define it.,Managing devices over the production network,Fails when the network fails.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Out-of-band management</b> — define it.,A separate path such as a console server or cellular modem,Still works when production is down.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Traffic shaping</b> — define it.,Buffers and smooths traffic to a rate,Produces delay.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>Traffic policing</b> — define it.,Drops or remarks traffic above a rate,Produces loss.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>DSCP</b> — define it.,Marks packets with a priority value in the IP header,EF is the marking for voice.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>UPS</b> — define it.,Battery backup that also conditions power,Protection from sags and surges matters as much as runtime.,20
+Network+ N10-009 Rapid Recall::20 Operations,<b>PDU</b> — define it.,Power distribution unit in a rack,A managed PDU allows remote power cycling.,20
+Network+ N10-009 Rapid Recall::01 Ports,<b>FTP data</b> — port number?,20,FTP is the classic 'two ports' answer.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>FTP data</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>FTP data</b> do?,Active-mode FTP data channel,FTP is the classic 'two ports' answer.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>FTP control</b> — port number?,21,Insecure — the fix is always SFTP (22) or FTPS (989/990).,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>FTP control</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>FTP control</b> do?,"File transfer commands, cleartext",Insecure — the fix is always SFTP (22) or FTPS (989/990).,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SSH</b> — port number?,22,Any 'securely manage a device remotely' question answers SSH.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SSH</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SSH</b> do?,Encrypted remote CLI,Any 'securely manage a device remotely' question answers SSH.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SFTP</b> — port number?,22,"Do not confuse with FTPS (TLS, 989/990) or TFTP (UDP 69).",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SFTP</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SFTP</b> do?,File transfer inside an SSH session,"Do not confuse with FTPS (TLS, 989/990) or TFTP (UDP 69).",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SCP</b> — port number?,22,"Rides on SSH, so same port 22.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SCP</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SCP</b> do?,Secure copy over SSH,"Rides on SSH, so same port 22.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Telnet</b> — port number?,23,Almost always the wrong answer and a hardening target.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Telnet</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>Telnet</b> do?,"Legacy remote CLI, cleartext",Almost always the wrong answer and a hardening target.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SMTP</b> — port number?,25,Send only. Retrieval is POP3/IMAP.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SMTP</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SMTP</b> do?,Sending and relaying mail,Send only. Retrieval is POP3/IMAP.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>TACACS+</b> — port number?,49,TCP and encrypts the whole packet — the RADIUS contrast.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>TACACS+</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>TACACS+</b> do?,Cisco AAA for device administration,TCP and encrypts the whole packet — the RADIUS contrast.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>DNS</b> — port number?,53,"The classic 'uses both' answer: UDP queries, TCP zone transfers.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>DNS</b> — TCP or UDP?,TCP and UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>DNS</b> do?,Name resolution,"The classic 'uses both' answer: UDP queries, TCP zone transfers.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>DHCP server</b> — port number?,67,"Server 67, client 68. Discover goes to 67.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>DHCP server</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>DHCP server</b> do?,Hands out addresses,"Server 67, client 68. Discover goes to 67.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>DHCP client</b> — port number?,68,Client listens on 68.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>DHCP client</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>DHCP client</b> do?,Receives the offer,Client listens on 68.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>TFTP</b> — port number?,69,"PXE boot, firmware and config pushes.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>TFTP</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>TFTP</b> do?,"Trivial file transfer, no auth","PXE boot, firmware and config pushes.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>HTTP</b> — port number?,80,Hardening answer is always HTTPS 443.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>HTTP</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>HTTP</b> do?,Unencrypted web,Hardening answer is always HTTPS 443.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Kerberos</b> — port number?,88,Port 88 is Kerberos; IP protocol 88 is EIGRP.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Kerberos</b> — TCP or UDP?,TCP and UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>Kerberos</b> do?,Ticket-based authentication in AD,Port 88 is Kerberos; IP protocol 88 is EIGRP.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>POP3</b> — port number?,110,"Multi-device sync answers IMAP, not POP3.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>POP3</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>POP3</b> do?,"Mail retrieval, downloads to one device","Multi-device sync answers IMAP, not POP3.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>NTP</b> — port number?,123,Broken time breaks Kerberos and certificates.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>NTP</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>NTP</b> do?,Time synchronization,Broken time breaks Kerberos and certificates.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>NetBIOS name service</b> — port number?,137,137/138/139 as a group; superseded by SMB 445.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>NetBIOS name service</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>NetBIOS name service</b> do?,Legacy Windows name resolution,137/138/139 as a group; superseded by SMB 445.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>NetBIOS datagram service</b> — port number?,138,Part of the 137-139 legacy group.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>NetBIOS datagram service</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>NetBIOS datagram service</b> do?,Legacy connectionless messaging,Part of the 137-139 legacy group.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>NetBIOS session service</b> — port number?,139,Modern answer is SMB on 445.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>NetBIOS session service</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>NetBIOS session service</b> do?,Legacy Windows file sharing,Modern answer is SMB on 445.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>IMAP</b> — port number?,143,Multi-device scenarios answer IMAP.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>IMAP</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>IMAP</b> do?,"Mail retrieval, syncs across devices",Multi-device scenarios answer IMAP.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SNMP</b> — port number?,161,Manager polls the agent on 161.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SNMP</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SNMP</b> do?,Polling managed devices,Manager polls the agent on 161.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SNMP trap</b> — port number?,162,Trap comes back on 162 — direction is tested.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SNMP trap</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SNMP trap</b> do?,Unsolicited alert from agent,Trap comes back on 162 — direction is tested.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>LDAP</b> — port number?,389,Secure version is LDAPS 636.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>LDAP</b> — TCP or UDP?,TCP and UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>LDAP</b> do?,"Directory lookups, cleartext",Secure version is LDAPS 636.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>HTTPS</b> — port number?,443,Also UDP 443 for HTTP/3 QUIC.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>HTTPS</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>HTTPS</b> do?,TLS-encrypted web,Also UDP 443 for HTTP/3 QUIC.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SMB</b> — port number?,445,Blocked at the perimeter as standard practice.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SMB</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SMB</b> do?,Windows file and printer sharing,Blocked at the perimeter as standard practice.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>IKE / ISAKMP</b> — port number?,500,Pairs with ESP protocol 50 and NAT-T 4500.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>IKE / ISAKMP</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>IKE / ISAKMP</b> do?,IPsec phase 1 key exchange,Pairs with ESP protocol 50 and NAT-T 4500.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Syslog</b> — port number?,514,"Severity 0 is most severe, 7 is Debug.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Syslog</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>Syslog</b> do?,Centralized log collection,"Severity 0 is most severe, 7 is Debug.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SMTP submission</b> — port number?,587,587 = client to its own server; 25 = server to server.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SMTP submission</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SMTP submission</b> do?,Authenticated client mail submission,587 = client to its own server; 25 = server to server.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>LDAPS</b> — port number?,636,The 389 to 636 secure swap.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>LDAPS</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>LDAPS</b> do?,LDAP over SSL/TLS,The 389 to 636 secure swap.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>DNS over TLS (DoT)</b> — port number?,853,DoH uses 443; DoT uses 853.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>DNS over TLS (DoT)</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>DNS over TLS (DoT)</b> do?,Encrypted DNS queries,DoH uses 443; DoT uses 853.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>FTPS</b> — port number?,989/990,"Not SFTP. Different mechanism, different ports.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>FTPS</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>FTPS</b> do?,FTP wrapped in SSL/TLS,"Not SFTP. Different mechanism, different ports.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>IMAPS</b> — port number?,993,Pairs with 143.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>IMAPS</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>IMAPS</b> do?,IMAP over TLS,Pairs with 143.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>POP3S</b> — port number?,995,Pairs with 110.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>POP3S</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>POP3S</b> do?,POP3 over TLS,Pairs with 110.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Microsoft SQL Server</b> — port number?,1433,Exposed 1433 is a standard audit finding.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Microsoft SQL Server</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>Microsoft SQL Server</b> do?,MS SQL database traffic,Exposed 1433 is a standard audit finding.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Oracle SQLnet</b> — port number?,1521,Usually a distractor rather than an answer.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>Oracle SQLnet</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>Oracle SQLnet</b> do?,Oracle database traffic,Usually a distractor rather than an answer.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>H.323</b> — port number?,1720,Older sibling of SIP.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>H.323</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>H.323</b> do?,Legacy VoIP/video call setup,Older sibling of SIP.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>RADIUS authentication</b> — port number?,1812,"UDP, encrypts only the password.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>RADIUS authentication</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>RADIUS authentication</b> do?,AAA for network access,"UDP, encrypts only the password.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>RADIUS accounting</b> — port number?,1813,"1812 auth, 1813 accounting.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>RADIUS accounting</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>RADIUS accounting</b> do?,Session accounting records,"1812 auth, 1813 accounting.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>MySQL / MariaDB</b> — port number?,3306,Recognize on sight.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>MySQL / MariaDB</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>MySQL / MariaDB</b> do?,MySQL database traffic,Recognize on sight.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>RDP</b> — port number?,3389,Graphical = RDP. Text = SSH.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>RDP</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>RDP</b> do?,Graphical Windows remote access,Graphical = RDP. Text = SSH.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>IPsec NAT-T</b> — port number?,4500,Exists because ESP has no ports to translate.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>IPsec NAT-T</b> — TCP or UDP?,UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>IPsec NAT-T</b> do?,IPsec traversal through NAT,Exists because ESP has no ports to translate.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SIP (cleartext)</b> — port number?,5060,Signaling only — audio is RTP on dynamic ports.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SIP (cleartext)</b> — TCP or UDP?,TCP and UDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SIP (cleartext)</b> do?,VoIP call signaling,Signaling only — audio is RTP on dynamic ports.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SIP (TLS)</b> — port number?,5061,"5060 plain, 5061 TLS.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>SIP (TLS)</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>SIP (TLS)</b> do?,Encrypted VoIP signaling,"5060 plain, 5061 TLS.",01
+Network+ N10-009 Rapid Recall::01 Ports,<b>PostgreSQL</b> — port number?,5432,Distractor-level recognition.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>PostgreSQL</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>PostgreSQL</b> do?,PostgreSQL database traffic,Distractor-level recognition.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>HTTP alternate / proxy</b> — port number?,8080,Frequently seen on proxies and management interfaces.,01
+Network+ N10-009 Rapid Recall::01 Ports,<b>HTTP alternate / proxy</b> — TCP or UDP?,TCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What does <b>HTTP alternate / proxy</b> do?,"Alternate web port, common proxy port",Frequently seen on proxies and management interfaces.,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>20</b>?,FTP data,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>21</b>?,FTP control,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>22</b>?,SSH / SFTP / SCP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>23</b>?,Telnet,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>25</b>?,SMTP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>49</b>?,TACACS+,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>53</b>?,DNS,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>67</b>?,DHCP server,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>68</b>?,DHCP client,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>69</b>?,TFTP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>80</b>?,HTTP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>88</b>?,Kerberos,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>110</b>?,POP3,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>123</b>?,NTP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>137</b>?,NetBIOS name service,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>138</b>?,NetBIOS datagram service,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>139</b>?,NetBIOS session service,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>143</b>?,IMAP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>161</b>?,SNMP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>162</b>?,SNMP trap,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>389</b>?,LDAP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>443</b>?,HTTPS,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>445</b>?,SMB,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>500</b>?,IKE / ISAKMP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>514</b>?,Syslog,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>587</b>?,SMTP submission,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>636</b>?,LDAPS,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>853</b>?,DNS over TLS (DoT),,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>989/990</b>?,FTPS,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>993</b>?,IMAPS,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>995</b>?,POP3S,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>1433</b>?,Microsoft SQL Server,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>1521</b>?,Oracle SQLnet,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>1720</b>?,H.323,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>1812</b>?,RADIUS authentication,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>1813</b>?,RADIUS accounting,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>3306</b>?,MySQL / MariaDB,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>3389</b>?,RDP,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>4500</b>?,IPsec NAT-T,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>5060</b>?,SIP (cleartext),,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>5061</b>?,SIP (TLS),,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>5432</b>?,PostgreSQL,,01
+Network+ N10-009 Rapid Recall::01 Ports,What runs on port <b>8080</b>?,HTTP alternate / proxy,,01
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>Directly connected</b>?,0,,12
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>Static route</b>?,1,,12
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>eBGP</b>?,20,,12
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>EIGRP (internal)</b>?,90,,12
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>OSPF</b>?,110,,12
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>IS-IS</b>?,115,,12
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>RIP</b>?,120,,12
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>EIGRP (external)</b>?,170,,12
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>iBGP</b>?,200,,12
+Network+ N10-009 Rapid Recall::12 Routing,Administrative distance of <b>Unreachable</b>?,255,,12
+Network+ N10-009 Rapid Recall::12 Routing,What does <b>administrative distance</b> rank?,The trustworthiness of the route source,Lowest AD wins.,12
+Network+ N10-009 Rapid Recall::12 Routing,Route selection order a router uses?,"<div class=""lst"">1. Longest prefix match<br>2. Lowest administrative distance<br>3. Lowest metric<br>4. Load balance equal-cost paths</div>",Longest prefix match is evaluated before AD — a common trap.,12
+Network+ N10-009 Rapid Recall::12 Routing,<b>OSPF</b> — what metric?,Cost (from bandwidth),,12
+Network+ N10-009 Rapid Recall::12 Routing,<b>RIP</b> — what metric?,"Hop count, max 15",,12
+Network+ N10-009 Rapid Recall::12 Routing,<b>EIGRP</b> — what metric?,Bandwidth and delay,,12
+Network+ N10-009 Rapid Recall::12 Routing,<b>BGP</b> — what metric?,AS-path and policy attributes,,12
+Network+ N10-009 Rapid Recall::12 Routing,<b>IS-IS</b> — what metric?,Cost,,12
+Network+ N10-009 Rapid Recall::12 Routing,<b>OSPF</b> — protocol type?,Link-state interior gateway protocol,,12
+Network+ N10-009 Rapid Recall::12 Routing,<b>BGP</b> — protocol type?,Path-vector exterior gateway protocol,Routes between autonomous systems.,12
+Network+ N10-009 Rapid Recall::12 Routing,<b>EIGRP</b> — protocol type?,Cisco advanced distance-vector,,12
+Network+ N10-009 Rapid Recall::12 Routing,<b>RIP</b> — maximum hop count?,15 (16 means unreachable),,12
+Network+ N10-009 Rapid Recall::12 Routing,Which OSPF area is the <b>backbone</b>?,Area 0,Every other area must connect to it.,12
+Network+ N10-009 Rapid Recall::19 Security,<b>Confidentiality</b> — define it.,Only authorized parties can read the data,Provided by encryption.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Integrity</b> — define it.,The data has not been altered,Provided by hashing and digital signatures.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Availability</b> — define it.,The system is there when needed,Provided by redundancy and HA.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Vulnerability</b> — define it.,A weakness,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Threat</b> — define it.,Something that could act on a weakness,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Exploit</b> — define it.,The technique or code used against a vulnerability,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Risk</b> — define it.,Likelihood multiplied by impact,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Authentication</b> — define it.,Proving who you are,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Authorization</b> — define it.,What you are allowed to do,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Accounting</b> — define it.,Recording what you did,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Least privilege</b> — define it.,Granting only the minimum access needed,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>RBAC</b> — define it.,"Permissions assigned to roles, users assigned to roles",,19
+Network+ N10-009 Rapid Recall::19 Security,<b>MFA</b> — define it.,Two or more different factor types,Two passwords is not MFA.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>SSO</b> — define it.,"Authenticate once, access many applications",,19
+Network+ N10-009 Rapid Recall::19 Security,<b>SAML</b> — define it.,XML standard passing authentication assertions for SSO,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Honeypot</b> — define it.,A single decoy system designed to be attacked,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Honeynet</b> — define it.,An entire decoy network,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Geofencing</b> — define it.,Restricting access based on physical location,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Screened subnet (DMZ)</b> — define it.,A zone between the internet and the LAN for public-facing servers,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Zero Trust</b> — define it.,"Never trust, always verify — no implicit trust from network location",,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Defense in depth</b> — define it.,Layering independent controls so no single failure is fatal,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>IDS</b> — define it.,"Detects and alerts, out of band",Cannot block traffic.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>IPS</b> — define it.,"Detects and blocks, inline",A false positive drops legitimate traffic.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Symmetric encryption</b> — define it.,"One shared key, fast, used for bulk data",AES.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Asymmetric encryption</b> — define it.,"A key pair, slow, used to exchange keys and sign","RSA, ECC.",19
+Network+ N10-009 Rapid Recall::19 Security,<b>Hashing</b> — define it.,One-way integrity check,Not reversible and not confidentiality.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>PKI</b> — define it.,The system of CAs and certificates that establishes trust,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Self-signed certificate</b> — define it.,"Signed by its own key, not by a trusted CA",Always produces a browser warning.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>RADIUS</b> — define it.,AAA for network access — UDP 1812/1813,Encrypts only the password; combines authn and authz.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>TACACS+</b> — define it.,AAA for device administration — TCP 49,"Encrypts the whole packet; separates authn, authz and accounting.",19
+Network+ N10-009 Rapid Recall::19 Security,<b>802.1X supplicant</b> — define it.,The client requesting access,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>802.1X authenticator</b> — define it.,The switch or AP controlling the port,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>802.1X authentication server</b> — define it.,The RADIUS server making the decision,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>WPA2</b> — define it.,AES-CCMP with a 4-way handshake,Vulnerable to offline dictionary attacks.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>WPA3</b> — define it.,AES-GCMP with SAE replacing the PSK handshake,Adds forward secrecy and protected management frames.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>PSK</b> — define it.,One shared passphrase for everyone,Rotating it means touching every device.,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Enterprise (802.1X) wireless</b> — define it.,Each user authenticates individually to RADIUS,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>PCI DSS</b> — define it.,Payment card data handling standard,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>GDPR</b> — define it.,EU personal data privacy regulation,,19
+Network+ N10-009 Rapid Recall::19 Security,<b>Data locality</b> — define it.,Requirement that data stays within a jurisdiction,,19
+Network+ N10-009 Rapid Recall::06 Key Addresses,Private Class A range?,10.0.0.0/8,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Private Class B range?,172.16.0.0/12,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Private Class C range?,192.168.0.0/16,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,APIPA range?,169.254.0.0/16,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,IPv4 loopback?,127.0.0.1 (127.0.0.0/8),,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Default route?,0.0.0.0/0,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Class A first octet range?,1-126,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Class B first octet range?,128-191,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Class C first octet range?,192-223,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Class D (multicast) range?,224-239,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Class E (experimental) range?,240-255,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,IPv6 global unicast prefix?,2000::/3,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,IPv6 link-local prefix?,fe80::/10,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,IPv6 unique local prefix?,fc00::/7,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,IPv6 multicast prefix?,ff00::/8,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,IPv6 loopback?,::1,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,IPv6 default route?,::/0,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Standard IPv6 LAN subnet size?,/64,,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,An address in <b>169.254.x.x</b> means what?,DHCP failed and APIPA self-assigned,One of the most tested symptoms on the exam.,06
+Network+ N10-009 Rapid Recall::06 Key Addresses,Why is the IPv6 LAN subnet always <b>/64</b>?,SLAAC and EUI-64 need a 64-bit interface ID,,06
+Network+ N10-009 Rapid Recall::04 Secure Swaps,What replaces <b>Telnet (23)</b>?,SSH (22),Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::04 Secure Swaps,What replaces <b>FTP (20/21)</b>?,SFTP (22) or FTPS (989/990),Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::04 Secure Swaps,What replaces <b>HTTP (80)</b>?,HTTPS (443),Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::04 Secure Swaps,What replaces <b>SMTP (25)</b>?,SMTP submission (587),Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::04 Secure Swaps,What replaces <b>POP3 (110)</b>?,POP3S (995),Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::04 Secure Swaps,What replaces <b>IMAP (143)</b>?,IMAPS (993),Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::04 Secure Swaps,What replaces <b>LDAP (389)</b>?,LDAPS (636),Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::04 Secure Swaps,What replaces <b>SNMPv1 / v2c</b>?,SNMPv3,Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::04 Secure Swaps,"What replaces <b>DNS (53, cleartext)</b>?",DoH (443) or DoT (853),Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::04 Secure Swaps,What replaces <b>WEP / WPA</b>?,WPA2 or WPA3,Hardening and compliance questions all resolve to this table.,04
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>ping</b> do?,Tests Layer 3 reachability and shows latency,A failed ping does not prove a host is down — ICMP is often filtered.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>traceroute / tracert</b> do?,Maps the hop-by-hop path to a destination,Works by incrementing TTL and reading ICMP Time Exceeded replies.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>tracert (Windows)</b> do?,Traces the path using ICMP,Windows uses ICMP; Linux traceroute uses UDP by default.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>pathping / mtr</b> do?,Combines traceroute with sustained ping for per-hop loss,Use when loss is intermittent and a single traceroute proves nothing.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>ipconfig / ifconfig / ip</b> do?,Shows local interface configuration,ipconfig /all adds DNS and DHCP detail.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>ipconfig /flushdns</b> do?,Clears the local DNS resolver cache,The fix when one client still reaches an old address after a migration.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>ipconfig /release and /renew</b> do?,Forces a new DHCP lease,Makes the client redo DORA.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>nslookup</b> do?,Queries DNS directly,Point it at a public resolver to prove whether your DNS is the problem.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>dig</b> do?,Queries DNS with detailed output,Linux/macOS. Shows the remaining TTL on a cached answer.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>netstat</b> do?,Shows listening ports and active connections on the local host,Confirms a service is actually listening.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>netstat -r</b> do?,Displays the local routing table,Same information as route print.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>arp -a</b> do?,Shows the local IP-to-MAC cache,Finds duplicate IPs and reveals ARP poisoning.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>tcpdump</b> do?,Captures packets from the command line,"Capture on a server, analyze the file in Wireshark.",16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Wireshark</b> do?,Graphical protocol analyzer,Needs a SPAN port or TAP to see other hosts' traffic.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Nmap</b> do?,Scans a remote host for open ports and services,Remote scanning. netstat is the local equivalent.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>iperf</b> do?,Measures achievable throughput between two hosts,Lets you test one segment at a time.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Speed tester</b> do?,Measures actual bandwidth over a path,Test at the demarc to isolate your network from the carrier's.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>LLDP</b> do?,Vendor-neutral Layer 2 neighbor discovery,802.1AB. CDP is the Cisco equivalent.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>CDP</b> do?,Cisco proprietary Layer 2 neighbor discovery,Tells you what is plugged into which port.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Toner probe</b> do?,Locates and traces a specific cable in a bundle,Locates. A cable tester validates.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Cable tester</b> do?,Verifies continuity and correct pinout,"Validates wiring, not performance.",16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Cable certifier</b> do?,Proves a run meets its category spec under load,Measures attenuation and crosstalk; a basic tester cannot.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>TDR</b> do?,Finds the distance to a fault on copper,Optical version is the OTDR.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>OTDR</b> do?,Finds the distance to a fault on fiber,The O is for optical.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Visual fault locator</b> do?,Shoots visible light down fiber to reveal breaks,Cheap first check for fiber faults.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Optical power meter</b> do?,Measures light levels arriving on a fiber link,Confirms whether a transceiver is degrading.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Wi-Fi analyzer</b> do?,"Shows SSIDs, channels and signal strength",Sees Wi-Fi only.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Spectrum analyzer</b> do?,Shows all RF energy including non-Wi-Fi interference,Sees microwaves and cordless phones that a Wi-Fi analyzer cannot.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Network TAP</b> do?,Passive inline hardware that copies traffic losslessly,Preferred over SPAN for forensic capture.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>SPAN / mirror port</b> do?,Switch feature that copies traffic to an analyzer port,"Free, but can drop frames under load.",16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Protocol analyzer</b> do?,Inspects the actual contents of traffic on the wire,The answer when a question asks how to see real packet contents.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Punch-down tool</b> do?,Terminates cable onto a patch panel or keystone jack,110 blocks are the modern data standard.,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Crimper</b> do?,Attaches an RJ45 connector to a cable end,,16
+Network+ N10-009 Rapid Recall::16 Tools,What does <b>Loopback adapter</b> do?,Tests a port by looping transmit back to receive,,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to test whether a host is reachable at Layer 3?,ping,Latency and loss come free in the summary line.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to find where latency enters a path?,traceroute / tracert,Latency that rises at a hop and stays high afterwards is real.,16
+Network+ N10-009 Rapid Recall::16 Tools,"Which tool do you use to find a device's IP, mask, gateway and DNS?",ipconfig /all (or ip addr),Also shows which DHCP server issued the lease.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to prove whether a problem is DNS?,nslookup or dig,Query a known-good public resolver and compare.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to confirm a service is listening on a server?,netstat -an,Local sockets. Nmap is the remote equivalent.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to find a duplicate IP address?,"arp -a, then show mac-address-table",Trace the unexpected MAC to a physical port.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to see the actual contents of traffic?,protocol analyzer (Wireshark / tcpdump),Needs a SPAN port or TAP on a switched network.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to scan a remote host for open ports?,Nmap,Also does host discovery and service fingerprinting.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to locate one cable in a large bundle?,toner probe,Locate with a toner; validate with a tester.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to verify a cable is wired correctly?,cable tester,Continuity and pinout only.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to prove a cable run supports 10 Gbps?,cable certifier,"Measures attenuation, NEXT and return loss.",16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to find the distance to a break in fiber?,OTDR,TDR is the copper version.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to identify non-Wi-Fi wireless interference?,spectrum analyzer,A Wi-Fi analyzer cannot see microwaves or cordless phones.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to discover what device is on a switch port?,LLDP or CDP,Also from show mac-address-table.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to measure real throughput between two hosts?,iperf,Isolates a single segment.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to find what is consuming bandwidth?,"flow data — NetFlow, sFlow or IPFIX",Not a protocol analyzer. Flow data shows top talkers.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to check PoE budget and per-port draw?,show power inline,,16
+Network+ N10-009 Rapid Recall::16 Tools,"Which tool do you use to see interface errors, duplex and utilization?",show interface,Where cable and duplex faults become visible.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to map a MAC address to a physical switch port?,show mac-address-table,,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to see the routing table on a router?,show ip route,Also reveals whether a default route exists.,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to check VLAN membership per port?,show vlan,,16
+Network+ N10-009 Rapid Recall::16 Tools,Which tool do you use to see the root bridge and port roles?,show spanning-tree,Catches an access switch that wrongly became root.,16
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,<b>ICMP</b> — IP protocol number?,1,"Protocol 1, not a port. Blocked ICMP breaks Path MTU Discovery.",02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,Which protocol is <b>IP protocol 1</b>?,ICMP,,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,What does <b>ICMP</b> do?,Diagnostics and error messaging,"Protocol 1, not a port. Blocked ICMP breaks Path MTU Discovery.",02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,<b>TCP</b> — IP protocol number?,6,"Handshake: SYN, SYN/ACK, ACK.",02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,Which protocol is <b>IP protocol 6</b>?,TCP,,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,What does <b>TCP</b> do?,Connection-oriented transport,"Handshake: SYN, SYN/ACK, ACK.",02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,<b>UDP</b> — IP protocol number?,17,Chosen when speed beats guaranteed delivery.,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,Which protocol is <b>IP protocol 17</b>?,UDP,,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,What does <b>UDP</b> do?,Connectionless transport,Chosen when speed beats guaranteed delivery.,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,<b>GRE</b> — IP protocol number?,47,GRE does not encrypt — pair it with IPsec.,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,Which protocol is <b>IP protocol 47</b>?,GRE,,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,What does <b>GRE</b> do?,"Tunneling, no encryption",GRE does not encrypt — pair it with IPsec.,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,<b>ESP</b> — IP protocol number?,50,ESP encrypts. AH does not.,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,Which protocol is <b>IP protocol 50</b>?,ESP,,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,What does <b>ESP</b> do?,IPsec encryption and authentication,ESP encrypts. AH does not.,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,<b>AH</b> — IP protocol number?,51,"No encryption, and it breaks through NAT.",02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,Which protocol is <b>IP protocol 51</b>?,AH,,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,What does <b>AH</b> do?,IPsec integrity only,"No encryption, and it breaks through NAT.",02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,<b>EIGRP</b> — IP protocol number?,88,IP protocol 88. Port 88 is Kerberos.,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,Which protocol is <b>IP protocol 88</b>?,EIGRP,,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,What does <b>EIGRP</b> do?,Cisco advanced distance-vector routing,IP protocol 88. Port 88 is Kerberos.,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,<b>OSPF</b> — IP protocol number?,89,"Protocol 89, AD 110, metric is cost.",02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,Which protocol is <b>IP protocol 89</b>?,OSPF,,02
+Network+ N10-009 Rapid Recall::02 IP Protocol Numbers,What does <b>OSPF</b> do?,Link-state routing,"Protocol 89, AD 110, metric is cost.",02
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>DoS</b>?,One source exhausts a resource to deny service,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>DDoS</b>?,Many compromised hosts attack at once,Blocking by source is impractical — needs upstream scrubbing.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>ARP poisoning / spoofing</b>?,Forged ARP replies put an attacker on-path,Mitigated by Dynamic ARP Inspection.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>MAC flooding</b>?,Fills the switch CAM table so it floods traffic everywhere,Mitigated by port security.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>VLAN hopping</b>?,Reaching a VLAN you should not have access to,Two methods: switch spoofing and double tagging.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Switch spoofing</b>?,Negotiating a trunk from a user port,Disable DTP and hardcode access ports.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Double tagging</b>?,Two 802.1Q tags exploit the native VLAN,Change the native VLAN off VLAN 1.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>DNS poisoning</b>?,Injecting false records into a resolver cache,Mitigated by DNSSEC.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Rogue DHCP server</b>?,Unauthorized server hands out addresses and gateways,Mitigated by DHCP snooping.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Rogue AP</b>?,Any unauthorized access point on the network,Found with wireless intrusion detection.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Evil twin</b>?,A rogue AP impersonating your SSID to harvest credentials,Mitigated by 802.1X with certificate validation.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>On-path attack</b>?,Attacker positions between two parties to read or alter traffic,Formerly called man-in-the-middle.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Deauthentication attack</b>?,Forces wireless clients off so they reconnect to an attacker,Mitigated by protected management frames in WPA3.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Phishing</b>?,Mass fraudulent email seeking credentials or action,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Spear phishing</b>?,Phishing targeted at a specific person,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Whaling</b>?,Phishing targeted at executives,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Vishing</b>?,Social engineering by voice call,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Smishing</b>?,Social engineering by SMS,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Tailgating / piggybacking</b>?,Following an authorized person through a secure door,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Shoulder surfing</b>?,Observing credentials or data over someone's shoulder,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What is <b>Dumpster diving</b>?,Recovering sensitive information from discarded material,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>ARP poisoning</b>?,Dynamic ARP Inspection,Relies on the DHCP snooping binding table.,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>Rogue DHCP server</b>?,DHCP snooping with trusted ports,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>MAC flooding</b>?,Port security limiting MACs per port,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>VLAN hopping</b>?,Change the native VLAN off VLAN 1 and disable DTP,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>DNS poisoning</b>?,DNSSEC,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>A user plugging in their own switch</b>?,BPDU Guard on access ports,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>Layer 2 loops</b>?,Spanning Tree Protocol,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>Unauthorized devices on the wired network</b>?,802.1X port-based authentication,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>Evil twin</b>?,802.1X Enterprise with certificate validation,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>Brute-force login attempts</b>?,MFA and account lockout,,18
+Network+ N10-009 Rapid Recall::18 Attacks,What mitigates <b>Multicast flooding a segment</b>?,IGMP snooping,Not a spanning tree problem.,18
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.11h</b> — what is it?,DFS and TPC so 5 GHz can coexist with radar,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.11r</b> — what is it?,Fast BSS transition — quicker roaming,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.11k</b> — what is it?,Neighbor reports so a client knows where to roam,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.11v</b> — what is it?,Network-assisted steering of clients between APs,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.1X</b> — what is it?,Port-based network access control,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.1Q</b> — what is it?,VLAN tagging on trunks,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.1D</b> — what is it?,Original Spanning Tree Protocol,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.1w</b> — what is it?,Rapid Spanning Tree Protocol,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.1AB</b> — what is it?,LLDP — vendor-neutral neighbor discovery,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.3ad</b> — what is it?,LACP link aggregation,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.3af</b> — what is it?,PoE — 15.4 W at the port,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.3at</b> — what is it?,PoE+ — 30 W at the port,,11
+Network+ N10-009 Rapid Recall::11 IEEE Standards,<b>802.3bt</b> — what is it?,PoE++ — 60 W (Type 3) or 90 W (Type 4),,11
+Network+ N10-009 Rapid Recall::17 Commands,<code>show interface</code> — what does it show?,"Status, speed, duplex, errors, discards and utilization",,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>show mac-address-table</code> — what does it show?,Which MAC address is on which port and VLAN,,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>show ip route</code> — what does it show?,The routing table and gateway of last resort,,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>show arp</code> — what does it show?,IP-to-MAC bindings on the device,,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>show vlan</code> — what does it show?,VLAN membership per port,,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>show running-config</code> — what does it show?,The live configuration,,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>show power inline</code> — what does it show?,PoE budget and per-port power draw,,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>show spanning-tree</code> — what does it show?,"Root bridge, port roles and port states",,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>show etherchannel summary</code> — what does it show?,Link aggregation bundle status and why members are suspended,,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>shutdown / no shutdown</code> — what does it show?,Disables then re-enables an interface,How you clear an err-disabled port after fixing the cause.,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>route print</code> — what does it show?,Displays the routing table on Windows,netstat -r does the same.,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>nbtstat</code> — what does it show?,Displays NetBIOS over TCP/IP information,Legacy Windows tool.,17
+Network+ N10-009 Rapid Recall::17 Commands,<code>hostname</code> — what does it show?,Displays the local system name,,17
+Network+ N10-009 Rapid Recall::07 OSI Model,OSI <b>Layer 1</b> — name?,Physical,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Physical</b> — which OSI layer number?,Layer 1,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,OSI <b>Layer 2</b> — name?,Data Link,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Data Link</b> — which OSI layer number?,Layer 2,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,OSI <b>Layer 3</b> — name?,Network,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Network</b> — which OSI layer number?,Layer 3,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,OSI <b>Layer 4</b> — name?,Transport,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Transport</b> — which OSI layer number?,Layer 4,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,OSI <b>Layer 5</b> — name?,Session,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Session</b> — which OSI layer number?,Layer 5,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,OSI <b>Layer 6</b> — name?,Presentation,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Presentation</b> — which OSI layer number?,Layer 6,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,OSI <b>Layer 7</b> — name?,Application,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Application</b> — which OSI layer number?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,PDU at <b>Layer 1</b>?,Bits,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,PDU at <b>Layer 2</b>?,Frame,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,PDU at <b>Layer 3</b>?,Packet,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,PDU at <b>Layer 4</b>?,Segment (TCP) / Datagram (UDP),,07
+Network+ N10-009 Rapid Recall::07 OSI Model,Mnemonic for OSI layers 7 down to 1?,All People Seem To Need Data Processing,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Hub</b> operates at which OSI layer?,Layer 1,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Repeater</b> operates at which OSI layer?,Layer 1,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Cable / connector</b> operates at which OSI layer?,Layer 1,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Transceiver</b> operates at which OSI layer?,Layer 1,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Media converter</b> operates at which OSI layer?,Layer 1,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Switch</b> operates at which OSI layer?,Layer 2,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Bridge</b> operates at which OSI layer?,Layer 2,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>NIC</b> operates at which OSI layer?,Layer 2,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Wireless access point</b> operates at which OSI layer?,Layer 2,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Router</b> operates at which OSI layer?,Layer 3,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Layer 3 switch</b> operates at which OSI layer?,Layer 3,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Firewall (traditional)</b> operates at which OSI layer?,Layer 4,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Load balancer</b> operates at which OSI layer?,Layer 4,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>NGFW / proxy / IDS-IPS content inspection</b> operates at which OSI layer?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>IP</b> lives at which OSI layer?,Layer 3,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>ICMP</b> lives at which OSI layer?,Layer 3,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>ARP</b> lives at which OSI layer?,Layer 2,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>OSPF</b> lives at which OSI layer?,Layer 3,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>IPsec</b> lives at which OSI layer?,Layer 3,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>TCP</b> lives at which OSI layer?,Layer 4,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>UDP</b> lives at which OSI layer?,Layer 4,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>HTTP</b> lives at which OSI layer?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>FTP</b> lives at which OSI layer?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>SMTP</b> lives at which OSI layer?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>DNS</b> lives at which OSI layer?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>DHCP</b> lives at which OSI layer?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>SNMP</b> lives at which OSI layer?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Telnet</b> lives at which OSI layer?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>SSH</b> lives at which OSI layer?,Layer 7,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>802.1Q VLAN tagging</b> lives at which OSI layer?,Layer 2,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>MAC address</b> lives at which OSI layer?,Layer 2,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Ethernet frame</b> lives at which OSI layer?,Layer 2,,07
+Network+ N10-009 Rapid Recall::07 OSI Model,<b>Spanning Tree Protocol</b> lives at which OSI layer?,Layer 2,,07
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>ACL</b> stands for?,Access Control List,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>AH</b> stands for?,Authentication Header,"IPsec — integrity only, no encryption",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>AP</b> stands for?,Access Point,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>API</b> stands for?,Application Programming Interface,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>APIPA</b> stands for?,Automatic Private IP Addressing,169.254.0.0/16,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>ARP</b> stands for?,Address Resolution Protocol,IP → MAC,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>AUP</b> stands for?,Acceptable Use Policy,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>BGP</b> stands for?,Border Gateway Protocol,"path-vector EGP, routes the internet",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>BNC</b> stands for?,Bayonet Neill–Concelman,coax connector,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>BSSID</b> stands for?,Basic Service Set Identifier,MAC of an AP radio,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>BYOD</b> stands for?,Bring Your Own Device,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>CAM</b> stands for?,Content-Addressable Memory,the switch MAC address table,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>CDN</b> stands for?,Content Delivery Network,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>CDP</b> stands for?,Cisco Discovery Protocol,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>CIA</b> stands for?,"Confidentiality, Integrity, Availability",,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>CIDR</b> stands for?,Classless Inter-Domain Routing,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>CNAME</b> stands for?,Canonical Name,DNS alias record,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>CRC</b> stands for?,Cyclic Redundancy Check,frame error detection,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DAC</b> stands for?,Direct Attach Copper,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DAS</b> stands for?,Direct-Attached Storage,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DCI</b> stands for?,Data Center Interconnect,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DDoS</b> stands for?,Distributed Denial-of-Service,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DHCP</b> stands for?,Dynamic Host Configuration Protocol,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DLP</b> stands for?,Data Loss Prevention,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DNS</b> stands for?,Domain Name System,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DNSSEC</b> stands for?,DNS Security Extensions,signs records for authenticity,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DoH</b> stands for?,DNS over HTTPS,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DoT</b> stands for?,DNS over TLS,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DoS</b> stands for?,Denial-of-Service,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>DR</b> stands for?,Disaster Recovery,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>EAPoL</b> stands for?,Extensible Authentication Protocol over LAN,802.1X,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>EIGRP</b> stands for?,Enhanced Interior Gateway Routing Protocol,"Cisco, AD 90",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>EOL</b> stands for?,End-of-Life,vendor stops selling,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>EOS</b> stands for?,End-of-Support,vendor stops patching,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>ESP</b> stands for?,Encapsulating Security Payload,IPsec — encrypts and authenticates,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>ESSID</b> stands for?,Extended Service Set Identifier,same SSID across many APs,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>FC</b> stands for?,Fibre Channel,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>FHRP</b> stands for?,First Hop Redundancy Protocol,"VRRP, HSRP, GLBP",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>GDPR</b> stands for?,General Data Protection Regulation,EU privacy law,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>GRE</b> stands for?,Generic Routing Encapsulation,"tunneling, no encryption",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IaaS</b> stands for?,Infrastructure as a Service,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IaC</b> stands for?,Infrastructure as Code,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IAM</b> stands for?,Identity and Access Management,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>ICMP</b> stands for?,Internet Control Message Protocol,"ping, traceroute",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>ICS</b> stands for?,Industrial Control System,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IDF</b> stands for?,Intermediate Distribution Frame,floor wiring closet,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IDS</b> stands for?,Intrusion Detection System,"out of band, alerts only",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IPS</b> stands for?,Intrusion Prevention System,"inline, blocks",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IoT</b> stands for?,Internet of Things,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IIoT</b> stands for?,Industrial Internet of Things,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IKE</b> stands for?,Internet Key Exchange,"IPsec phase 1, UDP 500",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IPAM</b> stands for?,IP Address Management,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IPSec</b> stands for?,Internet Protocol Security,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>IS-IS</b> stands for?,Intermediate System to Intermediate System,link-state IGP,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>LACP</b> stands for?,Link Aggregation Control Protocol,802.3ad,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>LC</b> stands for?,Local Connector,small fiber connector,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>LDAP</b> stands for?,Lightweight Directory Access Protocol,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>LDAPS</b> stands for?,LDAP over SSL/TLS,port 636,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>LLDP</b> stands for?,Link Layer Discovery Protocol,"802.1AB, vendor-neutral",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MAC</b> stands for?,Media Access Control,Layer 2 hardware address,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MDF</b> stands for?,Main Distribution Frame,primary demarc/core closet,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MDIX</b> stands for?,Medium Dependent Interface Crossover,auto crossover detection,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MFA</b> stands for?,Multifactor Authentication,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MIB</b> stands for?,Management Information Base,SNMP object database,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MPO</b> stands for?,Multifiber Push-On,ribbon fiber connector for 40/100G,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MTBF</b> stands for?,Mean Time Between Failures,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MTTR</b> stands for?,Mean Time To Repair,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MTU</b> stands for?,Maximum Transmission Unit,Ethernet default 1500,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>MX</b> stands for?,Mail Exchange,DNS mail server record,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>NAC</b> stands for?,Network Access Control,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>NAS</b> stands for?,Network-Attached Storage,"file-level, over Ethernet",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>NAT</b> stands for?,Network Address Translation,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>NFV</b> stands for?,Network Functions Virtualization,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>NIC</b> stands for?,Network Interface Card,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>NS</b> stands for?,Name Server,DNS record,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>NTP</b> stands for?,Network Time Protocol,UDP 123,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>NTS</b> stands for?,Network Time Security,authenticated NTP,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>OSPF</b> stands for?,Open Shortest Path First,"link-state IGP, AD 110, cost metric",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>OSI</b> stands for?,Open Systems Interconnection,the 7-layer model,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>OT</b> stands for?,Operational Technology,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>PaaS</b> stands for?,Platform as a Service,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>PAT</b> stands for?,Port Address Translation,NAT overload — many to one,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>PCI DSS</b> stands for?,Payment Card Industry Data Security Standard,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>PDU</b> stands for?,Power Distribution Unit,also Protocol Data Unit,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>PKI</b> stands for?,Public Key Infrastructure,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>PoE</b> stands for?,Power over Ethernet,802.3af / at / bt,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>PSK</b> stands for?,Pre-Shared Key,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>PTP</b> stands for?,Precision Time Protocol,"IEEE 1588, sub-microsecond",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>PTR</b> stands for?,Pointer,DNS reverse-lookup record,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>QoS</b> stands for?,Quality of Service,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>QSFP</b> stands for?,Quad Small Form-factor Pluggable,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>RADIUS</b> stands for?,Remote Authentication Dial-In User Service,UDP 1812/1813,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>RDP</b> stands for?,Remote Desktop Protocol,TCP 3389,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>RFID</b> stands for?,Radio Frequency Identification,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>RIP</b> stands for?,Routing Information Protocol,"distance-vector, AD 120, hop count",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>RJ</b> stands for?,Registered Jack,"RJ45 = Ethernet, RJ11 = phone",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>RPO</b> stands for?,Recovery Point Objective,how much data you can lose,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>RSTP</b> stands for?,Rapid Spanning Tree Protocol,802.1w,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>RTO</b> stands for?,Recovery Time Objective,how long you can be down,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SaaS</b> stands for?,Software as a Service,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SAML</b> stands for?,Security Assertion Markup Language,SSO assertions,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SAN</b> stands for?,Storage Area Network,"block-level, dedicated fabric",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SASE</b> stands for?,Secure Access Service Edge,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SC</b> stands for?,Subscriber Connector,square push-pull fiber connector,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SCADA</b> stands for?,Supervisory Control and Data Acquisition,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SDN</b> stands for?,Software-Defined Networking,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SD-WAN</b> stands for?,Software-Defined Wide Area Network,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SFP</b> stands for?,Small Form-factor Pluggable,1 Gbps; SFP+ = 10 Gbps,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SFTP</b> stands for?,SSH File Transfer Protocol,port 22,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SIP</b> stands for?,Session Initiation Protocol,"VoIP signaling, 5060/5061",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SIEM</b> stands for?,Security Information and Event Management,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SLA</b> stands for?,Service-Level Agreement,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SLAAC</b> stands for?,Stateless Address Autoconfiguration,IPv6,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SMB</b> stands for?,Server Message Block,"TCP 445, Windows file sharing",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SMTP</b> stands for?,Simple Mail Transfer Protocol,TCP 25,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SNMP</b> stands for?,Simple Network Management Protocol,UDP 161/162,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SOA</b> stands for?,Start of Authority,DNS zone record,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SSE</b> stands for?,Security Service Edge,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SSH</b> stands for?,Secure Shell,TCP 22,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SSID</b> stands for?,Service Set Identifier,the wireless network name,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SSO</b> stands for?,Single Sign-On,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>ST</b> stands for?,Straight Tip,round bayonet fiber connector,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>STP</b> stands for?,Spanning Tree Protocol — also Shielded Twisted Pair,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>SVI</b> stands for?,Switch Virtual Interface,a VLAN's Layer 3 interface,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>TACACS+</b> stands for?,Terminal Access Controller Access Control System Plus,TCP 49,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>TCP</b> stands for?,Transmission Control Protocol,"connection-oriented, reliable",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>TFTP</b> stands for?,Trivial File Transfer Protocol,"UDP 69, no auth",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>TTL</b> stands for?,Time to Live,hop limit; also DNS cache lifetime,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>TXT</b> stands for?,Text,"DNS record — SPF, DKIM, DMARC",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>UDP</b> stands for?,User Datagram Protocol,"connectionless, best effort",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>UPS</b> stands for?,Uninterruptible Power Supply,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>URL</b> stands for?,Uniform Resource Locator,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>UTM</b> stands for?,Unified Threat Management,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>UTP</b> stands for?,Unshielded Twisted Pair,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>VIP</b> stands for?,Virtual IP,shared by FHRP routers or a load balancer pool,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>VLAN</b> stands for?,Virtual Local Area Network,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>VLSM</b> stands for?,Variable Length Subnet Mask,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>VoIP</b> stands for?,Voice over IP,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>VPC</b> stands for?,Virtual Private Cloud,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>VPN</b> stands for?,Virtual Private Network,,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>VXLAN</b> stands for?,Virtual Extensible LAN,"Layer 2 over Layer 3, 24-bit VNI",23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>WPA</b> stands for?,Wi-Fi Protected Access,WPA2 = AES-CCMP; WPA3 = SAE,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>WPS</b> stands for?,Wi-Fi Protected Setup,insecure — disable it,23
+Network+ N10-009 Rapid Recall::23 Acronyms,<b>ZTA</b> stands for?,Zero Trust Architecture,,23

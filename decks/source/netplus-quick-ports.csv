@@ -1,0 +1,51 @@
+deck,front,answer,note,tags
+N+ Quick · Common Ports and Uses,Port <b>20/21</b> — what service?,"FTP<br><span style='font-size:22px'>File transfer, cleartext</span>",Two ports. The secure answer is always SFTP or FTPS.,quick_ports
+N+ Quick · Common Ports and Uses,<b>FTP</b> — port number?,20/21,Two ports. The secure answer is always SFTP or FTPS.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>22</b> — what service?,SSH / SFTP / SCP<br><span style='font-size:22px'>Encrypted remote CLI and file transfer</span>,Any 'securely manage a device remotely' question.,quick_ports
+N+ Quick · Common Ports and Uses,<b>SSH / SFTP / SCP</b> — port number?,22,Any 'securely manage a device remotely' question.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>23</b> — what service?,"Telnet<br><span style='font-size:22px'>Legacy remote CLI, cleartext</span>",Almost always the wrong answer and a hardening target.,quick_ports
+N+ Quick · Common Ports and Uses,<b>Telnet</b> — port number?,23,Almost always the wrong answer and a hardening target.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>25</b> — what service?,SMTP<br><span style='font-size:22px'>Sending and relaying mail</span>,Send only. Retrieval is POP3 or IMAP.,quick_ports
+N+ Quick · Common Ports and Uses,<b>SMTP</b> — port number?,25,Send only. Retrieval is POP3 or IMAP.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>49</b> — what service?,TACACS+<br><span style='font-size:22px'>AAA for device administration</span>,"TCP. Encrypts the whole packet, separates AAA.",quick_ports
+N+ Quick · Common Ports and Uses,<b>TACACS+</b> — port number?,49,"TCP. Encrypts the whole packet, separates AAA.",quick_ports
+N+ Quick · Common Ports and Uses,Port <b>53</b> — what service?,DNS<br><span style='font-size:22px'>Name resolution</span>,Uses both UDP (queries) and TCP (zone transfers).,quick_ports
+N+ Quick · Common Ports and Uses,<b>DNS</b> — port number?,53,Uses both UDP (queries) and TCP (zone transfers).,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>67/68</b> — what service?,DHCP<br><span style='font-size:22px'>Automatic IP addressing</span>,"Server 67, client 68. Discover is a broadcast.",quick_ports
+N+ Quick · Common Ports and Uses,<b>DHCP</b> — port number?,67/68,"Server 67, client 68. Discover is a broadcast.",quick_ports
+N+ Quick · Common Ports and Uses,Port <b>69</b> — what service?,"TFTP<br><span style='font-size:22px'>Simple file transfer, no authentication</span>","PXE boot, firmware and config pushes.",quick_ports
+N+ Quick · Common Ports and Uses,<b>TFTP</b> — port number?,69,"PXE boot, firmware and config pushes.",quick_ports
+N+ Quick · Common Ports and Uses,Port <b>80</b> — what service?,HTTP<br><span style='font-size:22px'>Unencrypted web</span>,The hardening answer is HTTPS 443.,quick_ports
+N+ Quick · Common Ports and Uses,<b>HTTP</b> — port number?,80,The hardening answer is HTTPS 443.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>88</b> — what service?,Kerberos<br><span style='font-size:22px'>Ticket-based authentication in Active Directory</span>,Port 88 is Kerberos; IP protocol 88 is EIGRP.,quick_ports
+N+ Quick · Common Ports and Uses,<b>Kerberos</b> — port number?,88,Port 88 is Kerberos; IP protocol 88 is EIGRP.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>110</b> — what service?,"POP3<br><span style='font-size:22px'>Mail retrieval, downloads to one device</span>",Multi-device sync answers IMAP instead.,quick_ports
+N+ Quick · Common Ports and Uses,<b>POP3</b> — port number?,110,Multi-device sync answers IMAP instead.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>123</b> — what service?,NTP<br><span style='font-size:22px'>Time synchronization</span>,Broken time breaks Kerberos and certificates.,quick_ports
+N+ Quick · Common Ports and Uses,<b>NTP</b> — port number?,123,Broken time breaks Kerberos and certificates.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>143</b> — what service?,"IMAP<br><span style='font-size:22px'>Mail retrieval, synced across devices</span>",The multi-device answer.,quick_ports
+N+ Quick · Common Ports and Uses,<b>IMAP</b> — port number?,143,The multi-device answer.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>161</b> — what service?,SNMP<br><span style='font-size:22px'>Polling devices for monitoring data</span>,Manager polls the agent on 161.,quick_ports
+N+ Quick · Common Ports and Uses,<b>SNMP</b> — port number?,161,Manager polls the agent on 161.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>162</b> — what service?,SNMP trap<br><span style='font-size:22px'>Unsolicited alert from agent to manager</span>,"Direction is tested: poll out on 161, trap in on 162.",quick_ports
+N+ Quick · Common Ports and Uses,<b>SNMP trap</b> — port number?,162,"Direction is tested: poll out on 161, trap in on 162.",quick_ports
+N+ Quick · Common Ports and Uses,Port <b>389</b> — what service?,"LDAP<br><span style='font-size:22px'>Directory lookups, cleartext</span>",Secure version is LDAPS 636.,quick_ports
+N+ Quick · Common Ports and Uses,<b>LDAP</b> — port number?,389,Secure version is LDAPS 636.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>443</b> — what service?,HTTPS<br><span style='font-size:22px'>TLS-encrypted web</span>,Also UDP 443 for HTTP/3 QUIC.,quick_ports
+N+ Quick · Common Ports and Uses,<b>HTTPS</b> — port number?,443,Also UDP 443 for HTTP/3 QUIC.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>445</b> — what service?,SMB<br><span style='font-size:22px'>Windows file and printer sharing</span>,Blocked at the perimeter as standard practice.,quick_ports
+N+ Quick · Common Ports and Uses,<b>SMB</b> — port number?,445,Blocked at the perimeter as standard practice.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>514</b> — what service?,Syslog<br><span style='font-size:22px'>Centralized log collection</span>,"Severity 0 is most severe, 7 is Debug.",quick_ports
+N+ Quick · Common Ports and Uses,<b>Syslog</b> — port number?,514,"Severity 0 is most severe, 7 is Debug.",quick_ports
+N+ Quick · Common Ports and Uses,Port <b>587</b> — what service?,SMTP submission<br><span style='font-size:22px'>Authenticated client mail submission</span>,587 is client to server; 25 is server to server.,quick_ports
+N+ Quick · Common Ports and Uses,<b>SMTP submission</b> — port number?,587,587 is client to server; 25 is server to server.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>636</b> — what service?,LDAPS<br><span style='font-size:22px'>LDAP over SSL/TLS</span>,The 389 to 636 secure swap.,quick_ports
+N+ Quick · Common Ports and Uses,<b>LDAPS</b> — port number?,636,The 389 to 636 secure swap.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>993</b> — what service?,IMAPS<br><span style='font-size:22px'>IMAP over TLS</span>,Pairs with 143. POP3S is 995.,quick_ports
+N+ Quick · Common Ports and Uses,<b>IMAPS</b> — port number?,993,Pairs with 143. POP3S is 995.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>1812/1813</b> — what service?,RADIUS<br><span style='font-size:22px'>AAA for network access — auth and accounting</span>,UDP. Encrypts only the password.,quick_ports
+N+ Quick · Common Ports and Uses,<b>RADIUS</b> — port number?,1812/1813,UDP. Encrypts only the password.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>3389</b> — what service?,RDP<br><span style='font-size:22px'>Graphical Windows remote access</span>,Graphical = RDP. Text = SSH.,quick_ports
+N+ Quick · Common Ports and Uses,<b>RDP</b> — port number?,3389,Graphical = RDP. Text = SSH.,quick_ports
+N+ Quick · Common Ports and Uses,Port <b>5060/5061</b> — what service?,SIP<br><span style='font-size:22px'>VoIP call signaling</span>,Signaling only — audio is RTP on dynamic ports.,quick_ports
+N+ Quick · Common Ports and Uses,<b>SIP</b> — port number?,5060/5061,Signaling only — audio is RTP on dynamic ports.,quick_ports

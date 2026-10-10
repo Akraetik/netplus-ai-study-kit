@@ -1,0 +1,43 @@
+deck,front,answer,note,tags
+N+ Quick · OSI Model and Layers,OSI <b>Layer 1</b>?,Physical,"Bits on the wire. Cables, connectors, hubs, repeaters, transceivers.",quick_osi
+N+ Quick · OSI Model and Layers,OSI <b>Layer 2</b>?,Data Link,"Frames and MAC addresses. Switches, NICs, VLANs, 802.1Q, STP.",quick_osi
+N+ Quick · OSI Model and Layers,OSI <b>Layer 3</b>?,Network,"Packets and IP addresses. Routers, ICMP, routing protocols, NAT.",quick_osi
+N+ Quick · OSI Model and Layers,OSI <b>Layer 4</b>?,Transport,"Segments and ports. TCP, UDP, the three-way handshake.",quick_osi
+N+ Quick · OSI Model and Layers,OSI <b>Layer 5</b>?,Session,"Setting up, managing and tearing down conversations.",quick_osi
+N+ Quick · OSI Model and Layers,OSI <b>Layer 6</b>?,Presentation,"Formatting, encoding, compression, encryption.",quick_osi
+N+ Quick · OSI Model and Layers,OSI <b>Layer 7</b>?,Application,"HTTP, FTP, SMTP, DNS, SNMP, DHCP.",quick_osi
+N+ Quick · OSI Model and Layers,<b>Physical</b> — which layer number?,Layer 1,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Data Link</b> — which layer number?,Layer 2,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Network</b> — which layer number?,Layer 3,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Transport</b> — which layer number?,Layer 4,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Session</b> — which layer number?,Layer 5,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Presentation</b> — which layer number?,Layer 6,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Application</b> — which layer number?,Layer 7,,quick_osi
+N+ Quick · OSI Model and Layers,Mnemonic for layers 7 down to 1?,<b>A</b>ll <b>P</b>eople <b>S</b>eem <b>T</b>o <b>N</b>eed <b>D</b>ata <b>P</b>rocessing,,quick_osi
+N+ Quick · OSI Model and Layers,PDU at <b>Layer 1</b>?,Bits,,quick_osi
+N+ Quick · OSI Model and Layers,PDU at <b>Layer 2</b>?,Frame,,quick_osi
+N+ Quick · OSI Model and Layers,PDU at <b>Layer 3</b>?,Packet,,quick_osi
+N+ Quick · OSI Model and Layers,PDU at <b>Layer 4</b>?,Segment (TCP) or Datagram (UDP),,quick_osi
+N+ Quick · OSI Model and Layers,<b>Hub</b> — which layer?,Layer 1,Repeats every bit out every port. One collision domain.,quick_osi
+N+ Quick · OSI Model and Layers,<b>Repeater</b> — which layer?,Layer 1,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Switch</b> — which layer?,Layer 2,A multilayer switch also routes at Layer 3 using SVIs.,quick_osi
+N+ Quick · OSI Model and Layers,<b>Bridge</b> — which layer?,Layer 2,,quick_osi
+N+ Quick · OSI Model and Layers,<b>NIC</b> — which layer?,Layer 2,It carries the MAC address.,quick_osi
+N+ Quick · OSI Model and Layers,<b>Wireless access point</b> — which layer?,Layer 2,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Router</b> — which layer?,Layer 3,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Traditional firewall</b> — which layers?,Layers 3 and 4,Filters on IP and port. An NGFW inspects up to Layer 7.,quick_osi
+N+ Quick · OSI Model and Layers,<b>Load balancer</b> — which layer?,Layer 4 (Layer 7 if content-aware),,quick_osi
+N+ Quick · OSI Model and Layers,<b>IP</b> — which layer?,Layer 3,,quick_osi
+N+ Quick · OSI Model and Layers,<b>ICMP</b> — which layer?,Layer 3,IP protocol 1. No ports.,quick_osi
+N+ Quick · OSI Model and Layers,<b>ARP</b> — which layer?,Layer 2,Resolves IP to MAC on the local segment.,quick_osi
+N+ Quick · OSI Model and Layers,<b>TCP and UDP</b> — which layer?,Layer 4,,quick_osi
+N+ Quick · OSI Model and Layers,"<b>HTTP, FTP, SMTP, DNS, DHCP</b> — which layer?",Layer 7,,quick_osi
+N+ Quick · OSI Model and Layers,<b>802.1Q VLAN tagging</b> — which layer?,Layer 2,,quick_osi
+N+ Quick · OSI Model and Layers,<b>Spanning Tree Protocol</b> — which layer?,Layer 2,,quick_osi
+N+ Quick · OSI Model and Layers,<b>MAC address</b> — which layer?,Layer 2,,quick_osi
+N+ Quick · OSI Model and Layers,What does <b>encapsulation</b> mean?,Each layer wraps the layer above with its own header,"Data becomes segment, packet, frame, bits going down the stack.",quick_osi
+N+ Quick · OSI Model and Layers,<b>Bottom-up</b> troubleshooting — when?,When a physical problem is likely,Start at Layer 1: check the cable.,quick_osi
+N+ Quick · OSI Model and Layers,<b>Top-down</b> troubleshooting — when?,When one application is broken and everything else works,Start at Layer 7.,quick_osi
+N+ Quick · OSI Model and Layers,<b>Divide and conquer</b> — where do you start?,"In the middle, usually Layer 3 with a ping",Then move whichever way the evidence points.,quick_osi
+N+ Quick · OSI Model and Layers,A switch that routes between VLANs is what?,A <b>Layer 3 / multilayer switch</b>,"Switches at L2, routes at L3 using SVIs.",quick_osi
+N+ Quick · OSI Model and Layers,What bounds a <b>broadcast domain</b>?,A VLAN or a router interface,Every switch port is its own collision domain.,quick_osi

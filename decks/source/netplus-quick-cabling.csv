@@ -1,0 +1,41 @@
+deck,front,answer,note,tags
+"N+ Quick · Cables, Speeds and Distances",<b>Cat 5e</b> — speed and distance?,1 Gbps at 100 m,100 MHz. The reference point for the whole category table.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>Cat 6</b> — speed and distance?,1 Gbps at 100 m; <b>10 Gbps only to 55 m</b>,250 MHz. The 55 m limit is the most tested Cat 6 fact.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>Cat 6a</b> — speed and distance?,10 Gbps at the full 100 m,500 MHz. The answer to '10 Gbps over copper at 100 metres'.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>Cat 7</b> — speed and distance?,10 Gbps at 100 m,"600 MHz, fully shielded, may use GG45/TERA instead of RJ45.",quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>Cat 8</b> — speed and distance?,25 or 40 Gbps at only <b>30 m</b>,2000 MHz. Data centre top-of-rack only. Wrong answer for a building run.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",Maximum distance for copper Ethernet?,<b>100 m</b>,"Includes patch cables at both ends, not just the horizontal run.",quick_cabling
+"N+ Quick · Cables, Speeds and Distances","<b>1000BASE-T</b> — speed, media, distance?","1 Gbps, copper UTP, 100 m",,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>1000BASE-SX</b> — media and distance?,"Multimode fiber, up to ~550 m",SX = short. Multimode.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>1000BASE-LX</b> — media and distance?,"Single-mode fiber, 5-10 km",LX = long. Single-mode.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>10GBASE-T</b> — distance on Cat 6 vs Cat 6a?,"55 m on Cat 6, 100 m on Cat 6a",The single most tested copper distance pair.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>10GBASE-SR</b> — media and distance?,"Multimode fiber, 300-400 m","SR = short reach, inside a building.",quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>10GBASE-LR</b> — media and distance?,"Single-mode fiber, 10 km","LR = long reach, between sites.",quick_cabling
+"N+ Quick · Cables, Speeds and Distances","<b>Single-mode fiber</b> — core, source, reach?","9 micron core, laser, kilometres",Yellow jacket.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances","<b>Multimode fiber</b> — core, source, reach?","50 or 62.5 micron core, LED/VCSEL, hundreds of metres",Aqua or orange jacket. Limited by modal dispersion.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",Which fiber grades are the data centre standard?,<b>OM3</b> (aqua) and <b>OM4</b>,OM1 and OM2 are legacy 62.5 and 50 micron.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>LC</b> connector?,"Small form factor fiber, latched duplex",The data centre default.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>SC</b> connector?,Square push-pull fiber,'Stick and click'.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>ST</b> connector?,Round bayonet fiber,'Stick and twist'.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>MPO / MTP</b> connector?,Multi-fiber ribbon connector,Used for 40G and 100G.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>RJ45</b> vs <b>RJ11</b>?,RJ45 is 8-pin Ethernet; RJ11 is 6-pin telephone,,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>F-type</b> and <b>BNC</b> connectors?,"Coax — F-type for cable broadband, BNC for legacy coax and video",,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>SFP</b> — speed?,1 Gbps,,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>SFP+</b> — speed?,10 Gbps,,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>QSFP28</b> — speed?,100 Gbps,QSFP is 4x1 or 4x10 Gbps.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What is a <b>DAC</b> cable?,Direct attach copper with fixed transceivers on both ends,Cheap 1-7 m switch-to-switch links.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What is <b>plenum-rated</b> cable for?,Air-handling spaces above ceilings and under floors,Fire code requirement. Using PVC there is a violation.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>T568A</b> vs <b>T568B</b>?,Only the orange and green pairs are swapped,Same standard at both ends = straight-through. A then B = crossover.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",When do you need a <b>crossover</b> cable?,Connecting like devices — switch to switch,Auto-MDI-X makes this mostly historical.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What is a <b>rollover</b> cable for?,Console access to a device,All eight conductors reversed. Not Ethernet — a common distractor.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>802.3af (PoE)</b> — power?,"15.4 W at the port, 12.95 W at the device",,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>802.3at (PoE+)</b> — power?,"30 W at the port, 25.5 W at the device",What most modern APs need.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",<b>802.3bt Type 4</b> — power?,"90 W at the port, 71.3 W at the device",Type 3 is 60 W to 51 W.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What is <b>attenuation</b>?,Signal weakening over distance,Why the 100 m limit exists.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What is <b>crosstalk</b>?,Signal bleeding between adjacent pairs,Usually caused by untwisting too much pair at termination.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What is <b>EMI</b> and how do you fight it?,Outside electrical noise; use shielded cable and reroute,"Keep runs away from power conduit, motors and fluorescent lighting.",quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What causes <b>runts</b> and <b>late collisions</b>?,<b>Duplex mismatch</b>,Full duplex should never show collisions.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What causes <b>giants</b>?,<b>MTU or jumbo frame mismatch</b>,Frames exceed the interface MTU and are dropped.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What causes <b>CRC errors</b>?,"Bad cable, EMI, distance, failing transceiver, or duplex mismatch",Errors = physical. Discards = congestion.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",A gigabit port links at 100 Mbps. Why?,A <b>bad pair</b> in the cable,Gigabit needs all four pairs; 100 Mbps needs only two.,quick_cabling
+"N+ Quick · Cables, Speeds and Distances",What is a <b>transceiver mismatch</b>?,"Wrong optic for the fiber type, wavelength or distance",Single-mode optic on multimode fiber will not link.,quick_cabling

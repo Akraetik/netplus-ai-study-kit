@@ -1,0 +1,45 @@
+deck,front,answer,note,tags
+N+ Quick · Tools and When to Use Them,A user says a site is down. What do you run first to test reachability?,<b>ping</b>,Proves Layer 3 both directions. A failed ping does not prove the host is down — ICMP is often filtered.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to find <i>where</i> in the path latency starts. What do you run?,<b>traceroute</b> / <b>tracert</b>,Latency that rises at a hop and stays high afterwards is the real problem hop.,quick_tools
+N+ Quick · Tools and When to Use Them,A user can reach IPs but not names. What tool confirms it?,<b>nslookup</b> or <b>dig</b>,Query a public resolver and compare against yours.,quick_tools
+N+ Quick · Tools and When to Use Them,"You need this PC's IP, mask, gateway and DNS. What do you run?",<b>ipconfig /all</b> (Linux: <b>ip addr</b>),Also names the DHCP server that issued the lease.,quick_tools
+N+ Quick · Tools and When to Use Them,A client is stuck with a bad DHCP lease. What do you run?,<b>ipconfig /release</b> then <b>/renew</b>,Forces the client to redo DORA.,quick_tools
+N+ Quick · Tools and When to Use Them,One PC still reaches an old server IP after a migration. What do you run?,<b>ipconfig /flushdns</b>,Clears the local resolver cache. The population-wide fix is lowering the record TTL.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to know whether a service is listening on this server. What do you run?,<b>netstat -an</b>,Local sockets. LISTENING means the service is up.,quick_tools
+N+ Quick · Tools and When to Use Them,You suspect a duplicate IP. What do you check first?,<b>arp -a</b>,A flapping IP-to-MAC binding is the signature. Then trace the MAC on the switch.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to see the actual bytes on the wire. What do you use?,A <b>protocol analyzer</b> — Wireshark or tcpdump,Needs a SPAN port or TAP to see traffic that is not yours.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to know which ports a remote server has open. What do you use?,<b>Nmap</b>,Remote scanning. netstat is the local equivalent.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to know what device is plugged into a switch port. What do you use?,<b>LLDP</b> or <b>CDP</b>,LLDP is the open standard (802.1AB); CDP is Cisco.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to find one cable in a bundle of 200. What tool?,<b>Toner probe</b>,Toner locates. A tester validates. They are not interchangeable.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to confirm a cable is wired to the right pins. What tool?,<b>Cable tester</b>,Continuity and pinout only — says nothing about performance.,quick_tools
+N+ Quick · Tools and When to Use Them,A cable passes a continuity test but errors under load. What tool proves it?,<b>Cable certifier</b>,"Measures attenuation, NEXT and return loss against the TIA spec.",quick_tools
+N+ Quick · Tools and When to Use Them,You need the distance to a break in a fiber run. What tool?,<b>OTDR</b>,TDR is the copper equivalent. The O is for optical.,quick_tools
+N+ Quick · Tools and When to Use Them,You need a quick check for a fiber break or bad splice. What tool?,<b>Visual fault locator</b>,Shoots visible red light down the fiber so faults glow.,quick_tools
+N+ Quick · Tools and When to Use Them,Wi-Fi is bad but there are no competing access points. What tool?,<b>Spectrum analyzer</b>,A Wi-Fi analyzer only sees Wi-Fi. A spectrum analyzer sees microwaves and cordless phones.,quick_tools
+N+ Quick · Tools and When to Use Them,"You need to see SSIDs, channels and signal strength. What tool?",<b>Wi-Fi analyzer</b>,"Use it for channel overlap and coverage, not for non-Wi-Fi noise.",quick_tools
+N+ Quick · Tools and When to Use Them,You need to know what is eating the bandwidth. What do you use?,"<b>Flow data</b> — NetFlow, sFlow or IPFIX",Shows top talkers. A packet capture is the wrong tool for this question.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to measure real throughput between two internal hosts. What tool?,<b>iperf</b>,Lets you test one segment at a time and isolate the bottleneck.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to prove the carrier is the problem. Where and what do you test?,"<b>Speed test at the demarc</b>, plus traceroute",The demarc is the responsibility boundary. Test both sides of it.,quick_tools
+N+ Quick · Tools and When to Use Them,"You need interface errors, duplex and utilization. What command?",<b>show interface</b>,Where cable faults and duplex mismatches become visible.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to map a MAC address to a physical port. What command?,<b>show mac-address-table</b>,How you trace a rogue device or a duplicate IP to a wall jack.,quick_tools
+N+ Quick · Tools and When to Use Them,A device will not power up over PoE. What command?,<b>show power inline</b>,"Shows total budget, consumed watts and per-port draw.",quick_tools
+N+ Quick · Tools and When to Use Them,You suspect the wrong switch became root bridge. What command?,<b>show spanning-tree</b>,"Shows root bridge, port roles and port states.",quick_tools
+N+ Quick · Tools and When to Use Them,You need to know why traffic takes an odd path. What command?,<b>show ip route</b>,Also reveals whether a default route exists at all.,quick_tools
+N+ Quick · Tools and When to Use Them,A link aggregation bundle will not come up. What command?,<b>show etherchannel summary</b>,Reports which members are suspended and why.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to check VLAN membership per port. What command?,<b>show vlan</b>,,quick_tools
+N+ Quick · Tools and When to Use Them,A port is err-disabled. What do you do after fixing the cause?,<b>shutdown</b> then <b>no shutdown</b>,Bouncing it without fixing the cause just repeats the violation.,quick_tools
+N+ Quick · Tools and When to Use Them,You need lossless traffic capture for forensics. SPAN or TAP?,<b>TAP</b>,A SPAN port can drop frames under load and hides physical-layer errors.,quick_tools
+N+ Quick · Tools and When to Use Them,A remote switch is unreachable after a config change. How do you get in?,<b>Out-of-band</b> — console server or dedicated management port,In-band management dies with the network you just broke.,quick_tools
+N+ Quick · Tools and When to Use Them,"You need per-hop packet loss over time, not a single snapshot. What tool?",<b>pathping</b> (Windows) or <b>mtr</b> (Linux),Combines traceroute with sustained ping.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to know if a cable run exceeds 100 m. What tool?,<b>Cable certifier</b> or a TDR,A certifier reports the measured length along with pass/fail.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to test a port without another device. What tool?,<b>Loopback adapter</b>,Loops transmit back to receive.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to terminate a cable onto a patch panel. What tool?,<b>Punch-down tool</b>,110 blocks are the modern data standard; 66 blocks are legacy voice.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to attach an RJ45 connector to a cable. What tool?,<b>Crimper</b>,,quick_tools
+N+ Quick · Tools and When to Use Them,You need to check whether a fiber is receiving enough light. What tool?,<b>Optical power meter</b>,Confirms whether a transceiver is degrading.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to see which process is holding a port on Windows. What command?,<b>netstat -b</b>,Shows the owning executable.,quick_tools
+N+ Quick · Tools and When to Use Them,You need the routing table on a Windows host. What command?,<b>route print</b> (or netstat -r),,quick_tools
+N+ Quick · Tools and When to Use Them,You need to test a specific TCP port from a client. What do you use?,<b>telnet host port</b> or <b>Test-NetConnection</b>,Refused = nothing listening. Timeout = something is dropping.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to check a DNS record type such as MX. What do you run?,<b>dig MX domain</b> or <b>nslookup -type=MX</b>,Mail problems are usually MX or PTR problems.,quick_tools
+N+ Quick · Tools and When to Use Them,You need to verify a change did not break anything else. What step is this?,<b>Verify full system functionality</b> — step 6,"Test the system, not just the original complaint.",quick_tools
+N+ Quick · Tools and When to Use Them,"Your theory is that the carrier circuit is degraded, but you cannot test their gear. What now?",<b>Escalate</b> with evidence,Escalation is legitimate at step 3 and step 5.,quick_tools
+N+ Quick · Tools and When to Use Them,An outage started at 09:00. Where do you look first?,The <b>change log</b>,Most incidents are caused by a change. Correlate by time.,quick_tools
