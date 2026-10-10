@@ -18,7 +18,7 @@ I added Anthropic's Claude as a contributor. I used them to create the AI flashc
 - [x] Project scope and licenses
 - [x] The method: define the target, how learning works, study plans
 - [x] Tracking templates: miss log, score tracker, study plan
-- [ ] `make_deck.py` — CSV → Anki deck, with CI
+- [x] `make_deck.py` — CSV → Anki deck, with CI
 - [ ] ~2,000 Anki cards: core, rapid recall, trouble areas, quick decks
 - [ ] `make_audio.py` — local two-voice TTS for car drills
 - [ ] Audio drills (GitHub Release)

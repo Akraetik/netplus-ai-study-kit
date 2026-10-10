@@ -1,0 +1,43 @@
+name: build-decks
+
+# Proves the tooling works on every change: lints the Python, validates every
+# card CSV in the repo, and builds the sample deck as a downloadable artifact.
+
+on:
+  push:
+    paths: ["tools/**", "examples/**", "templates/**", "cards/**", ".github/workflows/**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install genanki ruff
+
+      - name: Lint
+        run: ruff check tools/ --select E,F,W --ignore E501
+
+      - name: Build sample deck
+        run: python tools/make_deck.py examples/sample-cards.csv --name "Network+ N10-009::Sample" --out build/sample.apkg
+
+      - name: Build any source decks in cards/
+        run: |
+          shopt -s nullglob
+          for f in cards/*.csv; do
+            name=$(basename "$f" .csv)
+            python tools/make_deck.py "$f" --name "Network+ N10-009::${name}" --out "build/${name}.apkg"
+          done
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anki-decks
+          path: build/*.apkg

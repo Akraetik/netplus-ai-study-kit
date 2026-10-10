@@ -1,0 +1,11 @@
+front,back,extra,tags,deck,reverse
+"<b>SSH</b> — port and transport?","22 / TCP","Replaced Telnet (23). If the question says <i>secure remote CLI</i>, the answer is SSH.",obj1.4 ports,Ports,y
+"<b>RDP</b> — port and transport?","3389 / TCP (and UDP)","Windows remote desktop. Spoken: thirty-three eighty-nine.",obj1.4 ports,Ports,y
+"<b>LDAPS</b> — port?","636 / TCP","LDAP is 389. The secure swap adds TLS and moves to 636.",obj1.4 ports secure-swap,Ports,y
+"<b>SNMP</b> — ports for polling vs traps?","161 polls the agent · 162 receives traps","Hook: traps come <i>back</i> one number higher.",obj1.4 obj3.2 ports,Ports,
+"<b>RPO vs RTO</b> — which one measures acceptable DATA loss?","<b>RPO</b> — Recovery <b>Point</b> Objective","RTO is how long you can be down. P = the Point in time you roll back to.",obj3.3 discriminator missed-once,Discriminators,
+"<b>Host shows 169.254.x.x</b>. What failed?","DHCP. The host self-assigned an APIPA address.","Check the link, the switch-port VLAN, the DHCP relay (ip helper-address), and scope exhaustion.",obj5.5 domain5 troubleshooting,Troubleshooting,
+"Users can ping 8.8.8.8 but cannot browse to any site by name. First suspect?","<b>DNS</b>","Layer 3 works, so this is name resolution. Test with nslookup or dig against a known-good resolver.",obj5.5 domain5 troubleshooting,Troubleshooting,
+"<b>Cat 6</b> — max distance at 10 Gbps?","55 m","Cat 6 runs 1 Gbps to 100 m but only reaches 10 Gbps to 55 m. Cat 6a does 10 Gbps to the full 100 m.",obj1.5 cabling,Cabling,
+"CompTIA troubleshooting methodology — step 1?","Identify the problem","Gather info, question users, identify symptoms, determine what changed, duplicate the problem, approach multiple problems one at a time.",obj5.1 domain5 methodology,Troubleshooting,
+"<b>802.1Q</b> — what does it do?","Tags Ethernet frames with a VLAN ID on a trunk link","The untagged VLAN on a trunk is the native VLAN. Mismatched native VLANs are a classic Domain 2 question.",obj2.2 domain2 switching,Switching,y
