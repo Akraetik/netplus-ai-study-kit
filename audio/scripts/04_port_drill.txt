@@ -1,0 +1,405 @@
+# TITLE: Track 04 - Port Drill
+
+Track four. Full speed port drill.
+
+No teaching in this track. Pure recall. Three rounds.
+
+Round one is port to protocol. Round two is protocol to port. Round three is scenario based, which is how the exam actually asks.
+
+Say every answer out loud. Go.
+
+[PAUSE 2]
+
+Round one. Port to protocol.
+
+Twenty and twenty one.
+
+[PAUSE 3]
+
+FTP.
+
+Twenty two.
+
+[PAUSE 3]
+
+SSH and SFTP.
+
+Twenty three.
+
+[PAUSE 3]
+
+Telnet.
+
+Twenty five.
+
+[PAUSE 3]
+
+SMTP.
+
+Fifty three.
+
+[PAUSE 3]
+
+DNS.
+
+Sixty seven, sixty eight.
+
+[PAUSE 3]
+
+DHCP.
+
+Sixty nine.
+
+[PAUSE 3]
+
+TFTP.
+
+Eighty.
+
+[PAUSE 3]
+
+HTTP.
+
+One twenty three.
+
+[PAUSE 3]
+
+NTP.
+
+One sixty one, one sixty two.
+
+[PAUSE 3]
+
+SNMP.
+
+Three eighty nine.
+
+[PAUSE 3]
+
+LDAP.
+
+Four forty three.
+
+[PAUSE 3]
+
+HTTPS.
+
+Four forty five.
+
+[PAUSE 3]
+
+SMB.
+
+Five fourteen.
+
+[PAUSE 3]
+
+Syslog.
+
+Five eighty seven.
+
+[PAUSE 3]
+
+SMTPS.
+
+Six thirty six.
+
+[PAUSE 3]
+
+LDAPS.
+
+Fourteen thirty three.
+
+[PAUSE 3]
+
+SQL Server.
+
+Thirty three eighty nine.
+
+[PAUSE 3]
+
+RDP.
+
+Fifty sixty, fifty sixty one.
+
+[PAUSE 3]
+
+SIP.
+
+[PAUSE 2]
+
+Round two. Protocol to port. Include the transport, TCP or UDP, if you can.
+
+Secure Shell.
+
+[PAUSE 3]
+
+Twenty two, TCP.
+
+Domain Name System.
+
+[PAUSE 3]
+
+Fifty three. UDP for queries, TCP for zone transfers.
+
+Server Message Block.
+
+[PAUSE 3]
+
+Four forty five, TCP.
+
+Syslog.
+
+[PAUSE 3]
+
+Five fourteen, UDP.
+
+Simple Network Management Protocol.
+
+[PAUSE 3]
+
+One sixty one and one sixty two, UDP.
+
+Remote Desktop Protocol.
+
+[PAUSE 3]
+
+Thirty three eighty nine.
+
+Trivial File Transfer Protocol.
+
+[PAUSE 3]
+
+Sixty nine, UDP.
+
+Network Time Protocol.
+
+[PAUSE 3]
+
+One twenty three, UDP.
+
+Lightweight Directory Access Protocol over SSL.
+
+[PAUSE 3]
+
+Six thirty six, TCP.
+
+Session Initiation Protocol.
+
+[PAUSE 3]
+
+Fifty sixty, and fifty sixty one for TLS.
+
+Hypertext Transfer Protocol Secure.
+
+[PAUSE 3]
+
+Four forty three, TCP.
+
+Dynamic Host Configuration Protocol.
+
+[PAUSE 3]
+
+Sixty seven server, sixty eight client, UDP.
+
+Secure File Transfer Protocol.
+
+[PAUSE 3]
+
+Twenty two, TCP.
+
+Microsoft SQL Server.
+
+[PAUSE 3]
+
+Fourteen thirty three, TCP.
+
+[PAUSE 2]
+
+Round three. Ports that are not on the official list, but show up in scenarios anyway. These are worth knowing.
+
+TACACS plus.
+
+[PAUSE 3]
+
+TCP forty nine.
+
+Kerberos.
+
+[PAUSE 3]
+
+Eighty eight.
+
+POP three.
+
+[PAUSE 3]
+
+One ten. Encrypted, nine ninety five.
+
+IMAP.
+
+[PAUSE 3]
+
+One forty three. Encrypted, nine ninety three.
+
+BGP.
+
+[PAUSE 3]
+
+TCP one seventy nine.
+
+IKE, for IPSec tunnel negotiation.
+
+[PAUSE 3]
+
+UDP five hundred. And UDP forty five hundred when crossing NAT.
+
+DNS over TLS.
+
+[PAUSE 3]
+
+Eight fifty three.
+
+RADIUS.
+
+[PAUSE 3]
+
+UDP eighteen twelve for authentication, eighteen thirteen for accounting.
+
+NFS.
+
+[PAUSE 3]
+
+Twenty forty nine.
+
+iSCSI.
+
+[PAUSE 3]
+
+Thirty two sixty.
+
+VXLAN.
+
+[PAUSE 3]
+
+UDP forty seven eighty nine.
+
+VNC.
+
+[PAUSE 3]
+
+Fifty nine hundred.
+
+[PAUSE 2]
+
+Round four. IP protocol numbers. These are not port numbers, and that distinction gets tested in firewall and access control list questions. ICMP, GRE, ESP, AH, OSPF, and EIGRP have no port number at all, because they are not TCP or UDP. They ride directly on IP.
+
+ICMP.
+
+[PAUSE 3]
+
+Protocol number one.
+
+TCP.
+
+[PAUSE 3]
+
+Six.
+
+UDP.
+
+[PAUSE 3]
+
+Seventeen.
+
+GRE.
+
+[PAUSE 3]
+
+Forty seven.
+
+ESP, the encrypting part of IPSec.
+
+[PAUSE 3]
+
+Fifty.
+
+AH, the authentication header.
+
+[PAUSE 3]
+
+Fifty one.
+
+EIGRP.
+
+[PAUSE 3]
+
+Eighty eight.
+
+OSPF.
+
+[PAUSE 3]
+
+Eighty nine.
+
+VRRP.
+
+[PAUSE 3]
+
+One twelve.
+
+[PAUSE 2]
+
+Last round. Insecure protocol, secure replacement. I say the old one, you say what replaces it and on what port.
+
+FTP.
+
+[PAUSE 3]
+
+SFTP on twenty two, or FTPS on nine ninety.
+
+Telnet.
+
+[PAUSE 3]
+
+SSH on twenty two.
+
+HTTP.
+
+[PAUSE 3]
+
+HTTPS on four forty three.
+
+LDAP.
+
+[PAUSE 3]
+
+LDAPS on six thirty six.
+
+POP three.
+
+[PAUSE 3]
+
+POP three S on nine ninety five.
+
+IMAP.
+
+[PAUSE 3]
+
+IMAPS on nine ninety three.
+
+SNMP version two c.
+
+[PAUSE 3]
+
+SNMP version three. Same port, one sixty one. The version is what changes.
+
+WPA two.
+
+[PAUSE 3]
+
+WPA three.
+
+[PAUSE 1]
+
+End of track four. If you got most of those, your ports are exam ready. Come back to this track once a day until test day.

@@ -1,0 +1,161 @@
+# TITLE: Track 14 - Implementation 2
+
+[A] Domain two. Network Implementation. Drill two, switching, wireless, and physical installation. Twenty five questions.
+
+[PAUSE 1]
+
+[A] Question twenty six. A trunk link is configured between two switches. Switch A has native VLAN one, switch B has native VLAN ninety nine. What is the result?
+
+[PAUSE 5]
+
+[B] A native VLAN mismatch. Untagged frames leaving switch A on VLAN one arrive at switch B and get placed into VLAN ninety nine. Two broadcast domains merge. Traffic leaks between VLANs that should be isolated, and spanning tree can behave unpredictably. Both ends must agree.
+
+[A] Question twenty seven. An IP phone and a workstation share one wall jack. How is the traffic separated?
+
+[PAUSE 5]
+
+[B] A voice VLAN. The switch port carries the data VLAN untagged for the PC and the voice VLAN tagged for the phone. The phone has a built in switch and tags its own traffic. LLDP MED tells the phone which VLAN to use automatically.
+
+[A] Question twenty eight. How many bytes does eight oh two dot one Q add to an Ethernet frame, and what is the valid VLAN ID range?
+
+[PAUSE 5]
+
+[B] Four bytes, and VLAN IDs run one through four thousand ninety four. That four byte addition is why jumbo or maximum size frames can become giants on a trunk if MTU is not accounted for.
+
+[A] Question twenty nine. Four gigabit links connect two switches, but throughput never exceeds one gigabit. What is happening and what is the fix?
+
+[PAUSE 6]
+
+[B] Spanning tree has blocked three links, because they are redundant paths that would form a loop. The fix is link aggregation with LACP, which bundles all four into a single logical interface. Spanning tree then sees one path and forwards on all four members.
+
+[A] Question thirty. LACP is configured active on one switch and passive on the other. Does the bundle form?
+
+[PAUSE 5]
+
+[B] Yes. Active initiates negotiation, passive responds. The only combination that fails is passive to passive, because neither side ever speaks first. Active to active also works.
+
+[A] Question thirty one. What determines which switch becomes the spanning tree root bridge?
+
+[PAUSE 5]
+
+[B] The lowest bridge ID, which is priority followed by MAC address. Default priority is thirty two thousand seven hundred sixty eight. If everything is left at default, the lowest MAC wins, and older switches have lower MACs. That usually elects your oldest, slowest switch as root, which is why you set priority manually.
+
+[A] Question thirty two. Name the RSTP port states.
+
+[PAUSE 5]
+
+[B] Discarding, learning, and forwarding. Three states. The original eight oh two dot one D had five: blocking, listening, learning, forwarding, and disabled, with thirty to fifty seconds of convergence. RSTP converges in seconds. If a question lists three states, it is RSTP.
+
+[A] Question thirty three. A workstation takes thirty seconds to obtain DHCP after boot. Which switch feature resolves this?
+
+[PAUSE 5]
+
+[B] PortFast on the access port. Without it, the port sits in listening and learning while the DHCP client is broadcasting into a port that is not forwarding yet. PortFast should be paired with BPDU guard, so that if someone plugs a switch into that jack, the port shuts down.
+
+[A] Question thirty four. Which feature prevents an unauthorized switch plugged into an access port from becoming the root bridge?
+
+[PAUSE 5]
+
+[B] Root guard. BPDU guard is related but different. BPDU guard shuts the port down entirely when any BPDU arrives. Root guard keeps the port up but refuses to let that neighbor become root. Both defend the topology, at different levels of severity.
+
+[A] Question thirty five. Jumbo frames are enabled on two servers and the switch between them, but one intermediate switch is left at default. What is the symptom?
+
+[PAUSE 6]
+
+[B] Intermittent failures and collapsed throughput. Large frames are silently dropped at the device with the fifteen hundred byte MTU. Small packets succeed, so basic connectivity tests pass, which makes this maddening to diagnose. Every device in the path must match.
+
+[A] Question thirty six. A switch port is configured with port security and a maximum of one MAC address. A user connects a small unmanaged switch. What happens?
+
+[PAUSE 5]
+
+[B] A violation occurs and the port typically goes into error disabled state. Port security counts source MAC addresses learned on the port. Two devices behind the unmanaged switch means two MACs, which exceeds the limit. Recovery requires shutting and re opening the port, or errdisable recovery.
+
+[A] Question thirty seven. Which non overlapping channels should be used in the two point four gigahertz band?
+
+[PAUSE 5]
+
+[B] One, six, and eleven. The band has only enough spectrum for three non overlapping twenty megahertz channels in North America. Adjacent access points on channels three, four, and five interfere with each other even though the numbers differ.
+
+[A] Question thirty eight. A client supports only two point four gigahertz and cannot see a new SSID broadcast from an eight oh two dot eleven A C access point. Why?
+
+[PAUSE 5]
+
+[B] Eight oh two dot eleven A C operates in the five gigahertz band only. The client is not broken and the SSID is not hidden. The radio simply cannot tune there. Eight oh two dot eleven N and A X are the dual band standards.
+
+[A] Question thirty nine. What is the difference between an SSID and a BSSID?
+
+[PAUSE 5]
+
+[B] The SSID is the human readable network name, shared by every access point in the network. The BSSID is the MAC address of one specific access point radio. When troubleshooting roaming, the BSSID tells you exactly which AP a client is attached to. The SSID cannot.
+
+[A] Question forty. An enterprise wants per user wireless credentials so a departing employee can be revoked without changing anything on other devices. What should be deployed?
+
+[PAUSE 6]
+
+[B] WPA two or WPA three Enterprise, using eight oh two dot one X with a RADIUS server. Pre shared key is the distractor. With PSK everyone shares one passphrase, so revoking one person means re keying every device in the building.
+
+[A] Question forty one. Which WPA three mechanism replaces the WPA two four way handshake, and what attack does it defeat?
+
+[PAUSE 5]
+
+[B] SAE, simultaneous authentication of equals, sometimes called Dragonfly. It defeats offline dictionary attacks against a captured handshake, and it adds forward secrecy, so traffic captured today cannot be decrypted later even if the password is eventually learned.
+
+[A] Question forty two. A guest network must require users to accept terms before gaining internet access. What is configured?
+
+[PAUSE 5]
+
+[B] A captive portal. It intercepts the first web request and redirects to an acceptance or login page. Best practice pairs it with a separate guest VLAN and client isolation, so guests cannot see each other or reach internal resources.
+
+[A] Question forty three. Widening a wireless channel from twenty to forty megahertz doubles throughput on paper. What is the trade off?
+
+[PAUSE 6]
+
+[B] Fewer non overlapping channels and more interference. In two point four gigahertz, a forty megahertz channel consumes most of the band and is almost always a bad idea. In five and six gigahertz there is room, but in dense deployments narrower channels often perform better because co channel interference drops.
+
+[A] Question forty four. Which antenna type would you select to cover a long narrow warehouse aisle from one end?
+
+[PAUSE 5]
+
+[B] A directional antenna, such as a yagi or patch. It concentrates the signal into a narrow beam with higher gain in that direction. An omnidirectional antenna radiates in all directions and would waste most of its energy into the walls.
+
+[A] Question forty five. What is the purpose of dynamic frequency selection in the five gigahertz band?
+
+[PAUSE 5]
+
+[B] It requires the access point to detect radar and vacate the channel, because parts of the five gigahertz band are shared with weather and military radar. A practical symptom is clients suddenly disconnecting when the AP detects a radar hit and changes channel.
+
+[A] Question forty six. What is the difference between an MDF and an IDF?
+
+[PAUSE 5]
+
+[B] The MDF, main distribution frame, is the primary demarcation and equipment room where circuits enter the building and the core lives. IDFs, intermediate distribution frames, are the satellite closets on each floor that aggregate local drops and connect back to the MDF. Horizontal cabling runs from the IDF to the desk.
+
+[A] Question forty seven. Six new PoE cameras are added and three existing access points stop working. No interface errors are logged. What is the cause?
+
+[PAUSE 6]
+
+[B] The switch PoE power budget has been exceeded. Every switch has a total wattage ceiling, separate from per port limits. When it is exhausted, the switch stops delivering power to lower priority ports. Check it with show power. Adding devices is a power planning problem, not a network problem.
+
+[A] Question forty eight. A pan tilt zoom camera requires forty five watts. The switch supports eight oh two dot three A T. Will it power on?
+
+[PAUSE 5]
+
+[B] No. Eight oh two dot three A T, PoE plus, delivers a maximum of thirty watts at the source. Forty five watts requires eight oh two dot three B T, PoE plus plus. For reference, original PoE, eight oh two dot three A F, delivers fifteen point four watts.
+
+[A] Question forty nine. What is the difference between a UPS and a PDU in a server rack?
+
+[PAUSE 5]
+
+[B] A UPS, uninterruptible power supply, provides battery backup and rides through outages or feeds a generator transition. A PDU, power distribution unit, simply distributes power to multiple devices, though managed models add per outlet switching and monitoring. A PDU alone gives you no runtime during an outage.
+
+[A] Question fifty. Why do data centers use hot aisle and cold aisle containment?
+
+[PAUSE 5]
+
+[B] To stop hot exhaust from being drawn back into equipment intakes. Racks face each other so cold supply air enters the front of every device and hot exhaust is confined behind them. Without it, recirculation raises intake temperatures and cooling efficiency collapses.
+
+[PAUSE 2]
+
+[A] End of implementation drill two.
+
+[B] The heaviest hitters here are native VLAN mismatch, spanning tree root election, and the PoE power budget. Those three account for most implementation questions people miss.

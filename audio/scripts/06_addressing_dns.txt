@@ -1,0 +1,183 @@
+# TITLE: Track 06 - Addressing Dns
+
+Track six. Addressing and name resolution. ARP, NDP, DHCP, APIPA, SLAAC, and DNS.
+
+This track covers the services that break most often in the real world, which is exactly why the exam loves them.
+
+[PAUSE 1]
+
+ARP. Address Resolution Protocol.
+
+ARP maps a known IPv4 address to an unknown MAC address on the local segment. The request is a broadcast, asking who has this IP. The reply is a unicast from the owner. Results get cached in the ARP table, which you view with arp dash a on a host, or show arp on a switch.
+
+ARP sits right at the boundary of layer two and layer three. CompTIA generally treats it as layer two.
+
+A gratuitous ARP is an unsolicited announcement. Legitimate uses include duplicate address detection and gateway failover. The malicious use is ARP spoofing.
+
+Attack scenario. Two hosts on the same VLAN have intermittent connectivity, and arp dash a shows the default gateway's IP mapped to an unexpected MAC address that keeps changing. What is happening? ARP poisoning, enabling an on path attack, what used to be called man in the middle. The mitigation is dynamic ARP inspection, along with DHCP snooping.
+
+[PAUSE 1]
+
+NDP. Neighbor Discovery Protocol. This is the IPv6 replacement for ARP, and it does considerably more.
+
+NDP runs over ICMP version six, and uses five message types.
+
+Router solicitation, type one thirty three. A host asking whether any routers are present. Router advertisement, type one thirty four. A router answering with the prefix and configuration flags. Neighbor solicitation, type one thirty five. The ARP request equivalent. Also used for duplicate address detection. Neighbor advertisement, type one thirty six. The ARP reply equivalent. And redirect, type one thirty seven.
+
+The consequence people miss. Because NDP runs on ICMP version six, blocking all ICMP version six at your firewall breaks IPv6 entirely. That is different from IPv4, where blocking ICMP is merely inconvenient. In IPv6, ICMP is load bearing.
+
+Also note, NDP uses multicast rather than broadcast, so it is quieter than ARP.
+
+[PAUSE 1]
+
+DHCP. Dynamic Host Configuration Protocol. UDP sixty seven server, sixty eight client.
+
+The process is DORA. Discover, Offer, Request, Acknowledge.
+
+CompTIA tests these terms directly, so learn the distinctions.
+
+A scope is the pool of addresses a server can hand out.
+
+A reservation ties a specific IP permanently to a MAC address, but the client still uses DHCP. This is the centrally managed way to give a device a fixed address.
+
+An exclusion tells the server never to issue certain addresses inside the scope, usually because those devices are configured statically.
+
+Lease time is how long an assignment is valid. Renewal is attempted at fifty percent of the lease, and again at eighty seven and a half percent.
+
+Options are extra parameters. Option three is the default gateway. Option six is DNS. Option sixty six is the TFTP server.
+
+And relay, also called an IP helper. This is a router configuration that converts a client's DHCP broadcast into a unicast aimed at a DHCP server on a different subnet.
+
+That last one produces the most tested DHCP scenario on the exam. Clients on VLAN thirty get one sixty nine dot two five four addresses, while clients on VLAN ten, where the DHCP server lives, get addresses normally. What is wrong? The router interface for VLAN thirty is missing an IP helper address. Remember, DHCP discover is a broadcast, and routers do not forward broadcasts.
+
+Second scenario. Users report intermittent failures to get an address late in the day, and the server logs show no free addresses. That is address pool exhaustion. Expand the scope, or shorten the lease time.
+
+Third. A printer must always get the same address but be managed centrally. Answer, a DHCP reservation. Not a static address configured on the printer.
+
+[PAUSE 1]
+
+APIPA. Automatic Private IP Addressing. The range one sixty nine dot two five four, with a sixteen bit mask.
+
+A host self assigns from this range when it cannot reach a DHCP server. It allows link local communication only. No gateway, no routing, no internet.
+
+The one thing to remember. APIPA is not a configuration. It is a symptom. It means DHCP failed. Check the physical link, the VLAN assignment, the relay configuration, or the DHCP service itself.
+
+Do not confuse APIPA with the RFC nineteen eighteen private ranges, which are ten dot anything, one seventy two dot sixteen through thirty one, and one ninety two dot one sixty eight. Those are intentional private addressing behind NAT. And do not confuse it with loopback, one twenty seven dot zero dot zero dot one, or colon colon one in IPv6, which only tests the local TCP IP stack and never leaves the machine.
+
+[PAUSE 1]
+
+SLAAC. Stateless Address Autoconfiguration. IPv6 only.
+
+The host listens for a router advertisement, takes the prefix from it, and builds its own address by generating its own interface identifier, either with EUI sixty four or a randomized privacy value.
+
+Stateless means no server tracks the assignment. Nobody has a record of who got what.
+
+Compare that with stateful DHCP version six, where a server assigns and records addresses. Many networks run both, using SLAAC for the address and DHCP version six for DNS settings.
+
+Exam discriminator. If the scenario stresses that no server is present, it is SLAAC. If it stresses tracking or auditing which host held which address, it is DHCP version six.
+
+[PAUSE 1]
+
+Now DNS, the biggest topic in this track.
+
+DNS resolves names to addresses and back. It is hierarchical and distributed. Root, then top level domain, then the authoritative servers for the zone.
+
+Record types. Learn all of these.
+
+A record maps a hostname to an IPv4 address. Quad A record maps a hostname to an IPv6 address. Four A's, four times thirty two bits. CNAME is an alias pointing to another hostname. Never to an IP address. To a name. MX identifies the mail server for a domain, with a priority value. TXT is free form text, and it carries the anti spoofing records, SPF, DKIM, and DMARC. NS says which name servers are authoritative for the zone. PTR is the reverse lookup, IP to name. Mail servers use it to verify senders. SOA, start of authority, holds the zone serial number, refresh timers, and admin contact. And SRV locates a service, like a domain controller or a SIP server.
+
+[PAUSE 1]
+
+DNS concepts CompTIA tests.
+
+Forward zone is name to IP. Reverse zone is IP to name.
+
+An authoritative answer comes from the server that actually owns the zone. A non authoritative answer comes from a cache. And when nslookup labels a result non authoritative, that is not an error. It just means the answer came from a caching resolver.
+
+Recursive means the resolver does the entire lookup on the client's behalf. Iterative means each server returns a referral and the asker keeps going.
+
+Primary zone holds the writable master copy. Secondary holds a read only replica received through a zone transfer. That is different from the secondary DNS server field on your network adapter, which is just a second resolver to ask.
+
+And the hosts file is checked before DNS on most systems, which makes it both a troubleshooting tool and a malware target.
+
+[PAUSE 1]
+
+DNS troubleshooting signatures.
+
+A user cannot reach a hostname but can reach the same server by IP address, and every other site works. That is a problem with that specific record. A missing or wrong A record, or a stale cached entry.
+
+An administrator changes a website's IP, but some users still hit the old server hours later. Why? The old record is still cached and its TTL has not expired. The lesson is to lower the TTL before a planned migration.
+
+Note that this TTL, the DNS caching timer, is a completely different thing from the TTL in an IP header, which is a hop counter that prevents routing loops. Same acronym, unrelated meanings. The exam will use both.
+
+[PAUSE 1]
+
+Two security extensions to DNS, and people mix them up constantly.
+
+DNSSEC. DNS Security Extensions. It digitally signs DNS records so a resolver can verify the answer was not altered. DNSSEC provides authentication and integrity. It does not encrypt anything. Your queries are still readable on the wire.
+
+DNS over HTTPS, on port four forty three, and DNS over TLS, on port eight fifty three. These encrypt the query itself for confidentiality. But they say nothing about whether the answer is genuine.
+
+The clean way to hold both. DNSSEC answers, is this answer real. DoH and DoT answer, can anyone see my question. Completely different problems.
+
+One more scenario worth knowing. A security team notices URL filtering is being bypassed on some workstations, and DNS queries no longer appear on the internal resolver. What happened? DNS over HTTPS. The browser is resolving names over port four forty three to an external resolver, invisible to internal DNS logging. That is exactly why DoH frustrates enterprise content filtering.
+
+[PAUSE 2]
+
+Drill.
+
+A host has the address one sixty nine dot two five four dot eight dot four. What failed?
+
+[PAUSE 3]
+
+DHCP. That is APIPA.
+
+Clients on one VLAN get addresses, clients on another get APIPA. The DHCP server is on the working VLAN. What is missing?
+
+[PAUSE 4]
+
+An IP helper address, or DHCP relay, on the router interface for the failing VLAN.
+
+Which DNS record maps a name to an IPv6 address?
+
+[PAUSE 3]
+
+Quad A.
+
+Which record must exist for a domain to receive email?
+
+[PAUSE 3]
+
+MX.
+
+Which record type carries SPF and DMARC?
+
+[PAUSE 3]
+
+TXT.
+
+Which protocol resolves IPv6 neighbor addresses?
+
+[PAUSE 3]
+
+NDP, running over ICMP version six.
+
+An IPv6 host got a global address with no DHCP server anywhere. How?
+
+[PAUSE 4]
+
+SLAAC, using the prefix from a router advertisement.
+
+Which technology proves a DNS answer has not been tampered with?
+
+[PAUSE 3]
+
+DNSSEC.
+
+Which one encrypts the DNS query itself?
+
+[PAUSE 3]
+
+DNS over HTTPS, or DNS over TLS.
+
+End of track six.

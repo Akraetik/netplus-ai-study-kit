@@ -1,0 +1,139 @@
+# TITLE: Track 05 - Core Protocols
+
+Track five. The core Internet Protocol types. TCP, UDP, ICMP, GRE, and IPSec.
+
+These five are called out by name in objective one point four, and they carry a large share of the exam.
+
+[PAUSE 1]
+
+Start with the transport layer, layer four. There are exactly two transport protocols, and the exam wants you to choose between them constantly.
+
+TCP. Transmission Control Protocol. IP protocol number six.
+
+TCP is connection oriented and reliable. It opens a session with the three way handshake. SYN, then SYN ACK, then ACK. Memorize that order. It closes with FIN and ACK.
+
+TCP provides sequencing, so segments arrive in order. Acknowledgment, so the sender knows what got through. Retransmission, so lost data gets resent. Flow control through windowing. And congestion control.
+
+All of that costs overhead. Use TCP when every byte matters. Web, email, file transfer, databases, remote desktop.
+
+Troubleshooting signature. If a packet capture shows a high number of TCP retransmissions and duplicate acknowledgments, that means packet loss somewhere on the path. TCP is detecting missing segments and resending them, which is why throughput collapses. Look for congestion, a failing interface, or a bad cable.
+
+[PAUSE 1]
+
+UDP. User Datagram Protocol. IP protocol number seventeen.
+
+UDP is connectionless and unreliable by design. No handshake. No acknowledgment. No retransmission. No ordering. The header is only eight bytes, so overhead and latency are minimal.
+
+Use UDP when speed beats completeness. Voice and video media, DNS queries, DHCP, TFTP, SNMP, NTP, Syslog.
+
+Troubleshooting signature. During a VoIP call, users hear brief audio gaps but the call never drops. Why does the audio not recover? Because the media rides on UDP, and UDP does not retransmit. The missing audio is simply gone. And that is correct behavior, because retransmitted audio would arrive too late to be useful anyway.
+
+[PAUSE 1]
+
+The exam shortcut for choosing between them. If the question mentions real time, streaming, voice, video, or broadcast, think UDP. If it mentions integrity, sessions, files, or transactions, think TCP.
+
+[PAUSE 1]
+
+ICMP. Internet Control Message Protocol. Layer three. IP protocol number one. No port number, because it is not TCP or UDP.
+
+ICMP carries error and diagnostic messages for IP. It carries no user data at all. It is the engine behind ping and traceroute.
+
+Message types worth memorizing. Type zero is echo reply. Type three is destination unreachable. Type five is redirect. Type eight is echo request. Type eleven is time exceeded, which means the TTL hit zero.
+
+Note that echo request is eight and echo reply is zero. Request is the higher number. That trips people up.
+
+Two classic scenarios.
+
+First. A technician can reach a web server by IP address in a browser, but ping to that same server times out. What is happening? A firewall is blocking ICMP echo requests. The service is up and fine. Blocked ICMP is a security default, not a fault. Do not conclude the server is down just because ping fails.
+
+Second. How does traceroute work? It sends packets with deliberately low TTL values, starting at one and incrementing. Each router along the path decrements the TTL, and the router where it hits zero drops the packet and sends back an ICMP time exceeded message. Reading those replies reveals every hop in order.
+
+[PAUSE 1]
+
+GRE. Generic Routing Encapsulation. IP protocol number forty seven.
+
+GRE wraps one protocol's packets inside IP so they can cross a network that would not otherwise carry them.
+
+The critical fact. GRE provides encapsulation only. No encryption. No authentication. If a question asks what GRE provides for security, the answer is nothing.
+
+But GRE has one capability that matters enormously. It can carry multicast and broadcast traffic. Plain IPSec cannot. And routing protocols like OSPF and EIGRP use multicast for their hello messages.
+
+So the classic design question. An engineer needs to run OSPF between two sites across the internet, and the traffic must be encrypted. What is the answer? GRE over IPSec. GRE carries the OSPF multicast, and IPSec wraps around it for confidentiality. Each one covers the other's weakness.
+
+[PAUSE 1]
+
+IPSec. Internet Protocol Security. This is a framework, not a single protocol, and the exam tests its parts individually.
+
+IPSec provides confidentiality, integrity, authentication, and anti replay for IP traffic.
+
+Two modes. Transport mode encrypts only the payload and keeps the original IP header. That is host to host. Tunnel mode encrypts the entire original packet and adds a new IP header. That is site to site VPN. If the scenario says between two branch offices, it is tunnel mode.
+
+Three components, and these are individually tested.
+
+AH. Authentication Header. IP protocol fifty one. It provides integrity and origin authentication for the entire packet, including the IP header. And here is the fact that gets tested. AH provides no encryption at all. None. Furthermore, because AH authenticates the IP header, and NAT rewrites the IP header, NAT breaks AH.
+
+ESP. Encapsulating Security Payload. IP protocol fifty. ESP provides encryption, plus integrity and authentication of the payload. This is what essentially everyone actually deploys.
+
+IKE. Internet Key Exchange. UDP port five hundred, or UDP forty five hundred when NAT traversal is in play. IKE negotiates the security association and exchanges the keys. Phase one builds a secure management channel and authenticates the peers. Phase two negotiates the actual data tunnel.
+
+[PAUSE 2]
+
+Drill.
+
+Which IPSec component provides encryption?
+
+[PAUSE 3]
+
+ESP. AH provides integrity and authentication only.
+
+A site to site VPN fails to establish, and the peers are behind a NAT device. What is the likely cause and the fix?
+
+[PAUSE 4]
+
+AH cannot survive NAT, because NAT rewrites the header AH is protecting. Use ESP with NAT traversal, on UDP forty five hundred.
+
+Which tunneling protocol can carry multicast?
+
+[PAUSE 3]
+
+GRE.
+
+What is the order of flags in the TCP three way handshake?
+
+[PAUSE 3]
+
+SYN, SYN ACK, ACK.
+
+Which ICMP type is returned when a TTL reaches zero?
+
+[PAUSE 3]
+
+Type eleven, time exceeded. That is what traceroute reads.
+
+Which transport protocol carries DHCP, TFTP, and SNMP?
+
+[PAUSE 3]
+
+UDP.
+
+A packet capture shows many TCP retransmissions and duplicate ACKs. What does that indicate?
+
+[PAUSE 4]
+
+Packet loss on the path.
+
+[PAUSE 1]
+
+One last item for this track. Traffic types, because objective one point four lists them alongside the protocols.
+
+Unicast is one sender to one specific receiver. Loading a web page.
+
+Multicast is one sender to a subscribed group. OSPF hellos, IPTV, video conferencing.
+
+Anycast is one sender delivered to the nearest member of a group that all share the same address. Root DNS servers and content delivery networks work this way. If a question describes a single IP address where clients are automatically served by the closest data center, that is anycast.
+
+Broadcast is one sender to every host on the local segment. ARP requests, and the initial DHCP discover.
+
+And the fact that gets tested. IPv6 has no broadcast at all. It was removed. IPv6 uses multicast instead. That is a favorite exam question.
+
+End of track five.

@@ -1,0 +1,155 @@
+# TITLE: Track 08 - Switching
+
+Track eight. Layer two switching. VLANs, trunking, spanning tree, link aggregation, discovery protocols, and MTU.
+
+[PAUSE 1]
+
+VLANs. Virtual Local Area Networks. A VLAN is a separate broadcast domain created in software on a switch. Valid IDs run one through four thousand ninety four.
+
+Eight oh two dot one Q is the tagging standard. It inserts a four byte tag into the Ethernet frame identifying which VLAN the frame belongs to. Tagging applies to trunk links, the links that carry multiple VLANs between switches.
+
+Now three VLAN terms that people blur together.
+
+The default VLAN is VLAN one. Every port starts there out of the box.
+
+The native VLAN is whichever VLAN travels untagged across a trunk. By default that is also VLAN one, and for security it should be changed to something unused.
+
+A voice VLAN is a separate tagged VLAN for IP phones. It lets a phone tag its voice traffic while the PC daisy chained behind the phone stays untagged on the data VLAN. That is how one wall jack serves both devices with separate policy and separate QoS.
+
+The classic exam scenario. After connecting a new switch, hosts in VLAN ten on one switch can unexpectedly reach hosts in VLAN twenty on the other. Trunking is configured on both ends. What is wrong? A native VLAN mismatch. The two switches disagree about which VLAN is untagged, so untagged frames land in the wrong broadcast domain and two VLANs effectively merge.
+
+Also know the switch virtual interface, the SVI. That is a logical layer three interface on a switch that gives a VLAN an IP address, which is how a layer three switch routes between VLANs.
+
+[PAUSE 1]
+
+Spanning tree. STP. Eight oh two dot one D.
+
+Spanning tree prevents layer two loops by blocking redundant paths, leaving exactly one active path between any two points.
+
+Why it matters. Ethernet frames have no TTL. There is no hop counter at layer two. So a loop does not decay, it amplifies. A single broadcast circulates forever, multiplying, and within seconds you have a broadcast storm plus MAC address table instability. The network goes down hard.
+
+Root bridge election. The lowest bridge ID wins. The bridge ID is the priority value followed by the MAC address. Default priority is thirty two thousand seven hundred sixty eight, configurable in increments of four thousand ninety six.
+
+The consequence. If every switch is left at default priority, the tie breaks on MAC address, and the lowest MAC wins. That is usually the oldest, slowest switch in the building, because older MAC addresses are numerically lower. That is why you always set root bridge priority manually.
+
+Port roles. The root port is the best path toward the root bridge. A designated port is the forwarding port on a segment. A blocking or alternate port is the one spanning tree shut down to break the loop.
+
+Port states in the original eight oh two dot one D. Blocking, listening, learning, forwarding, plus disabled. Convergence takes roughly thirty to fifty seconds.
+
+[PAUSE 1]
+
+RSTP. Rapid Spanning Tree Protocol. Eight oh two dot one W. This is the modern version, and it converges in a few seconds instead of tens of seconds.
+
+RSTP collapses the port states down to three. Discarding, learning, forwarding. If a question lists three states, it is RSTP. If it lists five, it is the original.
+
+Two more variants. MSTP, eight oh two dot one S, maps groups of VLANs to spanning tree instances. And PVST plus runs a separate instance per VLAN, which is Cisco.
+
+Protective features worth knowing. PortFast skips the delay on an access port so a workstation gets link immediately. BPDU guard shuts down a port if a spanning tree message arrives where none should, which stops someone plugging a rogue switch into a wall jack. Root guard prevents an unauthorized switch from taking over as root bridge.
+
+Scenario. Users complain about a thirty second delay before their workstations get an IP address after boot. What fixes it? PortFast. The port was sitting in listening and learning while the DHCP client was trying to broadcast.
+
+Second scenario. A broadcast storm and MAC table flapping start the moment a technician connects two access switches with a second cable. What should have prevented it? Spanning tree.
+
+[PAUSE 1]
+
+Now a warning about an acronym collision that catches people every exam cycle. STP means spanning tree protocol in the switching domain. But STP also means shielded twisted pair in the cabling domain.
+
+Read the context. Loops, root bridge, BPDUs, broadcast storms means spanning tree. EMI, interference, crosstalk, cable runs near fluorescent lights means shielded twisted pair. Same three letters, entirely different topic.
+
+[PAUSE 1]
+
+Link aggregation. LACP. Link Aggregation Control Protocol. Eight oh two dot three A D, later renumbered eight oh two dot one A X.
+
+LACP bundles multiple physical links into one logical link, for more bandwidth and automatic failover. It negotiates dynamically, in active or passive mode. Both ends must agree on speed, duplex, and mode.
+
+Cisco's proprietary equivalent is PAgP. A static bundle uses no negotiation at all, which works but gives you no protection against a miswired cable.
+
+Scenario. Two switches are connected by four gigabit links, but only one carries traffic. Why? Spanning tree blocked the other three, because they are redundant paths. What do you configure? Link aggregation with LACP, which makes all four appear as a single logical link that spanning tree treats as one path.
+
+And do not confuse link aggregation with load balancing. Aggregation combines links between two devices. A load balancer distributes client sessions across multiple servers. Different layer, different purpose.
+
+[PAUSE 1]
+
+Discovery protocols. CDP and LLDP.
+
+CDP is Cisco Discovery Protocol. LLDP is Link Layer Discovery Protocol, eight oh two dot one A B, and it is the vendor neutral standard.
+
+Both operate at layer two. A device advertises its identity, model, software version, and the port it is using, so you can map who is plugged into what without tracing a single cable.
+
+LLDP MED extends it for media endpoints, delivering voice VLAN assignment and power requirements to IP phones automatically.
+
+Exam discriminator. Mixed vendor environment means LLDP. If the answer choices include both and the scenario mentions any non Cisco gear, pick LLDP.
+
+[PAUSE 1]
+
+MTU. Maximum Transmission Unit. Standard Ethernet MTU is fifteen hundred bytes.
+
+Jumbo frames raise it to around nine thousand bytes, which reduces per packet overhead. That helps storage networks and backup traffic significantly.
+
+The catch. Every device in the path must agree. If one device is still at fifteen hundred, oversized frames get dropped, sometimes silently.
+
+Scenario. After enabling jumbo frames on a storage network, iSCSI throughput drops sharply and hosts report intermittent timeouts. Cause? An MTU mismatch. Something in the path is still at fifteen hundred.
+
+[PAUSE 1]
+
+Finally, interface counters, because they appear in troubleshooting questions and each one points somewhere specific.
+
+Runts are frames smaller than sixty four bytes. Usually collisions or a duplex mismatch. Giants are frames larger than the MTU. Usually an MTU mismatch or a tagging problem. CRC errors mean corrupted frames. That points at physical layer. A bad cable, a bad connector, or electromagnetic interference. Drops mean a buffer overflowed. That points at congestion.
+
+And the classic combination. Late collisions plus CRC errors on a link that still passes some traffic is the signature of a duplex mismatch. One side is set to full duplex, the other to half.
+
+Port status values to know. Error disabled means the switch shut the port down for a violation, often port security or BPDU guard. Administratively down means somebody shut it off on purpose.
+
+[PAUSE 2]
+
+Drill.
+
+Which spanning tree standard uses discarding, learning, and forwarding?
+
+[PAUSE 3]
+
+RSTP. Eight oh two dot one W.
+
+How is the root bridge elected?
+
+[PAUSE 3]
+
+Lowest bridge ID, which is priority followed by MAC address.
+
+Which VLAN travels untagged on a trunk?
+
+[PAUSE 3]
+
+The native VLAN.
+
+Two switches disagree about the untagged VLAN on their trunk. What is the symptom?
+
+[PAUSE 4]
+
+Traffic leaking between VLANs. Hosts reaching a VLAN they should not.
+
+Which discovery protocol works in a multi vendor network?
+
+[PAUSE 3]
+
+LLDP.
+
+What causes CRC errors on an interface?
+
+[PAUSE 3]
+
+Physical layer problems. Bad cable, bad connector, or interference.
+
+Which feature lets an access port skip listening and learning?
+
+[PAUSE 3]
+
+PortFast.
+
+Storage throughput collapses after enabling jumbo frames. What is wrong?
+
+[PAUSE 4]
+
+MTU mismatch somewhere in the path.
+
+End of track eight.

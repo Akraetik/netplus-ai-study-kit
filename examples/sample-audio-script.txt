@@ -1,0 +1,32 @@
+# TITLE: Sample - Secure Swaps Drill
+
+// This is a sample two-voice drill. Voice A asks. Voice B answers.
+// Each [PAUSE] is your turn to say the answer out loud before you hear it.
+
+[A] Welcome to the secure swaps drill. Every insecure protocol on the Network Plus exam has a secure replacement on a different port. I ask. You answer out loud in the pause. Then you hear the answer.
+
+[A] Telnet runs on port twenty-three. What replaces it, and on what port?
+
+[PAUSE 4]
+
+[B] SSH, on port twenty-two. Same job, remote command line, but encrypted.
+
+[A] HTTP runs on port eighty. What is the secure version?
+
+[PAUSE 4]
+
+[B] HTTPS, on port four forty-three. That is HTTP wrapped in TLS.
+
+[A] LDAP runs on three eighty-nine. What is the secure version?
+
+[PAUSE 4]
+
+[B] LDAPS, on six thirty-six. Remember the pattern. Add TLS, move the port.
+
+[A] Last one. You need to transfer files securely over an SSH session. Which protocol, and which port?
+
+[PAUSE 4]
+
+[B] SFTP, on port twenty-two. It rides inside SSH, so it shares SSH's port. Do not confuse it with FTPS, which is FTP plus TLS on ports nine eighty-nine and nine ninety.
+
+[A] That is the drill. Run it again tomorrow. Spacing beats cramming.

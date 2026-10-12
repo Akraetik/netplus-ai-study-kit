@@ -1,0 +1,185 @@
+# TITLE: Track 02 - Ports Part1
+
+Track two. The official port list, part one. Ports twenty through one twenty three.
+
+These are the exact entries CompTIA publishes. I will teach each one, then we will drill.
+
+[PAUSE 1]
+
+Ports twenty and twenty one. FTP. File Transfer Protocol. Twenty one is the control connection where commands and your login travel. Twenty is the data connection in active mode. Both run over TCP.
+
+The thing to remember about FTP is that it is completely plain text. Username, password, file contents, all readable by anyone capturing the traffic. If an exam question shows you a packet capture with a visible password during a file transfer, the answer is FTP, and the fix is SFTP.
+
+[PAUSE 1]
+
+Port twenty two. This one port carries three protocols, and CompTIA loves that.
+
+SSH. Secure Shell. Encrypted command line access to a router, a switch, or a server. This is your default answer for securely managing a device over the network.
+
+SFTP. Secure File Transfer Protocol, which really means the SSH file transfer protocol, because it runs inside an SSH session. One port, fully encrypted, easy to allow through a firewall.
+
+And SCP, secure copy, which also rides SSH.
+
+So port twenty two means SSH, SFTP, and SCP. If a question tells you a firewall permits only TCP twenty two outbound and asks which file transfer protocol will work, the answer is SFTP.
+
+[PAUSE 1]
+
+Port twenty three. Telnet. Remote command line, same job as SSH, but plain text. Obsolete for management. Any security question offering Telnet is offering you a wrong answer.
+
+But here is the part people forget. Telnet is still useful as a troubleshooting tool. Typing telnet, then a host name, then a port number, tests whether that TCP port is open and listening. If you get a blank screen, the port is open. If you get connection refused or a timeout, it is closed or filtered.
+
+[PAUSE 1]
+
+Port twenty five. SMTP. Simple Mail Transfer Protocol. This is the protocol that sends mail. Server to server relay. Remember the direction. SMTP pushes mail out.
+
+If a user can receive email but cannot send email, you are troubleshooting SMTP.
+
+[PAUSE 1]
+
+Port fifty three. DNS. Domain Name System. Resolves names to IP addresses.
+
+DNS is one of the few protocols that uses both transports. Normal lookups use UDP fifty three because they are small and fast. Zone transfers between name servers, and any reply larger than five hundred twelve bytes, use TCP fifty three.
+
+The classic DNS failure signature. The user can ping eight dot eight dot eight dot eight successfully, but cannot reach a website by name. IP works, names do not. That is DNS every time.
+
+[PAUSE 1]
+
+Ports sixty seven and sixty eight. DHCP. Dynamic Host Configuration Protocol. Both UDP. Sixty seven is the server. Sixty eight is the client.
+
+Here is the memory hook. Sixty seven, the lower number, is the server, because the server is the one in charge. Client is sixty eight.
+
+The DHCP process is D O R A. Discover. Offer. Request. Acknowledge. The client broadcasts a discover, the server offers an address, the client requests it, the server acknowledges.
+
+The classic DHCP failure signature is an address starting one sixty nine dot two five four. That is APIPA, and it means the client never reached a DHCP server.
+
+[PAUSE 1]
+
+Port sixty nine. TFTP. Trivial File Transfer Protocol. UDP.
+
+Trivial is the operative word. No authentication at all. No encryption. No directory listing. It is stripped down small enough to fit in a router's boot ROM, which is exactly why it is used for firmware upgrades, configuration backups, and PXE network boot.
+
+Because it has no authentication whatsoever, TFTP should never touch the internet.
+
+Notice the pairing. Sixty nine is TFTP over UDP. Twenty one is FTP over TCP. Different protocols, different transports, easy to confuse.
+
+[PAUSE 1]
+
+Port eighty. HTTP. Hypertext Transfer Protocol. Web traffic, plain text. TCP.
+
+[PAUSE 1]
+
+Port one twenty three. NTP. Network Time Protocol. UDP. Synchronizes clocks.
+
+NTP uses a stratum hierarchy. Stratum zero is a reference clock, an atomic clock or a GPS receiver. Stratum one is directly attached to it. Every hop away adds one to the number.
+
+Accurate time matters far more than beginners expect. Kerberos authentication fails if clocks drift more than about five minutes. Certificates validate against time. Log correlation across devices is impossible without it. Time based one time passwords break.
+
+So when an exam question describes log entries from three switches that are minutes apart and cannot be correlated, the answer is implement NTP.
+
+[PAUSE 2]
+
+Now the drill. I will name a port, you say the protocol. Out loud.
+
+Port twenty one.
+
+[PAUSE 3]
+
+FTP. File Transfer Protocol. Plain text.
+
+Port twenty two.
+
+[PAUSE 3]
+
+SSH, and also SFTP.
+
+Port twenty three.
+
+[PAUSE 3]
+
+Telnet. Plain text.
+
+Port twenty five.
+
+[PAUSE 3]
+
+SMTP. Sending mail.
+
+Port fifty three.
+
+[PAUSE 3]
+
+DNS.
+
+Ports sixty seven and sixty eight.
+
+[PAUSE 3]
+
+DHCP. Sixty seven server, sixty eight client.
+
+Port sixty nine.
+
+[PAUSE 3]
+
+TFTP. No authentication.
+
+Port eighty.
+
+[PAUSE 3]
+
+HTTP.
+
+Port one twenty three.
+
+[PAUSE 3]
+
+NTP. Network Time Protocol.
+
+[PAUSE 1]
+
+Now reverse it. I name the protocol, you say the port.
+
+DNS.
+
+[PAUSE 3]
+
+Fifty three.
+
+Telnet.
+
+[PAUSE 3]
+
+Twenty three.
+
+Network Time Protocol.
+
+[PAUSE 3]
+
+One twenty three, UDP.
+
+Trivial File Transfer Protocol.
+
+[PAUSE 3]
+
+Sixty nine, UDP.
+
+Secure Shell.
+
+[PAUSE 3]
+
+Twenty two.
+
+Simple Mail Transfer Protocol.
+
+[PAUSE 3]
+
+Twenty five.
+
+Dynamic Host Configuration Protocol.
+
+[PAUSE 3]
+
+Sixty seven and sixty eight, UDP.
+
+[PAUSE 1]
+
+End of track two. Next track picks up at port one sixty one.

@@ -1,0 +1,163 @@
+# TITLE: Track 16 - Troubleshooting 2
+
+[A] Domain five. Network Troubleshooting. Drill two, switching faults, routing faults, addressing, performance, and wireless. Twenty five questions.
+
+[PAUSE 1]
+
+[A] Question twenty six. A user is moved to a new desk and immediately loses all network access. The port has link light. What should be checked first?
+
+[PAUSE 5]
+
+[B] The VLAN assignment on the new switch port. An incorrect VLAN is the most common cause of total loss of access after a move, because the port may be sitting in a VLAN with no DHCP scope and no route out. Link light only proves layer one.
+
+[A] Question twenty seven. Two switches are connected with two cables and the entire network becomes unusable within seconds. CPU on every switch spikes. What is happening?
+
+[PAUSE 5]
+
+[B] A broadcast storm from a layer two loop, with spanning tree disabled or misconfigured. Ethernet frames have no TTL, so a broadcast circulates forever and multiplies. MAC address tables also destabilize as the same address is learned on multiple ports.
+
+[A] Question twenty eight. After a power outage, a different switch has become the spanning tree root and traffic now takes a suboptimal path. Why did this happen?
+
+[PAUSE 6]
+
+[B] Bridge priorities were left at the default of thirty two thousand seven hundred sixty eight, so the election fell through to lowest MAC address. Whichever qualifying switch booted with the lowest MAC address won. The fix is to set the intended root's priority explicitly and use root guard.
+
+[A] Question twenty nine. A user connects and the switch port immediately goes into an error disabled state. What are the two most likely causes?
+
+[PAUSE 6]
+
+[B] A port security violation, meaning an unexpected or additional MAC address, or BPDU guard triggering because a switch was plugged into an access port. Recovery requires shutting and re enabling the port, or configuring errdisable recovery with a timer.
+
+[A] Question thirty. Users on VLAN twenty can reach the internet but cannot reach a server on VLAN thirty. Routing is configured and both VLANs are up. What should be checked?
+
+[PAUSE 5]
+
+[B] An access control list on the router or layer three switch. Internet access proves routing works, so the fault is filtering, not reachability. Check ACL direction and order, remembering that the implicit deny at the end catches anything not explicitly permitted.
+
+[A] Question thirty one. Traffic to a remote network loops between two routers until the TTL expires. What is the cause?
+
+[PAUSE 5]
+
+[B] A routing loop, usually from misconfigured static routes pointing at each other, or redistribution between protocols without filtering. Traceroute shows the same two hops alternating repeatedly. That repeating pattern is the signature.
+
+[A] Question thirty two. A backup link is never used even though the primary is heavily congested. Both are configured. Why?
+
+[PAUSE 5]
+
+[B] The backup route has a worse administrative distance or metric, so it stays out of the routing table entirely. Routing protocols select on trust and metric, not on current utilization. Load sharing requires equal cost paths or an explicit traffic engineering design.
+
+[A] Question thirty three. A workstation has an IP of ten dot one dot one dot fifty with mask two fifty five dot two fifty five dot two fifty five dot zero, and a gateway of ten dot one dot two dot one. What is wrong?
+
+[PAUSE 6]
+
+[B] The default gateway is not in the workstation's own subnet. With a slash twenty four mask, the host's subnet is ten dot one dot one dot zero, so ten dot one dot two dot one is unreachable. Local traffic works, everything off subnet fails. Either the gateway address or the mask is wrong.
+
+[A] Question thirty four. Two devices are configured with the same static IP. What symptoms appear?
+
+[PAUSE 5]
+
+[B] Intermittent connectivity for both, with the ARP cache flipping between two MAC addresses for one IP. Windows may log an address conflict. Traffic goes to whichever device answered most recently. The fix is to remove the static and use a DHCP reservation.
+
+[A] Question thirty five. Several clients suddenly receive addresses in an unexpected subnet and cannot reach corporate resources. What is the likely cause?
+
+[PAUSE 5]
+
+[B] A rogue DHCP server, often someone's home router plugged in backwards, with its LAN port on the corporate network. Clients accept whichever offer arrives first. The mitigation is DHCP snooping, which only trusts offers from designated uplink ports.
+
+[A] Question thirty six. New clients cannot obtain addresses at midday, but the same clients work fine in the morning. What should be checked?
+
+[PAUSE 5]
+
+[B] Scope exhaustion. The pool has no free addresses when population peaks. Fixes are a larger scope, a shorter lease time so abandoned leases return faster, or both. Check the server's active lease count against the scope size.
+
+[A] Question thirty seven. A laptop shows a one sixty nine dot two five four address. Ping to the gateway fails. What are the possible causes?
+
+[PAUSE 6]
+
+[B] APIPA, meaning DHCP failed. Possible causes are a physical link problem, a wrong or missing VLAN on the port, a missing IP helper address on the router for that subnet, an exhausted scope, or the DHCP service being down. Work bottom up through that list.
+
+[A] Question thirty eight. Users report the network is slow. Interface counters show high utilization and rising output drops on one uplink. What is the problem, and what is the fix?
+
+[PAUSE 6]
+
+[B] Congestion creating a bottleneck at that uplink. Fixes are link aggregation to add capacity, QoS to protect what matters, or upgrading the link speed. Note that this is not packet corruption. No errors were reported, only drops.
+
+[A] Question thirty nine. A file transfer between two sites achieves far less throughput than the circuit's rated bandwidth, and the path has high latency. What concept explains this?
+
+[PAUSE 6]
+
+[B] The bandwidth delay product. A single TCP session is limited by window size divided by round trip time, so a long fat link stays underused unless window scaling is enabled or multiple parallel streams are used. The circuit is fine. TCP is the limiter.
+
+[A] Question forty. What distinguishes latency, jitter, and packet loss as reported symptoms?
+
+[PAUSE 6]
+
+[B] Latency is delay, and it makes interactive sessions feel sluggish. Jitter is variation in that delay, and it makes voice choppy or robotic. Packet loss causes dropouts, retransmissions, and collapsed throughput. Match the user's complaint to the metric and you have your starting point.
+
+[A] Question forty one. Users at the far end of a warehouse have a weak signal and slow speeds, but stay connected. What is the issue?
+
+[PAUSE 5]
+
+[B] Insufficient wireless coverage. Clients at the edge fall back to lower data rates to maintain the link, which is why they stay connected but slow down. The fix is another access point or a directional antenna, validated with a site survey and a heat map.
+
+[A] Question forty two. A laptop stays attached to a distant access point while walking past a much closer one. What is this called and what causes it?
+
+[PAUSE 6]
+
+[B] Sticky client behavior, a roaming problem. The client, not the access point, decides when to roam, and many clients hold on until the signal is nearly unusable. Mitigations include lowering the minimum data rate, adjusting transmit power, and enabling assisted roaming features.
+
+[A] Question forty three. Three access points in adjacent rooms are all on channel six in the two point four gigahertz band. What problem does this create?
+
+[PAUSE 5]
+
+[B] Co channel interference. They share airtime, so each AP must wait for the others. Throughput drops even though the signal is strong. Assign one, six, and eleven across neighboring cells. Note this is different from adjacent channel interference, which comes from overlapping channels like one and three.
+
+[A] Question forty four. Wireless clients disconnect briefly and reconnect several times a day on a five gigahertz network. Logs show channel changes. What is the cause?
+
+[PAUSE 6]
+
+[B] Dynamic frequency selection. The access point detected radar on a DFS channel and is legally required to vacate it immediately. Clients disassociate during the move. The fix is to use non DFS channels if the environment allows.
+
+[A] Question forty five. Clients associate with an access point but authentication takes a long time or fails intermittently. The AP uses eight oh two dot one X. Where should you look?
+
+[PAUSE 6]
+
+[B] The RADIUS server and the path to it. Slow or failed association with enterprise wireless usually means RADIUS timeouts, a shared secret mismatch, or an expired certificate. Confirm the AP can reach the server on UDP eighteen twelve.
+
+[A] Question forty six. A wireless survey shows strong signal but a poor signal to noise ratio in one area. What does that indicate?
+
+[PAUSE 5]
+
+[B] A non Wi-Fi interference source raising the noise floor. Microwaves, cordless phones, Bluetooth, and some industrial equipment all sit in two point four gigahertz. Signal strength alone is not enough. A spectrum analyzer identifies the source.
+
+[A] Question forty seven. An application works from inside the office but fails for VPN users. Everything else works over the VPN. What should be checked?
+
+[PAUSE 6]
+
+[B] Split tunnel configuration and the ACLs defining interesting traffic, plus routing for that subnet across the tunnel. If the application's subnet is not included in the tunnel policy, its traffic exits locally and never reaches the internal server. MTU is a secondary suspect, since tunneling adds overhead.
+
+[A] Question forty eight. Web pages load partially and then hang over a newly built IPSec tunnel. Pings succeed. What is the likely cause?
+
+[PAUSE 6]
+
+[B] An MTU or MSS problem. Encapsulation adds headers, so full size packets exceed the path MTU and get dropped, often because ICMP fragmentation needed messages are blocked, creating a path MTU discovery black hole. Small packets like pings pass, large ones die. Clamp the MSS.
+
+[A] Question forty nine. Users report that one website is unreachable while everything else works, and the problem started right after a server migration. What is the cause?
+
+[PAUSE 5]
+
+[B] A stale cached DNS record whose TTL has not expired, or an A record that was never updated. Verify with dig or nslookup against both the authoritative server and the client's resolver, then flush the client cache.
+
+[A] Question fifty. A technician resolves an outage caused by a failed uplink, restores service, and confirms the user is working. Per the methodology, what is the final step, and why does it matter?
+
+[PAUSE 6]
+
+[B] Document findings, actions, and outcomes. It matters because the next outage on that link gets solved in minutes instead of hours, and because change records are what let you correlate a future failure with what was done today. On the exam, if documentation is offered as the last step, it is the answer.
+
+[PAUSE 2]
+
+[A] That is one hundred questions across both domains.
+
+[B] If you want one takeaway, it is this. Troubleshooting questions are rarely about knowing an obscure fact. They give you a symptom and expect you to name the layer. Link light but no access is VLAN. CRC errors are physical. Drops are congestion. APIPA is DHCP. Name resolution failure with a working IP ping is DNS.
+
+[A] Work the layer, then work the protocol. Good luck on the exam.
