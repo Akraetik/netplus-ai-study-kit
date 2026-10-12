@@ -65,8 +65,8 @@ Flashcards took the most time. Flashcards, practice tests and test review togeth
 - [x] `make_deck.py` — CSV → Anki deck, with CI
 - [x] ~2,000 Anki cards: core, rapid recall, trouble areas, quick decks
 - [x] `make_audio.py` — local two-voice TTS for car drills
-- [ ] Audio drills (GitHub Release)
-- [ ] Prompt library for any AI model
+- [x] Audio drills (GitHub Release)
+- [x] Prompt library for any AI model
 - [ ] The adaptive loop: practice test → miss log → rebuilt material
 - [ ] Exam-week guide and reuse for the next cert
 - [ ] v1.0 + video walkthrough
