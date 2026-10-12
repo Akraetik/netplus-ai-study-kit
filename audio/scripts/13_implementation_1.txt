@@ -1,0 +1,167 @@
+# TITLE: Track 13 - Implementation 1
+
+[A] Network Plus, domain two. Network Implementation. Drill one, routing and traffic management. Twenty five questions.
+
+[A] Here is how this works. I read the scenario. You get five seconds to answer out loud. Then my co host gives the answer and explains the reasoning, including why the tempting wrong answer is wrong.
+
+[B] The reasoning matters more than the answer. If you know why the distractor fails, you can rebuild the answer on exam day even if you blank.
+
+[A] Let us go.
+
+[PAUSE 2]
+
+[A] Question one. A router learns a path to ten dot one dot one dot zero slash twenty four through OSPF, and the same network through EIGRP internal. Which route is installed in the routing table?
+
+[PAUSE 5]
+
+[B] The EIGRP route. Both offer the identical prefix, so administrative distance decides, and EIGRP internal is ninety versus OSPF's one ten. Lower wins. The trap is assuming OSPF wins because it is link state and more sophisticated. Administrative distance has nothing to do with protocol quality. It is just a trust ranking.
+
+[A] Question two. A router has a slash twenty four route through OSPF and a slash twenty six route through RIP that both contain the destination address. Which is used?
+
+[PAUSE 5]
+
+[B] The RIP slash twenty six. Longest prefix match is evaluated before administrative distance, always. RIP's terrible administrative distance of one twenty never gets considered, because the router never reaches that tiebreaker. Specificity first. This is the number one routing mistake on the exam.
+
+[A] Question three. An organization connects to two separate ISPs and needs to control which path inbound internet traffic prefers. Which routing protocol is required?
+
+[PAUSE 5]
+
+[B] BGP. It is the only exterior gateway protocol on the exam, and the only one that carries policy attributes like AS path. OSPF and EIGRP are interior protocols. They run inside your autonomous system and cannot influence how the rest of the internet reaches you.
+
+[A] Question four. A network engineer must run a dynamic routing protocol across gear from three different vendors, with fast convergence and support for several hundred routers. Which protocol?
+
+[PAUSE 5]
+
+[B] OSPF. Open standard, link state, scales through areas. EIGRP is the trap here. It converges faster, but it is Cisco in practice, so multi vendor rules it out. Whenever you see the words multi vendor or open standard, that is the discriminator doing its job.
+
+[A] Question five. In an OSPF deployment with four areas, what must every non backbone area connect to?
+
+[PAUSE 5]
+
+[B] Area zero, the backbone. Every other area must touch it, either physically or through a virtual link. If area two only connects to area one, routing between areas breaks. This is a definitional rule, not a design preference.
+
+[A] Question six. Two hundred workstations need internet access and the company owns one public IPv4 address. What must be configured?
+
+[PAUSE 5]
+
+[B] PAT, port address translation, also called NAT overload. It multiplexes many private hosts onto one public address by rewriting source port numbers and tracking them in a translation table. Plain NAT is the distractor. One to one NAT would need two hundred public addresses.
+
+[A] Question seven. An internal web server must be reachable from the internet on a dedicated public IP that never changes. Which translation type?
+
+[PAUSE 5]
+
+[B] Static NAT, a permanent one to one mapping. Dynamic NAT pulls from a pool and the mapping changes, so inbound connections would not know where to land. Static NAT is what makes inbound traffic possible at all.
+
+[A] Question eight. Clients must keep the same default gateway address even if the primary router fails. Routers come from two different vendors. What should be deployed?
+
+[PAUSE 5]
+
+[B] VRRP. It is the open standard first hop redundancy protocol. HSRP and GLBP are both Cisco proprietary, so a mixed vendor environment eliminates them immediately. The clients point at a virtual IP shared by both routers and never notice the failover.
+
+[A] Question nine. What is the address clients actually use as their default gateway in an FHRP deployment?
+
+[PAUSE 5]
+
+[B] The virtual IP, the VIP. It floats between the physical routers along with a virtual MAC address. The whole point is that the client configuration never changes, so pointing clients at a router's real interface address would defeat the design.
+
+[A] Question ten. Which first hop redundancy protocol actively distributes traffic across multiple gateways instead of leaving a standby idle?
+
+[PAUSE 5]
+
+[B] GLBP, gateway load balancing protocol. Cisco proprietary. HSRP and VRRP both park the secondary router doing nothing until a failure. GLBP hands different clients different virtual MAC addresses so several routers forward at once.
+
+[A] Question eleven. A router has one physical interface connected to a trunk port, and must route between four VLANs. What must be configured?
+
+[PAUSE 5]
+
+[B] Subinterfaces, one per VLAN, each tagged with its VLAN ID and given an IP address in that subnet. This design is called router on a stick. The alternative on modern gear is a layer three switch using switch virtual interfaces, which is faster because it routes in hardware.
+
+[A] Question twelve. Voice traffic must be prioritized over file transfers on a congested WAN link. What should be implemented?
+
+[PAUSE 5]
+
+[B] QoS, quality of service. Voice gets marked with DSCP expedited forwarding, value forty six, and placed in a priority queue. Adding bandwidth is the distractor. It helps until the link fills again. QoS is what guarantees voice wins during congestion, which is the only time it matters.
+
+[A] Question thirteen. What is the difference between traffic shaping and traffic policing?
+
+[PAUSE 6]
+
+[B] Shaping buffers excess traffic and releases it later, smoothing the rate. Policing simply drops or remarks traffic above the limit. Shaping adds delay but preserves data. Policing preserves timing but loses data. Shape on the way out, police on the way in, is the usual rule.
+
+[A] Question fourteen. At which layer is voice traffic marked when using eight oh two dot one P, and at which layer does DSCP operate?
+
+[PAUSE 5]
+
+[B] Eight oh two dot one P is class of service, and it operates at layer two inside the VLAN tag. DSCP operates at layer three in the IP header. That matters because a layer two marking is lost the moment a router strips the frame. DSCP survives across routed hops.
+
+[A] Question fifteen. A default route must be configured on an edge router. What is the notation?
+
+[PAUSE 5]
+
+[B] Zero dot zero dot zero dot zero, slash zero, in IPv4, or colon colon slash zero in IPv6. It matches everything with the least possible specificity, so it only wins when nothing else matches. That is why it is called the gateway of last resort.
+
+[A] Question sixteen. An administrator wants a backup path used only when the primary static route fails. What technique achieves this?
+
+[PAUSE 6]
+
+[B] A floating static route. You configure the backup with a deliberately higher administrative distance, so it sits out of the routing table until the preferred route disappears. This is the one time you manipulate administrative distance on purpose.
+
+[A] Question seventeen. Which routing protocol uses bandwidth and delay in its metric by default?
+
+[PAUSE 5]
+
+[B] EIGRP. OSPF uses cost derived from bandwidth alone. RIP uses hop count only, which is why RIP will happily choose a three hop path over T one links instead of a four hop path over gigabit. Metric design is the real difference between these protocols.
+
+[A] Question eighteen. What is the administrative distance of a directly connected interface, and of a static route?
+
+[PAUSE 5]
+
+[B] Directly connected is zero. Static is one. Zero means absolute trust, because the router can see the link itself. Nothing ever overrides a connected route for its own subnet.
+
+[A] Question nineteen. RIP is running and a remote network is sixteen hops away. What happens?
+
+[PAUSE 5]
+
+[B] It is treated as unreachable. RIP's maximum is fifteen hops, and sixteen is defined as infinity. That limit is not a performance guideline, it is a hard protocol ceiling, and it is why RIP cannot be used in large networks.
+
+[A] Question twenty. A company needs to stretch a single layer two segment between two data centers connected only by a routed WAN, and needs far more than four thousand segments. What technology?
+
+[PAUSE 6]
+
+[B] VXLAN. It encapsulates layer two frames inside UDP on port forty seven eighty nine, and its twenty four bit network identifier allows about sixteen million segments versus the four thousand ninety four ceiling of eight oh two dot one Q. The devices doing the encapsulation are called VTEPs.
+
+[A] Question twenty one. IPv6 only clients must reach legacy IPv4 only servers. Which transition mechanism is required?
+
+[PAUSE 5]
+
+[B] NAT sixty four. It translates between the two address families. Dual stack is the distractor, and it is the preferred transition approach generally, but dual stack requires the server to speak IPv6. These servers cannot. So translation is the only option.
+
+[A] Question twenty two. What does a router do with a packet whose destination matches no route and no default route exists?
+
+[PAUSE 5]
+
+[B] It drops the packet and sends back an ICMP destination unreachable message. Routers do not flood unknown traffic. That is switch behavior at layer two. Routers discard what they cannot place.
+
+[A] Question twenty three. Which protocol number identifies OSPF, and which identifies EIGRP, in an access control list?
+
+[PAUSE 6]
+
+[B] OSPF is eighty nine, EIGRP is eighty eight. Note these are IP protocol numbers, not port numbers, because neither protocol uses TCP or UDP. They ride directly on IP. Writing an ACL that permits TCP port eighty nine does nothing at all for OSPF.
+
+[A] Question twenty four. An engineer must aggregate several contiguous subnets into a single advertisement to reduce routing table size. What is this called?
+
+[PAUSE 5]
+
+[B] Route summarization, also called route aggregation or supernetting. Besides shrinking the table, it contains instability, because a flapping link inside the summarized range no longer triggers updates outside it.
+
+[A] Question twenty five. Which two protocols would you expect to see forming adjacencies using multicast addresses two twenty four dot zero dot zero dot five and two twenty four dot zero dot zero dot ten respectively?
+
+[PAUSE 6]
+
+[B] Two twenty four dot zero dot zero dot five is OSPF all routers. Two twenty four dot zero dot zero dot ten is EIGRP. For completeness, RIP version two uses dot nine and VRRP uses dot eighteen. If a question shows you a packet capture full of traffic to dot five, you are looking at OSPF.
+
+[PAUSE 2]
+
+[A] That is drill one. Routing, translation, redundancy, and traffic management.
+
+[B] The two that decide the most exam points are route selection order and the administrative distance table. If either felt shaky, replay questions one through five before you move on.

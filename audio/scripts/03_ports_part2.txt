@@ -1,0 +1,185 @@
+# TITLE: Track 03 - Ports Part2
+
+Track three. The official port list, part two. Ports one sixty one through fifty sixty one.
+
+[PAUSE 1]
+
+Ports one sixty one and one sixty two. SNMP. Simple Network Management Protocol. UDP. This is how you monitor device health.
+
+The direction of these two ports is tested constantly, so lock it in now.
+
+One sixty one is the port on the device, where the agent listens for the monitoring server to ask a question. Polling.
+
+One sixty two is the port on the monitoring server, where it listens for alerts pushed by the device. Those alerts are called traps.
+
+The rule. If the device speaks first, it is one sixty two.
+
+A few SNMP terms. The MIB is the database of manageable objects on the device. An OID is the specific numeric address of one object in that MIB. A community string is the shared password in versions one and two c, and it travels in plain text. A trap is fire and forget. An inform is a trap that gets acknowledged and retransmitted if lost.
+
+Version three is the only secure version. It adds authentication, encryption, and message integrity. Any exam question about securing SNMP has exactly one answer, and that answer is version three.
+
+[PAUSE 1]
+
+Port three eighty nine. LDAP. Lightweight Directory Access Protocol. Queries a directory of users, groups, and computers. Active Directory is the most common implementation. Plain text by default.
+
+Port six thirty six. LDAPS. The same protocol wrapped in TLS. Encrypted.
+
+If a question says an application must authenticate against Active Directory and credentials must never cross the network in the clear, the answer is six thirty six.
+
+[PAUSE 1]
+
+Port four forty three. HTTPS. Web traffic protected by TLS. TCP.
+
+Remember that four forty three is also the port for TLS based VPNs, and for DNS over HTTPS. It is the universal port that firewalls almost never block, which is exactly why so much rides on it.
+
+[PAUSE 1]
+
+Port four forty five. SMB. Server Message Block. Windows file and printer sharing. TCP.
+
+If a user can ping a file server but cannot open a share, check four forty five. Older versions used the NetBIOS ports, one thirty seven through one thirty nine. Version one of SMB is what WannaCry and EternalBlue exploited, and it should be disabled everywhere.
+
+[PAUSE 1]
+
+Port five fourteen. Syslog. UDP. Sends log messages to a central collector.
+
+Syslog severity levels run zero through seven, and lower is worse. Zero, emergency. One, alert. Two, critical. Three, error. Four, warning. Five, notice. Six, informational. Seven, debug.
+
+The mnemonic is, Every Awesome Cisco Engineer Will Need Ice cream Daily. Emergency, alert, critical, error, warning, notice, informational, debug.
+
+Here is the trap. When you configure a device to log at level four, it sends level four and everything more severe. Zero through four. It does not send informational or debug messages, because those are levels six and seven, which are less severe.
+
+[PAUSE 1]
+
+Port five eighty seven. SMTPS. Encrypted mail submission from a client to its mail server.
+
+Now, a warning. In the real world, five eighty seven is the submission port using STARTTLS, and four sixty five is implicit SMTPS. CompTIA's objectives list SMTPS as five eighty seven. On the exam, answer five eighty seven, unless the question specifically says implicit TLS.
+
+[PAUSE 1]
+
+Port fourteen thirty three. Microsoft SQL Server. TCP. Database traffic.
+
+If an application server cannot reach its Microsoft SQL database after a firewall change, that is fourteen thirty three.
+
+For reference, MySQL is thirty three oh six, Oracle is fifteen twenty one, and Postgres is fifty four thirty two. Only fourteen thirty three is on the official list.
+
+[PAUSE 1]
+
+Port thirty three eighty nine. RDP. Remote Desktop Protocol. Microsoft's graphical remote access. TCP, and also UDP.
+
+RDP is encrypted by default, but exposing thirty three eighty nine to the internet is one of the most common ransomware entry points in the world. The correct design is to put it behind a VPN or a jump box.
+
+[PAUSE 1]
+
+Ports fifty sixty and fifty sixty one. SIP. Session Initiation Protocol. Voice over IP call setup. Fifty sixty is unencrypted, fifty sixty one is TLS protected.
+
+Critical detail. SIP is signaling only. It sets up the call, it rings the phone, it tears the call down. It does not carry the audio. The audio is carried by RTP on dynamic UDP ports, typically in the sixteen thousand to thirty two thousand range.
+
+That distinction is the single most tested VoIP concept on this exam. A call that connects but has no audio is not a SIP problem. Signaling clearly worked, because the phone rang. That is an RTP problem, a media path problem, usually a firewall blocking the dynamic UDP range.
+
+[PAUSE 2]
+
+Drill time. Port to protocol.
+
+One sixty one.
+
+[PAUSE 3]
+
+SNMP, the agent listening for polls.
+
+One sixty two.
+
+[PAUSE 3]
+
+SNMP traps, the manager listening for alerts.
+
+Three eighty nine.
+
+[PAUSE 3]
+
+LDAP, plain text.
+
+Four forty three.
+
+[PAUSE 3]
+
+HTTPS.
+
+Four forty five.
+
+[PAUSE 3]
+
+SMB. Windows file sharing.
+
+Five fourteen.
+
+[PAUSE 3]
+
+Syslog.
+
+Five eighty seven.
+
+[PAUSE 3]
+
+SMTPS.
+
+Six thirty six.
+
+[PAUSE 3]
+
+LDAPS.
+
+Fourteen thirty three.
+
+[PAUSE 3]
+
+Microsoft SQL Server.
+
+Thirty three eighty nine.
+
+[PAUSE 3]
+
+RDP. Remote Desktop.
+
+Fifty sixty and fifty sixty one.
+
+[PAUSE 3]
+
+SIP. Voice signaling.
+
+[PAUSE 1]
+
+Now the harder direction. Scenario to port.
+
+A monitoring server must receive unsolicited alerts from switches. Which port must be open inbound on that server?
+
+[PAUSE 4]
+
+UDP one sixty two.
+
+An application must query Active Directory with encryption required by audit.
+
+[PAUSE 4]
+
+TCP six thirty six. LDAPS.
+
+Users cannot open a Windows file share, but ping to the server succeeds.
+
+[PAUSE 4]
+
+TCP four forty five.
+
+Remote desktop connections stopped working after a firewall change.
+
+[PAUSE 4]
+
+TCP thirty three eighty nine.
+
+VoIP phones ring, calls connect, but nobody hears audio.
+
+[PAUSE 4]
+
+That is not SIP. That is RTP, on dynamic UDP ports. Signaling worked, media failed.
+
+[PAUSE 1]
+
+End of track three. Next track is a full speed drill on all twenty official ports.

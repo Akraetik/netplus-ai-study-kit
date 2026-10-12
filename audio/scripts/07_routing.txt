@@ -1,0 +1,175 @@
+# TITLE: Track 07 - Routing
+
+Track seven. Routing. Static routes, RIP, OSPF, EIGRP, BGP, route selection, and address translation.
+
+[PAUSE 1]
+
+Start with static routing. Manually configured. Administrative distance of one. A directly connected network has an administrative distance of zero, which is even more trusted.
+
+Static routes have no overhead and are perfectly predictable, but no automatic failover and no scalability.
+
+A default route is written zero dot zero dot zero dot zero, slash zero, in IPv4. In IPv6 it is colon colon, slash zero. It is also called the gateway of last resort. It means, if nothing else matches, send it here.
+
+[PAUSE 1]
+
+Now the dynamic protocols. There are four you must know, and the exam picks between them based on keywords in the scenario. I will give you the numbers first, then the keywords.
+
+RIP. Routing Information Protocol. Distance vector. The metric is hop count. Administrative distance one twenty. RIP version two multicasts to two twenty four dot zero dot zero dot nine.
+
+The defining limitation. Maximum fifteen hops. Sixteen means unreachable. That hop limit is the single most tested fact about RIP. Slow convergence, effectively obsolete, but it is on the exam because it illustrates distance vector behavior.
+
+[PAUSE 1]
+
+OSPF. Open Shortest Path First. Link state. The metric is cost, derived from bandwidth. Administrative distance one ten. IP protocol number eighty nine. Multicasts to two twenty four dot zero dot zero dot five, and dot six for the designated routers.
+
+OSPF is the open standard interior gateway protocol. Every router builds a complete map of the topology and runs Dijkstra's shortest path first algorithm against it.
+
+It scales through areas. And here is the mandatory fact. Area zero is the backbone, and every other area must connect to area zero. If a question asks what a non backbone area must touch, the answer is area zero.
+
+On multi access segments, OSPF elects a designated router and a backup designated router to limit the number of adjacencies.
+
+[PAUSE 1]
+
+EIGRP. Enhanced Interior Gateway Routing Protocol. Advanced distance vector, sometimes called hybrid. The metric is based on bandwidth and delay. Administrative distance ninety for internal routes, one seventy for external. IP protocol eighty eight. Multicasts to two twenty four dot zero dot zero dot ten.
+
+Cisco developed. It uses the DUAL algorithm and precomputes a backup route called the feasible successor, which gives it extremely fast convergence.
+
+[PAUSE 1]
+
+BGP. Border Gateway Protocol. Path vector. This is the exterior gateway protocol, the routing protocol of the internet itself. TCP port one seventy nine. Administrative distance twenty for external BGP, two hundred for internal.
+
+BGP routes between autonomous systems using AS path and policy attributes rather than a speed metric. It is deliberately slow to converge, because it prioritizes stability and policy control over speed.
+
+[PAUSE 1]
+
+And one more from the acronym list. IS IS. Intermediate System to Intermediate System. A link state protocol similar to OSPF, but it runs directly at layer two instead of over IP. Common in service provider cores. Know that it exists and that it is link state.
+
+[PAUSE 1]
+
+Now the keyword mapping, which is how you actually answer these questions.
+
+If the scenario says multi vendor, large scale, open standard, fast convergence, the answer is OSPF.
+
+If it says all Cisco, fastest reconvergence, or mentions a precomputed backup path, the answer is EIGRP.
+
+If it says between autonomous systems, multiple ISPs, internet, or controlling inbound path preference, the answer is BGP.
+
+If it says hop count, or a fifteen hop limit, or legacy, the answer is RIP.
+
+[PAUSE 1]
+
+Distance vector versus link state, because that comparison gets asked directly.
+
+Distance vector routers know only what their neighbors tell them. Routing by rumor. They share their entire table periodically.
+
+Link state routers each build a complete topology map and share only changes when they happen.
+
+RIP is distance vector. OSPF and IS IS are link state. EIGRP is advanced distance vector. BGP is path vector.
+
+[PAUSE 1]
+
+Now route selection, which is a guaranteed question topic and one people get backwards.
+
+When a router picks a path, it evaluates in this order.
+
+First, longest prefix match. The most specific route always wins, regardless of which protocol supplied it. A slash thirty two beats a slash twenty four, which beats a slash zero.
+
+Second, administrative distance. This only comes into play when two different protocols offer the exact same prefix. Lower administrative distance wins. Think of it as how much you trust the source.
+
+Third, metric. This only comes into play within the same protocol, comparing two paths to the same prefix. Lower metric wins.
+
+The mistake almost everyone makes is checking administrative distance first. Prefix length comes first. Always.
+
+Here is the question that catches people. A router has a route to ten dot one dot one dot zero, slash twenty four, learned by OSPF. It also has a route to ten dot one dot one dot one twenty eight, slash twenty five, learned by RIP. Traffic is destined for ten dot one dot one dot one thirty. Which route is used?
+
+The RIP route. Even though RIP has a much worse administrative distance, one twenty versus one ten, the slash twenty five is more specific and contains that address. Prefix length is evaluated before administrative distance.
+
+[PAUSE 1]
+
+Administrative distances to memorize.
+
+Directly connected, zero. Static, one. External BGP, twenty. EIGRP internal, ninety. OSPF, one ten. RIP, one twenty. EIGRP external, one seventy. Internal BGP, two hundred. And two fifty five means unreachable.
+
+Let me say the middle four again, because those are the ones that get compared. EIGRP internal ninety. OSPF one ten. RIP one twenty. EIGRP external one seventy.
+
+[PAUSE 1]
+
+Address translation.
+
+NAT. Network Address Translation. Rewrites IP addresses at the network boundary.
+
+PAT. Port Address Translation. Also called NAT overload. It additionally rewrites source port numbers so that many internal hosts share a single public IP address. Every home router does this.
+
+The exam discriminator. If the scenario says hundreds of internal hosts share one public address, that is PAT, not NAT.
+
+NAT sixty four translates between IPv6 and IPv4 networks. It is listed as an IPv6 transition mechanism alongside dual stack and tunneling. If a question describes IPv6 only clients that must reach IPv4 only servers, the answer is NAT sixty four.
+
+And the preferred transition approach in general is dual stack, meaning run both protocols simultaneously.
+
+[PAUSE 1]
+
+Last topic for this track. First hop redundancy.
+
+FHRP. First Hop Redundancy Protocol. Two or more routers share a virtual IP address and a virtual MAC address, which clients use as their default gateway. If the active router dies, the standby takes over the virtual IP, and clients never change a thing.
+
+Three flavors.
+
+HSRP, Hot Standby Router Protocol. Cisco proprietary. Active and standby. VRRP, Virtual Router Redundancy Protocol. The open standard. Master and backup. IP protocol one twelve. GLBP, Gateway Load Balancing Protocol. Cisco proprietary, and unlike the other two, it actually load balances across multiple gateways instead of leaving one sitting idle.
+
+The discriminator. Multi vendor means VRRP. Load balancing across gateways means GLBP.
+
+And do not confuse a first hop redundancy protocol with a load balancer. FHRP makes the default gateway redundant for clients. A load balancer makes servers redundant for clients. If the question says gateway or first hop, it is FHRP.
+
+[PAUSE 2]
+
+Drill.
+
+What is the administrative distance of OSPF?
+
+[PAUSE 3]
+
+One ten.
+
+Which routing protocol is used between autonomous systems?
+
+[PAUSE 3]
+
+BGP, on TCP one seventy nine.
+
+What is RIP's maximum hop count?
+
+[PAUSE 3]
+
+Fifteen. Sixteen is unreachable.
+
+Which is checked first, administrative distance or prefix length?
+
+[PAUSE 3]
+
+Prefix length. Most specific route always wins.
+
+Which OSPF area must all other areas connect to?
+
+[PAUSE 3]
+
+Area zero, the backbone.
+
+Which FHRP is vendor neutral?
+
+[PAUSE 3]
+
+VRRP.
+
+Two hundred hosts share one public IPv4 address. What technology?
+
+[PAUSE 3]
+
+PAT.
+
+Which routing protocol keeps a precomputed loop free backup route?
+
+[PAUSE 3]
+
+EIGRP, using the feasible successor.
+
+End of track seven.

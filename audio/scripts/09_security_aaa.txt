@@ -1,0 +1,183 @@
+# TITLE: Track 09 - Security Aaa
+
+Track nine. Security protocols and authentication. RADIUS, TACACS plus, eight oh two dot one X, Kerberos, LDAP, TLS, and wireless security.
+
+[PAUSE 1]
+
+Start with the single most missed comparison on this entire exam. RADIUS versus TACACS plus.
+
+RADIUS. Remote Authentication Dial In User Service. UDP eighteen twelve for authentication, eighteen thirteen for accounting. Older implementations used sixteen forty five and sixteen forty six.
+
+RADIUS is an open standard, so it works across vendors. It encrypts only the password field, leaving the rest of the packet readable. And it combines authentication and authorization into a single step.
+
+TACACS plus. Terminal Access Controller Access Control System Plus. TCP port forty nine.
+
+TACACS plus is Cisco developed. It encrypts the entire payload, not just the password. And it fully separates authentication, authorization, and accounting into three independent functions.
+
+That separation is the point. It is what lets you give one administrator read only show commands while another gets full configuration rights, with every command authorized individually.
+
+So here is the discriminator, and it is worth saying twice.
+
+If the question is about who gets onto the network, wireless, VPN, eight oh two dot one X, the answer is RADIUS.
+
+If the question is about what commands an administrator can run on a router or switch, the answer is TACACS plus.
+
+Multi vendor points to RADIUS. Granular per command control, or encrypt the entire packet, points to TACACS plus.
+
+[PAUSE 1]
+
+Eight oh two dot one X. Port based network access control.
+
+This blocks all traffic on a switch port or wireless association until the device or user authenticates.
+
+Three roles, and the exam names them.
+
+The supplicant is the client requesting access. The authenticator is the switch or access point enforcing the block. The authentication server is usually RADIUS, and it makes the actual decision.
+
+Understand the relationship, because it is tested as if these were competing answers when they are not. Eight oh two dot one X is the framework that gates the port. EAP is the authentication method carried inside it. RADIUS is the protocol that carries EAP to the server.
+
+So, which technology blocks the port until authentication? Eight oh two dot one X. Which server validates the credentials? RADIUS. They work together.
+
+EAP variants worth knowing. EAP TLS uses certificates on both sides and is the strongest. PEAP uses a server certificate plus username and password. And the frames that carry all this on a wired LAN are called EAPoL, EAP over LAN.
+
+Scenario. A contractor plugs a laptop into a conference room jack and gets no network access until they enter domain credentials. What is enforcing that? Eight oh two dot one X.
+
+[PAUSE 1]
+
+Three network access control methods, ranked, because the exam asks you to pick the strongest.
+
+MAC filtering allows or denies by hardware address. It is trivially defeated, because MAC addresses can be spoofed in seconds. Weakest.
+
+Port security limits how many MAC addresses a switch port will learn, and can shut the port down when violated. Stronger, and it is the mitigation for MAC flooding attacks.
+
+Eight oh two dot one X actually authenticates. Strongest.
+
+Order of strength. Eight oh two dot one X, then port security, then MAC filtering.
+
+[PAUSE 1]
+
+Kerberos. TCP and UDP port eighty eight. This is ticket based authentication, used by Windows domains.
+
+A key distribution center issues a ticket granting ticket, which the client exchanges for service tickets. It provides mutual authentication and it is what makes single sign on work in an Active Directory environment.
+
+The exam fact. Kerberos is extremely time sensitive. A clock skew greater than about five minutes causes authentication to fail outright.
+
+So the scenario. After a battery failure in a domain controller, users across the domain cannot log in, and the technician notices the server clock is off by twenty minutes. Cause? Kerberos clock skew. Fix time synchronization with NTP and logins recover. This is why NTP is a security dependency and not just a convenience.
+
+[PAUSE 1]
+
+LDAP and LDAPS, which we covered in the ports track. Three eighty nine plain, six thirty six encrypted. LDAP queries the directory of users, groups, and computers.
+
+SAML. Security Assertion Markup Language. An XML based standard that passes authentication assertions between an identity provider and a service provider. This is the mechanism behind web based single sign on to software as a service applications.
+
+Now separate three terms people use interchangeably and should not.
+
+Single sign on is an outcome. One login, many applications. Multifactor authentication is a strength control. Two or more distinct factor types. Something you know, something you have, something you are. SAML is the protocol that makes web single sign on actually work.
+
+They are not interchangeable answers. And note that multifactor strengthens authentication, not authorization.
+
+Which reminds me of the three A's, which the exam does ask directly. Authentication proves who you are. Authorization determines what you are allowed to do. Accounting records what you did. Role based access control is authorization. Not authentication.
+
+[PAUSE 1]
+
+TLS. Transport Layer Security. And its dead predecessor, SSL, Secure Sockets Layer.
+
+TLS is the cryptographic layer sitting underneath HTTPS, LDAPS, SMTPS, FTPS, and TLS based VPNs. Every version of SSL is deprecated and insecure. TLS one point two and one point three are current.
+
+People say SSL when they mean TLS. The exam expects you to know TLS is the correct term.
+
+TLS depends on public key infrastructure, PKI. A certificate authority signs a certificate that binds a public key to an identity. A self signed certificate is not signed by a trusted authority, so browsers throw warnings. Acceptable for an internal lab, not for anything else.
+
+Scenario. Users get certificate warnings on an internal web application, but the certificate is valid and unexpired. Why? It is self signed, or issued by a certificate authority that is not in the clients' trusted root store. The fix is to distribute the internal root certificate to clients, or use a publicly trusted certificate.
+
+[PAUSE 1]
+
+Wireless security.
+
+WPA two uses AES with CCMP, and authenticates with a four way handshake. Its weakness is that an attacker who captures that handshake can take it offline and brute force the passphrase at leisure. That is the KRACK family of problems, plus plain dictionary attacks against weak keys.
+
+WPA three replaces the pre shared key handshake with SAE, Simultaneous Authentication of Equals, also called Dragonfly.
+
+What SAE buys you. It defeats offline dictionary attacks, and it provides forward secrecy, meaning capturing traffic today does not let an attacker decrypt it later even if they eventually learn the password.
+
+WPA three also mandates protected management frames, and adds Enhanced Open, which encrypts traffic on open guest networks with no password at all.
+
+So any question about capturing a handshake and brute forcing it offline points to WPA three and SAE.
+
+[PAUSE 1]
+
+Pre shared key versus Enterprise, which is a guaranteed question.
+
+Pre shared key means everybody shares one passphrase. Simple to deploy. But rotating that passphrase means touching every single device.
+
+Enterprise means eight oh two dot one X against a RADIUS server. Per user credentials, individual revocation, and unique per session keys.
+
+The scenario. A company must revoke a departing employee's wireless access without changing credentials on every other device. Answer? WPA two or WPA three Enterprise, with eight oh two dot one X and RADIUS.
+
+One more. WPS, Wi-Fi Protected Setup. The PIN method is fundamentally broken and can be brute forced in hours. The correct exam answer is always disable it.
+
+[PAUSE 1]
+
+Two more security items that show up as protocol questions.
+
+IDS versus IPS. An intrusion detection system detects and alerts, and it sits out of band, usually fed by a port mirror. An intrusion prevention system detects and blocks, and it sits inline in the traffic path.
+
+Keyword mapping. Prevent, block, or stop the traffic means IPS. Alert without affecting traffic means IDS.
+
+And proxy versus reverse proxy versus load balancer versus CDN, which get confused constantly.
+
+A forward proxy sits in front of clients. Content filtering, caching outbound requests. A reverse proxy sits in front of servers. TLS offload, hiding the origin servers. A load balancer distributes requests across a pool of servers. A content delivery network caches content geographically close to users.
+
+[PAUSE 2]
+
+Drill.
+
+Which AAA protocol encrypts the entire payload?
+
+[PAUSE 3]
+
+TACACS plus.
+
+Which AAA protocol runs over UDP and is the standard back end for wireless?
+
+[PAUSE 3]
+
+RADIUS.
+
+Which port does TACACS plus use?
+
+[PAUSE 3]
+
+TCP forty nine.
+
+Which access control method is defeated by spoofing?
+
+[PAUSE 3]
+
+MAC filtering.
+
+A domain controller's clock drifts twenty minutes and nobody can log in. Which protocol failed?
+
+[PAUSE 4]
+
+Kerberos. Clock skew.
+
+Which WPA three feature prevents offline brute force of a captured handshake?
+
+[PAUSE 3]
+
+SAE.
+
+You must revoke one user's Wi-Fi access without changing anyone else's credentials.
+
+[PAUSE 4]
+
+WPA Enterprise with eight oh two dot one X and RADIUS.
+
+An appliance must block malicious traffic, not just alert on it.
+
+[PAUSE 3]
+
+IPS, deployed inline.
+
+End of track nine.

@@ -1,0 +1,47 @@
+# TITLE: Track 01 - Orientation
+
+Network Plus, exam N ten dash zero zero nine. Protocol and port audio course. Track one. Orientation.
+
+This course is built for listening while driving. There is nothing to look at. Every table from your written reference has been converted into spoken drills.
+
+[PAUSE 1]
+
+Here is how the course is laid out.
+
+Tracks two and three teach the official port list, the twenty entries CompTIA publishes in objective one point four. Those are guaranteed exam content.
+
+Track four is a pure drill on those ports. Call and response, both directions.
+
+Tracks five through ten cover the protocols themselves, grouped by function. Core transport. Addressing and name resolution. Routing. Switching. Security. Management and voice.
+
+Track eleven is the confusion killer. Every protocol pair that people mix up on exam day, and the one detail that separates them.
+
+Track twelve is a fifty question final drill.
+
+[PAUSE 1]
+
+Three rules for using this while you drive.
+
+Rule one. When you hear a question, there will be a pause. Say the answer out loud. Out loud matters. Saying it activates recall in a way that thinking it does not. You are alone in the car. Nobody is judging you.
+
+Rule two. If you miss one, do not stop the track and do not rewind. Let it go and keep moving. You will hear that item again in a later track. This course repeats deliberately.
+
+Rule three. Play these in order the first time through. After that, jump to whatever track hurts the most.
+
+[PAUSE 1]
+
+Before we start, four facts about the exam itself.
+
+Ninety minutes. A maximum of ninety questions. Multiple choice plus performance based questions, the drag and drop simulations.
+
+The domain weights are worth knowing because they tell you where the points live. Networking concepts, twenty three percent. Network implementation, twenty percent. Network operations, nineteen percent. Network security, fourteen percent. Network troubleshooting, twenty four percent.
+
+Troubleshooting is the heaviest domain on the exam. That is the single most useful thing to know about how this test is built. Most protocol questions are not asking you to recite a definition. They are describing a broken network and asking which protocol is responsible.
+
+So as you listen, do not just memorize what a protocol is. Memorize what it looks like when it fails. That is the question you will actually be asked.
+
+[PAUSE 1]
+
+One more thing. Ports are the highest yield memorization on this entire exam. They show up in multiple choice questions, they show up in firewall rule simulations, and they show up in drag and drop matching. If you learn nothing else from this course, learn tracks two, three, and four cold.
+
+Let us begin.

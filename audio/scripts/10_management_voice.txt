@@ -1,0 +1,169 @@
+# TITLE: Track 10 - Management Voice
+
+Track ten. Management, monitoring, time, and voice. SNMP, Syslog, flow data, NTP, PTP, SIP, and RTP.
+
+[PAUSE 1]
+
+Start with the monitoring hierarchy, because CompTIA asks this as a which tool question over and over. Four methods, each showing you something different.
+
+SNMP shows you device health. CPU utilization, memory, interface up or down, bandwidth utilization. Metrics over time.
+
+Syslog shows you discrete events. A port flapped. A configuration was changed. A login failed. Things that happened at a moment.
+
+Flow data shows you conversations. Who talked to whom, on what ports, and how many bytes. It does not show content.
+
+Packet capture shows you the actual contents. Byte by byte, the full conversation.
+
+So pick based on what the question wants to see. If a manager wants to know which internal hosts consume the most WAN bandwidth and who they are talking to, but explicitly does not need message content, that is flow data. If they need to see what was actually inside the packets, that is a packet capture with a protocol analyzer.
+
+[PAUSE 1]
+
+More on SNMP, since it is heavily tested.
+
+Ports one sixty one and one sixty two, both UDP. One sixty one is the agent on the device listening for polls. One sixty two is the manager listening for traps. If the device speaks first, it is one sixty two.
+
+The MIB is the database of manageable objects on the device. An OID is the specific numeric identifier of one object inside that MIB.
+
+A community string is the shared secret in versions one and two c, and it is sent in clear text. The defaults are public for read only and private for read write, and leaving those in place is a finding on every audit ever conducted.
+
+A trap is unacknowledged. Fire and forget. If it gets lost, nobody knows. An inform is an acknowledged trap, retransmitted if lost. Choose inform when the scenario says alerts cannot be missed.
+
+Version three is the only secure version, adding authentication, encryption, and message integrity.
+
+Scenario. A security assessment flags the network management system for transmitting credentials in clear text. Least disruptive fix? Migrate to SNMP version three. Not a firewall rule, not a VLAN. Version three.
+
+[PAUSE 1]
+
+Syslog. UDP five fourteen. There is also TCP five fourteen, and TLS protected syslog on sixty five fourteen.
+
+Severity levels zero through seven, lower is worse.
+
+Zero, emergency. The system is unusable. One, alert. Immediate action required. Two, critical. Three, error. Four, warning. Five, notice. Six, informational. Seven, debug.
+
+Every Awesome Cisco Engineer Will Need Ice cream Daily.
+
+And the trap I mentioned earlier, worth repeating because it is a favorite. Configure logging at level four and you get level four and everything more severe. Zero through four. Informational and debug messages, levels six and seven, are not sent.
+
+Related. Syslog is the transport. A SIEM is the platform that aggregates logs from many sources and correlates them to detect incidents. SIEM stands for security information and event management. If the question is about correlation and detection, the answer is SIEM, not syslog.
+
+And port mirroring, also called SPAN, is the switch feature that copies traffic to an analysis port. Compare that with a network TAP, which is a physical inline device. The TAP does not drop frames under load and cannot be accidentally reconfigured, but it costs money and you have to break the cable to install it. Port mirroring is free but oversubscribable, and it can silently drop frames when the switch is busy.
+
+[PAUSE 1]
+
+Time protocols.
+
+NTP. Network Time Protocol. UDP one twenty three. Stratum hierarchy, milliseconds of accuracy. Already covered, but here is the security angle. NTP is a dependency for Kerberos authentication, certificate validation, log correlation, and time based one time passwords. When time breaks, security breaks.
+
+PTP. Precision Time Protocol. IEEE fifteen eighty eight. Sub microsecond accuracy, achieved using hardware timestamping in the network devices themselves.
+
+Where PTP is required. Financial trading. Industrial control. Broadcast video. Cellular backhaul. Anywhere millisecond accuracy is not good enough.
+
+The discriminator is simple. If the question specifies accuracy below one microsecond, the answer is PTP. Otherwise NTP.
+
+NTS. Network Time Security. This adds cryptographic authentication to NTP so a client can verify the time it receives has not been forged. It is new to this version of the exam, which makes it a likely question. Know the name and what it does.
+
+[PAUSE 1]
+
+Now voice. Voice over IP.
+
+SIP. Session Initiation Protocol. Ports fifty sixty unencrypted, fifty sixty one over TLS.
+
+SIP is signaling only. It sets up the call, modifies it, and tears it down. Ringing, answering, hanging up. It does not carry a single byte of audio.
+
+RTP. Real time Transport Protocol. It carries the actual audio and video stream, on dynamic UDP ports, typically sixteen thousand three eighty four through thirty two thousand seven sixty seven.
+
+RTP runs on UDP because retransmitting late audio is worthless. SRTP is the encrypted variant. And RTCP carries quality statistics about the stream.
+
+Here is the scenario I want burned in, because it is one of the most commonly tested VoIP items on the exam.
+
+Calls connect successfully. The phone rings. Both parties answer. But neither hears any audio. Which protocol do you investigate?
+
+RTP. Not SIP. Signaling clearly succeeded, because the call set up and the phone rang. What failed is the media path. Usually a firewall blocking the dynamic UDP range, or a NAT traversal problem.
+
+One way audio is the same category of problem. One direction of RTP is getting through and the other is not.
+
+H point three two three is the older signaling suite, TCP seventeen twenty, largely displaced by SIP. Know it exists.
+
+[PAUSE 1]
+
+Voice quality metrics, which appear in performance troubleshooting questions.
+
+Latency is delay. Target under one hundred fifty milliseconds one way for voice. Jitter is variation in that latency. It causes choppy, robotic audio. Mitigated with a jitter buffer. Packet loss causes dropouts. Above roughly one percent it becomes audible.
+
+And separate four terms that get confused. Bandwidth is the theoretical capacity of the link. Throughput is what you actually achieve. Latency is delay. Jitter is variation in delay.
+
+Symptom mapping. Choppy voice means jitter. Slow but steady file transfers means throughput or bandwidth. Laggy interactive sessions means latency.
+
+QoS, quality of service, is the fix for congestion related voice problems. Voice is typically marked with DSCP EF, expedited forwarding, value forty six, at layer three. At layer two, class of service uses eight oh two dot one P.
+
+Scenario. Users report choppy, robotic audio on calls while large file transfers are running. Cause and fix? Jitter caused by congestion. Implement QoS to prioritize voice traffic.
+
+[PAUSE 1]
+
+Finally, management access methods, from objective three point five.
+
+Connection methods listed are SSH, graphical user interface, API, and console.
+
+And the distinction that matters most. In band versus out of band.
+
+SSH and Telnet are both in band. They depend on the production network being up. If the network is down, you cannot reach the device to fix it.
+
+A console cable, or a dedicated management port with a cellular modem, is out of band. It works when the production network is completely dead.
+
+So any scenario about managing a device during an outage, or recovering a switch you just misconfigured yourself out of, points to out of band management.
+
+A jump box, also called a jump host or bastion host, is a hardened intermediate system that administrators connect to first, and from which they reach protected devices. It concentrates and audits administrative access at one controlled point. That is different from a VPN, which extends the network to the client.
+
+[PAUSE 2]
+
+Drill.
+
+Which port does a monitoring server listen on to receive traps?
+
+[PAUSE 3]
+
+UDP one sixty two.
+
+Which SNMP version provides encryption?
+
+[PAUSE 3]
+
+Version three only.
+
+What is syslog severity level zero?
+
+[PAUSE 3]
+
+Emergency.
+
+Which monitoring method shows who talked to whom and how much, without content?
+
+[PAUSE 4]
+
+Flow data. NetFlow, sFlow, or IPFIX.
+
+A trading firm needs timestamps accurate below one microsecond.
+
+[PAUSE 3]
+
+PTP.
+
+A call connects and rings but there is no audio.
+
+[PAUSE 3]
+
+RTP. A media path problem, not signaling.
+
+Users report choppy robotic audio during heavy file transfers.
+
+[PAUSE 3]
+
+Jitter from congestion. Fix with QoS.
+
+You need to manage a switch whose production network link is down.
+
+[PAUSE 4]
+
+Out of band management. Console or a dedicated management connection.
+
+End of track ten.

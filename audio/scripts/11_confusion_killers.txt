@@ -1,0 +1,203 @@
+# TITLE: Track 11 - Confusion Killers
+
+Track eleven. The confusion killers.
+
+Every pair in this track is something people get wrong on exam day. Format is the same each time. Here is the confusion, here is why it happens, here is the one detail that separates them.
+
+If you only have time for one track before the exam, make it this one.
+
+[PAUSE 1]
+
+TCP versus UDP. People memorize reliable versus unreliable, then the question describes an application instead and they freeze. Map the application. Voice, video, streaming, DNS query, DHCP, TFTP, SNMP, NTP, syslog are UDP. Web, email, file transfer, database, remote desktop are TCP. And if the question mentions retransmission, sequencing, acknowledgments, or a handshake, it is TCP by definition.
+
+[PAUSE 1]
+
+SSH versus TLS. Both encrypt, both are called secure. SSH is an application protocol for remote shell access and tunneling, on port twenty two. TLS is a cryptographic layer that other protocols wrap themselves in. HTTPS, LDAPS, SMTPS, FTPS. SSH is a thing you run. TLS is a wrapper you put around other things.
+
+[PAUSE 1]
+
+SFTP versus FTPS versus TFTP. Four similar names, and CompTIA's own expansion of SFTP as secure file transfer protocol makes it sound like secured FTP, which it is not.
+
+SFTP runs inside SSH, port twenty two, encrypted, single connection. FTPS is FTP wrapped in TLS, port nine eighty nine or nine ninety, certificate driven, separate control and data connections. FTP is ports twenty and twenty one, no encryption. TFTP is UDP sixty nine, no encryption and no authentication whatsoever.
+
+Discriminator. If both SFTP and FTPS are offered and the scenario mentions a single open port or an existing SSH deployment, choose SFTP. If it mentions certificates or securing existing FTP infrastructure, choose FTPS.
+
+[PAUSE 1]
+
+SNMP one sixty one versus one sixty two. People memorize the pair without the direction. One sixty one is the device listening for the manager's questions. One sixty two is the manager listening for the device's alerts. If the device initiates, it is one sixty two.
+
+And trap versus inform. A trap is fire and forget. An inform is acknowledged and retransmitted if lost. If alerts cannot be missed, the answer is inform.
+
+[PAUSE 1]
+
+SNMP version two c versus version three. People assume community strings are passwords, so version two c must be somewhat secure. It is not. Versions one and two c send community strings in clear text with no encryption. Only version three provides authentication, encryption, and integrity.
+
+[PAUSE 1]
+
+RADIUS versus TACACS plus. The most missed comparison on the exam.
+
+RADIUS. UDP eighteen twelve and eighteen thirteen. Encrypts the password only. Combines authentication and authorization. Open standard. Best for network access, meaning wireless, VPN, and eight oh two dot one X.
+
+TACACS plus. TCP forty nine. Encrypts the entire payload. Separates all three A's. Cisco. Best for device administration and per command authorization.
+
+Who gets on the network, RADIUS. What commands an admin can run, TACACS plus.
+
+[PAUSE 1]
+
+Eight oh two dot one X versus RADIUS versus EAP. These get treated as competing answers when they are layers of one system. Eight oh two dot one X is the framework that blocks the port. EAP is the authentication method carried inside. RADIUS is the protocol that carries EAP to the decision server.
+
+[PAUSE 1]
+
+AH versus ESP. Both are IPSec, both provide integrity. The difference. AH does not encrypt. Only ESP encrypts. AH also breaks through NAT, because it protects the IP header that NAT rewrites. Any question mentioning confidentiality, or NAT, points to ESP.
+
+[PAUSE 1]
+
+IPSec transport mode versus tunnel mode. The names feel backwards to some people. Transport mode protects the payload only and keeps the original header. Host to host. Tunnel mode encrypts the entire original packet inside a new one. Site to site VPN. If the scenario says between two branch offices, it is tunnel mode.
+
+[PAUSE 1]
+
+GRE versus IPSec. Both are called tunneling. GRE encapsulates but does not encrypt, and it can carry multicast, so routing protocols work over it. IPSec encrypts but does not natively carry multicast. Combine them when you need both.
+
+[PAUSE 1]
+
+DNS versus DHCP symptoms. Both produce, I cannot get to the internet.
+
+Address is one sixty nine dot two five four, that is DHCP failure. Address looks correct, pinging an IP works, pinging a name fails, that is DNS. Some sites work and one specific hostname does not, that is a DNS record problem. No address at all and no link light, that is physical layer.
+
+[PAUSE 1]
+
+DNSSEC versus DNS over HTTPS. All three sound like secure DNS. DNSSEC signs records to prove authenticity and integrity, but leaves queries readable. DNS over HTTPS and DNS over TLS encrypt the query for confidentiality, but say nothing about whether the answer is genuine. Different problems entirely.
+
+[PAUSE 1]
+
+A versus quad A versus CNAME versus PTR. People read too fast. A is IPv4 forward. Quad A is IPv6 forward. CNAME is an alias to another name, never to an IP address. PTR is reverse, IP to name.
+
+[PAUSE 1]
+
+Authoritative versus non authoritative. Non authoritative sounds like an error message. It is not. It simply means the answer came from a cache instead of from the server that owns the zone.
+
+And recursive versus iterative. Recursive means the resolver chases the full answer for the client. Iterative means each server returns a referral and the asker keeps going.
+
+[PAUSE 1]
+
+ARP spoofing versus ARP poisoning versus MAC flooding. The first two are the same attack from two angles. Spoofing is sending forged ARP replies. Poisoning is the corrupted state that results in victim caches. Both enable an on path attack, and the mitigation is dynamic ARP inspection.
+
+MAC flooding is a different attack entirely. It overwhelms the switch's CAM table until the switch fails open and starts flooding frames out every port. The mitigation for that one is port security.
+
+[PAUSE 1]
+
+ARP versus NDP. People assume IPv6 still uses ARP. It does not. IPv6 has no ARP at all. NDP over ICMP version six handles neighbor resolution, router discovery, and duplicate address detection. Which is why blocking ICMP version six breaks IPv6 completely.
+
+[PAUSE 1]
+
+DHCP reservation versus exclusion versus static. All three produce a fixed address.
+
+A reservation lives on the DHCP server, tied to a MAC, and the client still uses DHCP. Centrally managed. An exclusion just tells the server never to hand out certain addresses, usually because those devices are configured by hand. A static assignment is set on the device itself, and the server knows nothing about it.
+
+Centrally managed points to reservation.
+
+[PAUSE 1]
+
+SLAAC versus DHCP version six. Both give an IPv6 host an address. SLAAC is stateless, the host builds its own address from a router advertised prefix, and nothing tracks it. DHCP version six is stateful, a server assigns and records. If the scenario stresses no server, SLAAC. If it stresses auditing which host had which address, DHCP version six.
+
+[PAUSE 1]
+
+APIPA versus RFC nineteen eighteen versus loopback. All three are non routable on the internet. One sixty nine dot two five four means DHCP failed, it is a symptom. Ten dot, one seventy two dot sixteen through thirty one, and one ninety two dot one sixty eight are intentional private addressing behind NAT. One twenty seven dot zero dot zero dot one tests only the local stack and never leaves the host.
+
+[PAUSE 1]
+
+NAT versus PAT. Vendors use NAT loosely for both. NAT is one to one translation. PAT, also called NAT overload, uses port numbers so many hosts share one public address. Hundreds of hosts, one public IP, is always PAT.
+
+[PAUSE 1]
+
+Administrative distance versus metric versus prefix length. People check administrative distance first. Wrong order. Longest prefix match is checked first, always. Administrative distance only breaks ties between different protocols offering the same prefix. Metric only breaks ties within the same protocol.
+
+[PAUSE 1]
+
+The four routing protocols by keyword. Multi vendor, large, open standard, fast convergence is OSPF. All Cisco, fastest reconvergence, feasible successor is EIGRP. Between autonomous systems, multiple ISPs, policy control is BGP. Hop count, fifteen hop limit, legacy is RIP.
+
+[PAUSE 1]
+
+Spanning tree versus shielded twisted pair. Identical acronym, S T P, two different domains. Loops, root bridge, BPDUs, broadcast storms means spanning tree. Cabling, EMI, interference, crosstalk means shielded twisted pair. Read the context.
+
+[PAUSE 1]
+
+Original spanning tree versus rapid spanning tree port states. Five states, blocking listening learning forwarding disabled, thirty to fifty second convergence, is eight oh two dot one D. Three states, discarding learning forwarding, seconds to converge, is eight oh two dot one W, rapid spanning tree.
+
+[PAUSE 1]
+
+Link aggregation versus load balancing. Both spread traffic around. Aggregation bonds physical links between two devices into one logical link. A load balancer distributes client requests across multiple servers. Different layer, different purpose.
+
+[PAUSE 1]
+
+Native VLAN versus default VLAN versus voice VLAN. Default VLAN is VLAN one, where every port starts. Native VLAN is whichever VLAN travels untagged on a trunk. Voice VLAN is a separate tagged VLAN for IP phones sharing a port with a PC.
+
+[PAUSE 1]
+
+CDP versus LLDP. CDP is Cisco only. LLDP is the open standard. Multi vendor always means LLDP.
+
+[PAUSE 1]
+
+HSRP versus VRRP versus GLBP. HSRP is Cisco, active standby. VRRP is the open standard, so it is the multi vendor answer. GLBP is Cisco and actually load balances instead of idling the standby.
+
+And first hop redundancy versus a load balancer. FHRP makes the default gateway redundant. A load balancer makes servers redundant. Gateway or first hop means FHRP.
+
+[PAUSE 1]
+
+SIP versus RTP. SIP sets up the call, ports fifty sixty and fifty sixty one. RTP carries the audio on dynamic UDP ports. A call that connects with no audio is always RTP, never SIP.
+
+[PAUSE 1]
+
+SMB versus NFS. Windows shares are SMB on four forty five. Linux, Unix, and hypervisor datastores are NFS on twenty forty nine.
+
+And NAS versus SAN. NAS is file level, over the existing LAN, appears as a network share. SAN is block level, over a dedicated storage network, appears to the server as a local disk.
+
+[PAUSE 1]
+
+SMTP versus POP three versus IMAP. SMTP sends. POP three downloads and deletes. IMAP syncs and retains on the server. Can receive but not send means SMTP. Read on one device and gone from another means POP three is in use and IMAP is the fix.
+
+[PAUSE 1]
+
+Telnet versus SSH versus out of band. Telnet and SSH are both in band, and both depend on the production network being up. A console cable or dedicated management port is out of band and works during an outage. Managing a device during an outage always means out of band.
+
+[PAUSE 1]
+
+Syslog versus SNMP versus flow data versus packet capture. SNMP for device health metrics. Syslog for discrete events. Flow data for who talked to whom and how much. Packet capture for actual content. Choose based on what the question wants to see.
+
+[PAUSE 1]
+
+Port mirroring versus a network TAP. Port mirroring is a switch feature, free, but it can drop frames under load. A TAP is a physical inline device, does not drop traffic, but costs money and requires breaking the cable to install.
+
+[PAUSE 1]
+
+IDS versus IPS. IDS detects and alerts, out of band. IPS detects and blocks, inline. Prevent or block means IPS.
+
+[PAUSE 1]
+
+Forward proxy versus reverse proxy. A forward proxy sits in front of clients, filtering outbound. A reverse proxy sits in front of servers, doing TLS offload and hiding origins.
+
+[PAUSE 1]
+
+WPA two versus WPA three. WPA two uses a four way handshake vulnerable to offline attack. WPA three uses SAE, adds forward secrecy, and mandates protected management frames. Offline dictionary attack on a captured handshake always points to WPA three.
+
+And pre shared key versus Enterprise. PSK is one shared passphrase. Enterprise is eight oh two dot one X with RADIUS and per user credentials. Revoke one user without touching everyone else means Enterprise.
+
+[PAUSE 1]
+
+MAC filtering versus port security versus eight oh two dot one X. MAC filtering is defeated by spoofing. Port security limits learned MACs per port and stops MAC flooding. Eight oh two dot one X actually authenticates. Strongest to weakest, that order reversed.
+
+[PAUSE 1]
+
+TTL in an IP header versus TTL in DNS. Same acronym, unrelated. In IP, TTL is a hop counter preventing routing loops, and it is what traceroute exploits. In DNS, TTL is how long a resolver caches a record, and it is why stale records survive a migration.
+
+[PAUSE 1]
+
+Latency versus jitter versus throughput versus bandwidth. Bandwidth is theoretical capacity. Throughput is what you actually get. Latency is delay. Jitter is variation in delay. Choppy voice is jitter. Slow steady transfers is throughput. Laggy interactive sessions is latency.
+
+[PAUSE 1]
+
+Runts versus giants versus CRC errors versus drops. Runts are undersized frames, often a duplex mismatch. Giants are oversized, often an MTU mismatch. CRC errors mean corruption, so physical layer, a bad cable or interference. Drops mean a buffer overflowed, so congestion.
+
+[PAUSE 1]
+
+That is the full confusion list. If any of those felt shaky, that is the one to review tonight. End of track eleven.

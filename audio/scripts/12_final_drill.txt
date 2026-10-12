@@ -1,0 +1,333 @@
+# TITLE: Track 12 - Final Drill
+
+Track twelve. Final drill. Fifty questions, mixed, exam style.
+
+No teaching. Answer out loud, then hear the answer. If you miss more than eight of these, go back and re listen to whichever track covers it.
+
+Here we go.
+
+[PAUSE 2]
+
+One. Which protocol uses UDP sixty nine and provides no authentication?
+
+[PAUSE 4]
+
+TFTP.
+
+Two. Which IPSec component provides encryption?
+
+[PAUSE 4]
+
+ESP.
+
+Three. A host has one sixty nine dot two five four dot eight dot four. What failed?
+
+[PAUSE 4]
+
+DHCP.
+
+Four. Which port must be open for a manager to receive SNMP traps?
+
+[PAUSE 4]
+
+UDP one sixty two.
+
+Five. Which routing protocol is used between autonomous systems?
+
+[PAUSE 4]
+
+BGP.
+
+Six. Which first hop redundancy protocol is vendor neutral?
+
+[PAUSE 4]
+
+VRRP.
+
+Seven. A call connects and rings but there is no audio. Which protocol?
+
+[PAUSE 4]
+
+RTP.
+
+Eight. Which AAA protocol encrypts the entire payload?
+
+[PAUSE 4]
+
+TACACS plus.
+
+Nine. What is the administrative distance of OSPF?
+
+[PAUSE 4]
+
+One ten.
+
+Ten. Which DNS record maps a name to an IPv6 address?
+
+[PAUSE 4]
+
+Quad A.
+
+[PAUSE 1]
+
+Eleven. Which spanning tree standard uses discarding, learning, and forwarding?
+
+[PAUSE 4]
+
+Rapid spanning tree. Eight oh two dot one W.
+
+Twelve. Which port does LDAPS use?
+
+[PAUSE 4]
+
+TCP six thirty six.
+
+Thirteen. Which technology extends layer two across a routed network using UDP forty seven eighty nine?
+
+[PAUSE 4]
+
+VXLAN.
+
+Fourteen. Which protocol resolves IPv6 neighbor addresses?
+
+[PAUSE 4]
+
+NDP, over ICMP version six.
+
+Fifteen. Which WPA three feature replaces the WPA two four way handshake?
+
+[PAUSE 4]
+
+SAE.
+
+Sixteen. What is the IP protocol number for GRE?
+
+[PAUSE 4]
+
+Forty seven.
+
+Seventeen. Which transport protocol carries DHCP, TFTP, and SNMP?
+
+[PAUSE 4]
+
+UDP.
+
+Eighteen. What is syslog severity level three?
+
+[PAUSE 4]
+
+Error.
+
+Nineteen. A user can ping an IP but not resolve any hostname. What is broken?
+
+[PAUSE 4]
+
+DNS.
+
+Twenty. Which port does Microsoft SQL Server use?
+
+[PAUSE 4]
+
+TCP fourteen thirty three.
+
+[PAUSE 1]
+
+Twenty one. Which is evaluated first in route selection, administrative distance or prefix length?
+
+[PAUSE 4]
+
+Prefix length.
+
+Twenty two. Which IPSec component breaks when traversing NAT?
+
+[PAUSE 4]
+
+AH, the authentication header.
+
+Twenty three. What are the four steps of DHCP, in order?
+
+[PAUSE 5]
+
+Discover, offer, request, acknowledge.
+
+Twenty four. Which discovery protocol is the vendor neutral standard?
+
+[PAUSE 4]
+
+LLDP.
+
+Twenty five. Which ICMP type indicates a TTL expired?
+
+[PAUSE 4]
+
+Type eleven, time exceeded.
+
+Twenty six. Which SNMP version provides encryption?
+
+[PAUSE 4]
+
+Version three.
+
+Twenty seven. A device must always receive the same IP but be managed centrally.
+
+[PAUSE 4]
+
+A DHCP reservation.
+
+Twenty eight. Which OSPF area is the backbone?
+
+[PAUSE 4]
+
+Area zero.
+
+Twenty nine. What is the maximum hop count in RIP?
+
+[PAUSE 4]
+
+Fifteen.
+
+Thirty. Which port carries SMB?
+
+[PAUSE 4]
+
+TCP four forty five.
+
+[PAUSE 1]
+
+Thirty one. Which traffic type does IPv6 not support?
+
+[PAUSE 4]
+
+Broadcast.
+
+Thirty two. What delivers traffic to the nearest member of a group sharing one address?
+
+[PAUSE 4]
+
+Anycast.
+
+Thirty three. Which protocol provides sub microsecond time accuracy?
+
+[PAUSE 4]
+
+PTP.
+
+Thirty four. Users on one VLAN get APIPA addresses. The DHCP server is on another VLAN. What is missing?
+
+[PAUSE 5]
+
+An IP helper address, or DHCP relay.
+
+Thirty five. Which access control method is defeated by MAC spoofing?
+
+[PAUSE 4]
+
+MAC filtering.
+
+Thirty six. Which protocol carries EAP to the authentication server in an eight oh two dot one X deployment?
+
+[PAUSE 5]
+
+RADIUS.
+
+Thirty seven. What is the port for TACACS plus?
+
+[PAUSE 4]
+
+TCP forty nine.
+
+Thirty eight. What technology signs DNS records to prove they are genuine?
+
+[PAUSE 4]
+
+DNSSEC.
+
+Thirty nine. What encrypts the DNS query itself on port eight fifty three?
+
+[PAUSE 4]
+
+DNS over TLS.
+
+Forty. Which VLAN travels untagged on a trunk?
+
+[PAUSE 4]
+
+The native VLAN.
+
+[PAUSE 1]
+
+Forty one. What is the IP protocol number for OSPF?
+
+[PAUSE 4]
+
+Eighty nine.
+
+Forty two. A packet capture shows heavy TCP retransmissions. What does that indicate?
+
+[PAUSE 4]
+
+Packet loss.
+
+Forty three. Which mode of IPSec is used for site to site VPN?
+
+[PAUSE 4]
+
+Tunnel mode.
+
+Forty four. Which tunneling protocol can carry multicast but provides no encryption?
+
+[PAUSE 4]
+
+GRE.
+
+Forty five. Which email protocol leaves messages on the server and syncs across devices?
+
+[PAUSE 4]
+
+IMAP.
+
+Forty six. What does a CRC error on an interface indicate?
+
+[PAUSE 4]
+
+Physical layer corruption. Bad cable, connector, or interference.
+
+Forty seven. Which PoE standard delivers thirty watts?
+
+[PAUSE 4]
+
+Eight oh two dot three A T. PoE plus.
+
+Forty eight. What is the standard Ethernet MTU?
+
+[PAUSE 4]
+
+Fifteen hundred bytes.
+
+Forty nine. Which management method works when the production network is down?
+
+[PAUSE 4]
+
+Out of band. Console or dedicated management port.
+
+Fifty. Which protocol authenticates a Windows domain login using tickets, and fails on clock skew?
+
+[PAUSE 5]
+
+Kerberos.
+
+[PAUSE 2]
+
+That is fifty.
+
+A closing thought on how CompTIA writes these questions.
+
+The scenario will be longer than it needs to be. Read the last sentence first, because that is the actual question, then go back for the detail that discriminates.
+
+Watch the qualifiers. Best, most likely, first. Multiple answers will work technically. The qualifier picks the winner.
+
+Usually two answers are obviously wrong and two are plausible. The discriminator is almost always one word in the scenario. Multi vendor means open standard. Encrypted rules out the plain text options. Without changing every device means centralized. During an outage means out of band.
+
+And insecure protocols are almost never the right answer in a security question. Telnet, FTP, PPTP, WEP, SNMP version one and two c, WPS, SMB version one. Those exist in the answer list to be eliminated.
+
+Good luck on the exam.

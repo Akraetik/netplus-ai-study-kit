@@ -1,0 +1,165 @@
+# TITLE: Track 15 - Troubleshooting 1
+
+[A] Network Plus, domain five. Network Troubleshooting. Drill one, methodology, physical layer, and tools. Twenty five questions.
+
+[B] Worth saying before we start. Troubleshooting is twenty four percent of this exam, the single heaviest domain. And CompTIA scores it on process as much as on knowledge.
+
+[A] Which is why we start with the methodology.
+
+[PAUSE 2]
+
+[A] Question one. Name the seven steps of the CompTIA troubleshooting methodology, in order.
+
+[PAUSE 8]
+
+[B] One, identify the problem. Two, establish a theory of probable cause. Three, test the theory to determine the cause. Four, establish a plan of action and identify potential effects. Five, implement the solution or escalate. Six, verify full system functionality and, if applicable, implement preventive measures. Seven, document findings, actions, and outcomes. Memorize the order. Questions ask what comes next.
+
+[A] Question two. A technician has just confirmed that a faulty transceiver is the cause of an outage. What is the next step?
+
+[PAUSE 5]
+
+[B] Establish a plan of action and identify potential effects. Step four. The trap is jumping straight to implementing the fix. Testing the theory only proves the cause. You still have to plan the change and consider what it will disrupt before touching anything.
+
+[A] Question three. A technician replaced a switch and confirmed the user can now reach the file server. What remains?
+
+[PAUSE 5]
+
+[B] Verify full system functionality, then document. Verification means checking everything that device does, not just the one symptom reported. And documentation is the step people skip in real life and miss on the exam. If documentation appears as an answer choice for what comes last, it is almost always correct.
+
+[A] Question four. During step one, identify the problem, what specific actions does CompTIA expect?
+
+[PAUSE 6]
+
+[B] Gather information, question users, identify symptoms, determine if anything has recently changed, and duplicate the problem if possible. Approach multiple problems individually rather than as one. That last point matters. Two symptoms are often two separate faults.
+
+[A] Question five. A user reports that a fiber link is down. Light levels measured at the receiver are far below the manufacturer's specification. What is this called?
+
+[PAUSE 5]
+
+[B] Excessive decibel loss, also called attenuation. Causes include a run exceeding distance limits, dirty or scratched connectors, too many splices or patch panels, or a tight bend radius violation. Fiber does not tolerate sharp bends.
+
+[A] Question six. A newly installed fiber link will not come up. Both transceivers show no light. What is the most common cause?
+
+[PAUSE 5]
+
+[B] Transmit and receive are transposed. Fiber is a pair. One strand transmits, the other receives, and they must cross between ends. Swap one end and the link comes up. This is the single most common fiber installation error.
+
+[A] Question seven. An engineer installs a single mode transceiver on one end and a multimode transceiver on the other. What happens?
+
+[PAUSE 5]
+
+[B] A transceiver mismatch. The link either never comes up or comes up with unusable error rates. Both ends must match in mode, wavelength, and speed. Single mode uses a small core with a laser for long distance. Multimode uses a larger core over shorter runs.
+
+[A] Question eight. A copper run measures three hundred and forty feet from switch to workstation. Users report intermittent connectivity. What is the issue?
+
+[PAUSE 5]
+
+[B] The run exceeds the one hundred meter limit for twisted pair, which is about three hundred and twenty eight feet. Beyond that, attenuation causes errors and unreliable links. The fix is a repeater, an intermediate switch, or converting the run to fiber.
+
+[A] Question nine. A cable run passes beside fluorescent lighting and a motor. Users see intermittent errors, and the interface counters show CRC errors. What is the cause and the fix?
+
+[PAUSE 6]
+
+[B] Electromagnetic interference. The fix is to reroute the cable away from the source, or use shielded twisted pair, which is grounded foil or braid designed for exactly this environment. Note the acronym collision. Here STP means shielded twisted pair, not spanning tree.
+
+[A] Question ten. An interface shows increasing CRC errors but the link stays up. Where should the technician look first?
+
+[PAUSE 5]
+
+[B] The physical layer. CRC errors mean frames arrived corrupted, which points to a damaged cable, a bad connector or termination, interference, or a failing transceiver. CRC errors are not a configuration symptom. No amount of VLAN or routing work will fix them.
+
+[A] Question eleven. An interface reports late collisions and CRC errors, and throughput is a fraction of expected. What is the classic cause?
+
+[PAUSE 6]
+
+[B] A duplex mismatch. One side is set to full duplex and the other to half, usually because one end is hardcoded and the other is autonegotiating. The half duplex side detects collisions the full duplex side does not believe in. The fix is to set both ends the same, either both auto or both hardcoded.
+
+[A] Question twelve. What do runts and giants indicate respectively?
+
+[PAUSE 5]
+
+[B] Runts are frames under sixty four bytes, usually from collisions or a duplex mismatch. Giants exceed the interface MTU, usually an MTU mismatch or unexpected VLAN tagging adding bytes. Different counters, different root causes.
+
+[A] Question thirteen. An interface shows a rising number of output drops, but no errors. What does this indicate?
+
+[PAUSE 5]
+
+[B] Congestion. The buffer filled and frames were discarded because there was nowhere to queue them. Drops are a capacity problem, not a corruption problem. The fixes are QoS, link aggregation, or more bandwidth. Replacing the cable will not help.
+
+[A] Question fourteen. A technician needs to locate one specific cable inside a bundle of two hundred terminating in a wiring closet. Which tool?
+
+[PAUSE 5]
+
+[B] A toner and probe, sometimes called a fox and hound. The toner injects an audible signal on the target pair and the probe finds it in the bundle. A cable tester verifies a cable once you have found both ends. It does not help you find it.
+
+[A] Question fifteen. Which tool identifies the distance to a break in a copper cable?
+
+[PAUSE 5]
+
+[B] A time domain reflectometer, a TDR. It sends a pulse and measures the reflection, reporting how far down the run the fault is. The fiber equivalent is an OTDR, optical time domain reflectometer. For a quick visual on fiber, a visual fault locator shines visible light so a break glows.
+
+[A] Question sixteen. Which command shows local listening ports and active connections on a workstation?
+
+[PAUSE 5]
+
+[B] Netstat. Use it to confirm a service is actually listening, or to spot an unexpected connection. Nmap is the distractor. Nmap scans other hosts from across the network. Netstat looks at the machine you are standing on.
+
+[A] Question seventeen. A technician needs to determine which switch port a specific MAC address is learned on. Which command?
+
+[PAUSE 5]
+
+[B] Show MAC address table. It maps learned MAC addresses to ports and VLANs. Combine it with show ARP on the router to go from an IP address to a MAC, and then to a physical port. That IP to MAC to port chain is how you find an unknown device.
+
+[A] Question eighteen. Which command line tool provides far more DNS detail than nslookup, including record type filtering and authority sections?
+
+[PAUSE 5]
+
+[B] Dig. It is the preferred DNS troubleshooting tool on Linux and macOS. Nslookup is available everywhere, including Windows, and is fine for a quick lookup, but dig shows you the full response structure.
+
+[A] Question nineteen. A technician suspects a specific application is malformed on the wire, and needs to inspect the actual packet contents. Which tool and which switch feature are required?
+
+[PAUSE 6]
+
+[B] A protocol analyzer such as Wireshark or tcpdump, and port mirroring, also called SPAN, to copy traffic to the capture port. The alternative to a mirror is a physical network TAP, which does not drop frames under load the way an oversubscribed mirror port can.
+
+[A] Question twenty. Which tool discovers open ports and running services on a remote host?
+
+[PAUSE 5]
+
+[B] Nmap, a port scanner. It can also fingerprint the operating system and service versions. For a single port from a machine with nothing installed, telnet to that host and port works as a poor man's test.
+
+[A] Question twenty one. A user cannot reach a server. Ping to the server's IP succeeds. Ping to its hostname fails. What layer is the problem?
+
+[PAUSE 5]
+
+[B] Name resolution, so DNS. Connectivity is proven by the successful IP ping, so everything at layers one through three is working. Check the client's configured resolver, the record itself, and the local cache.
+
+[A] Question twenty two. Traceroute output shows three hops of asterisks in the middle of the path, but the final destination replies normally. Is the path broken?
+
+[PAUSE 6]
+
+[B] No. Those routers are configured not to respond to traceroute probes, or to deprioritize ICMP. The destination answered, so the path works. Asterisks mid path are extremely common and do not indicate a fault by themselves.
+
+[A] Question twenty three. Which command displays the routing table on a router, and what does an administrative distance of zero mean in that output?
+
+[PAUSE 5]
+
+[B] Show route, or show IP route. An administrative distance of zero means directly connected. The router can see that network on its own interface, so nothing can override it.
+
+[A] Question twenty four. A network diagram is out of date and a technician needs to map which switch each device connects to, in a mixed vendor environment. Which protocol?
+
+[PAUSE 5]
+
+[B] LLDP, link layer discovery protocol, the vendor neutral standard defined in eight oh two dot one A B. CDP is Cisco only, so it fails in a mixed environment. Both reveal neighbor identity, model, software version, and the connecting port.
+
+[A] Question twenty five. A technician must test throughput between two internal sites to validate an SLA claim. Which category of tool?
+
+[PAUSE 5]
+
+[B] A speed tester or bandwidth testing tool, run between endpoints at both sites. Test at multiple times of day, because a link that meets its SLA at midnight may not at ten in the morning. A single test proves very little.
+
+[PAUSE 2]
+
+[A] End of troubleshooting drill one.
+
+[B] The seven step methodology alone is worth several questions. If you cannot recite it in order right now, replay question one before you continue.
