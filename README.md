@@ -3,7 +3,9 @@
 **Handy dandy lil repo to use your own AI (agnostic) to turn CompTIA Network+ (N10-009) into car audio, Anki flashcards, and a study plan that adapts to your practice-test misses.**
 
 ![Exam](https://img.shields.io/badge/CompTIA-Network%2B%20N10--009-c8202f)
-![Status](https://img.shields.io/badge/status-building%20in%20public-orange)
+![Anki](https://img.shields.io/badge/Anki-.apkg%20decks-235390)
+![TTS](https://img.shields.io/badge/audio-local%20Kokoro%20TTS-4b8bbe)
+![Python](https://img.shields.io/badge/python-3.10%2B-3776ab)
 ![License](https://img.shields.io/badge/code-MIT-green)
 ![Content](https://img.shields.io/badge/content-CC%20BY--NC--SA%204.0-lightgrey)
 
@@ -11,7 +13,69 @@ I built this system while preparing for Network+. I had a job, a long commute, a
 
 I'm publishing the finished materials and the system that made them, when I have time between doing other things. The system works around your real life. A certificate is just flair to a career and learning track.
 
-I added Anthropic's Claude as a contributor. I used them to create the AI flashcards and Audio. Fair disclosure. A feature not a bug. 
+I added Anthropic's Claude as a contributor. I used them to create the AI flashcards and Audio. Fair disclosure. A feature not a bug.
+
+> 🎥 **Video walkthrough:** *coming soon* · 💼 **Author:** Daniel McKinlay · MSCS, U.S. Army veteran
+
+---
+
+## What's inside
+
+| Folder | What it is |
+|---|---|
+| [`decks/`](decks/) | Ready-to-import Anki decks — **~2,000 cards** across a full-coverage deck, a rapid-recall deck, a trouble-areas deck, and five quick decks |
+| [`audio/`](audio/) | Car-ready MP3 drills with answer pauses. Files ship as [GitHub Release](../../releases) assets |
+| [`prompts/`](prompts/) | Copy-paste prompts for ChatGPT, Claude, Gemini, or any capable model |
+| [`docs/`](docs/) | The method: set a target, set a timeline, how learning works, and the adaptive loop |
+| [`tools/`](tools/) | Two Python tools: **CSV → Anki deck** and **script → verified MP3** (local, free, no API key) |
+| [`templates/`](templates/) | Miss log, score tracker, study plan, card CSV |
+| [`examples/`](examples/) | A sample card CSV and a sample two-voice audio script to test the tools |
+
+## The system in one picture
+
+```mermaid
+flowchart LR
+    A[Exam objectives] --> B[AI writes<br/>cards + audio scripts]
+    B --> C[make_deck.py<br/>→ Anki]
+    B --> D[make_audio.py<br/>→ MP3]
+    C --> E[Study<br/>spaced + active recall]
+    D --> E
+    E --> F[Practice test]
+    F --> G[Miss log]
+    G -->|AI diagnoses the pattern| B
+    F -->|3 scores ≥ 85%| H[Book the exam]
+```
+
+The loop is the point. Generic material gets you to about 70%. Material rebuilt from **your** misses closes the gap.
+
+---
+
+## Quick start
+
+### Path 1 — Just study (5 minutes)
+1. Install [Anki](https://apps.ankiweb.net/) (free on Windows, Mac, Linux, Android; AnkiMobile is paid on iOS).
+2. Download a deck from [`decks/`](decks/) and double-click it.
+3. Download the MP3s from the [latest release](../../releases/latest). Put them on your phone. Drive.
+4. Read [`docs/06-adaptive-loop.md`](docs/06-adaptive-loop.md) before your first practice test.
+
+### Path 2 — Build your own material (30 minutes)
+1. Follow [`docs/01-define-the-target.md`](docs/01-define-the-target.md) and [`docs/03-study-plans.md`](docs/03-study-plans.md). Set your date.
+2. Open [`prompts/`](prompts/) and run the planning prompt with your AI.
+3. Generate cards as CSV → build a deck:
+   ```bash
+   pip install -r tools/requirements.txt
+   python tools/make_deck.py my-cards.csv --name "Network+ N10-009::My Deck" --out my-deck.apkg
+   ```
+4. Generate an audio script → render it:
+   ```bash
+   python tools/make_audio.py my-script.txt --kokoro models/kokoro-en-v0_19 --out audio/
+   ```
+   Full walkthroughs: [flashcards](docs/05-flashcard-pipeline.md) · [audio](docs/04-audio-pipeline.md).
+
+### Path 3 — No code at all
+Every prompt in [`prompts/`](prompts/) works in a normal chat window. Ask the AI for a CSV, paste it into a file, and use Anki's built-in **File → Import**. For audio, paste the script into any text-to-speech app.
+
+---
 
 ## My Study Log
 
@@ -57,6 +121,47 @@ Flashcards took the most time. Flashcards, practice tests and test review togeth
 - **Sep 11. Back to work.** I studied 12 of the next 14 days. Mostly Udemy and flashcards.
 - **Sep 24. Passed.**
 
+---
+
+## The method
+
+1. **[Define the target](docs/01-define-the-target.md)** — the exam, the five domains, their weights, the passing score.
+2. **[How learning works](docs/02-how-learning-works.md)** — retrieval, spacing, interleaving, and why hitting a topic from several angles beats re-reading.
+3. **[Pick a plan](docs/03-study-plans.md)** — 7-day sprint, 30-day standard, or 60-day part-time.
+4. **[Audio pipeline](docs/04-audio-pipeline.md)** — scripts written *for the ear*, rendered locally.
+5. **[Flashcard pipeline](docs/05-flashcard-pipeline.md)** — card rules that hold up on exam day.
+6. **[The adaptive loop](docs/06-adaptive-loop.md)** — practice test → miss log → diagnosis → rebuilt material.
+7. **[Exam week](docs/07-exam-week.md)** — readiness gates, the last 72 hours, and test-day tactics.
+8. **[Reuse it for your next cert](docs/08-next-cert.md)** — Linux+, Security+, CCNA, AWS.
+
+## Exam at a glance (N10-009)
+
+| Domain | Weight |
+|---|---|
+| 1.0 Networking Concepts | 23% |
+| 2.0 Network Implementation | 20% |
+| 3.0 Network Operations | 19% |
+| 4.0 Network Security | 14% |
+| 5.0 Network Troubleshooting | 24% |
+
+Up to 90 questions · 90 minutes · passing score 720 on a 100–900 scale · multiple choice plus performance-based questions. Always confirm current details on the [official CompTIA page](https://www.comptia.org/certifications/network).
+
+---
+
+## Design choices
+
+- **Your AI, not mine.** The prompts are model-agnostic. No API keys, no subscription lock-in.
+- **Local, free, verified audio.** [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M) neural TTS runs on a laptop CPU. A local speech recognizer checks each sentence and re-renders any it can't understand. Voices were chosen by measured clarity, not by ear ([details](docs/04-audio-pipeline.md#choosing-voices-measure-dont-guess)).
+- **Idempotent decks.** Card IDs derive from the card text. Re-import an improved deck and Anki updates cards in place. Your review history survives.
+- **Binaries out of git history.** MP3s ship as release assets, not commits, so the repo stays small to clone.
+- **CI.** A GitHub Action builds the sample deck on every push, so the tooling is always known to work.
+
+## Accuracy and fair use
+
+AI makes mistakes. I checked this material against the official N10-009 objectives, but check anything that looks wrong and [open an issue](../../issues). Nothing here reproduces questions from any paid practice-test vendor. Build your own misses into your own decks; don't publish a vendor's questions.
+
+CompTIA and Network+ are trademarks of CompTIA, Inc. This project is independent and not affiliated with or endorsed by CompTIA.
+
 ## Roadmap
 
 - [x] Project scope and licenses
@@ -76,6 +181,8 @@ Watch or star the repo to follow along.
 
 ## License
 
-Code: [MIT](LICENSE). Study content: [CC BY-NC-SA 4.0](LICENSE-CONTENT.md).
+Code in `tools/` and `.github/`: [MIT](LICENSE). Study content (docs, prompts, decks, audio): [CC BY-NC-SA 4.0](LICENSE-CONTENT.md). Share it, adapt it, credit it, don't sell it.
 
-CompTIA and Network+ are trademarks of CompTIA, Inc. This project is independent and not affiliated with or endorsed by CompTIA.
+## Contributing
+
+Found a wrong fact? Have a better prompt? See [CONTRIBUTING.md](CONTRIBUTING.md).
